@@ -1,0 +1,53 @@
+:root {
+  --font-base: BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  --s1: 1.5rem;
+  --stack-space: var(--s1);
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+li, p {
+  max-width: 50ch;
+}
+
+h1, h2, h3, h4 {
+  max-width: 20ch;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+ol[role=list], ul[role=list] {
+  list-style: none
+}

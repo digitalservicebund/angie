@@ -1,0 +1,26 @@
+{
+  "name": "frontend-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy && node tools/compileSass.js && node tools/compileJs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/digitalservicebund/frontend-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalservicebund/frontend-playground/issues"
+  },
+  "homepage": "https://github.com/digitalservicebund/frontend-playground#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.15",
+    "sass-embedded": "^1.54.9"
+  }
+}

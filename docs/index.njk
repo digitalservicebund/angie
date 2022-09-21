@@ -1,0 +1,12 @@
+---
+title: Index
+layout: layouts/default.njk
+---
+
+<h1>Index</h1>
+
+<ul>
+{%- for playground in collections.playground -%}
+  <li><a href="{{ playground.url }}">{{ playground.data.title }}</a></li>
+{%- endfor -%}
+</ul>

@@ -1,0 +1,9 @@
+[class^=stack] > * + * {
+  margin-block-start: var(--stack-space);
+}
+
+.stack-2 > * + * {
+  --stack-space: 3rem;
+}
+
+body { color: blue !important}
