@@ -2,6 +2,8 @@
 
 pre-pre-alpha. This is just a starting point!
 
+Standing on the shoulders of GDS giants: [Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
+
 
 ## Angie
 
@@ -68,6 +70,8 @@ This is all just a starting point. Some things will change over time.
 
 ### Progressive Enhancement / layered approach
 
+> A website built following the philosophy of progressive enhancement will be usable by anyone on any device, using any browser.
+
 > Progressive enhancement isn’t about browsers or devices or technologies. It’s about crafting experiences that serve your users by giving them access to content without technological restrictions. Progressive enhancement doesn’t require that you provide the same experience to every user, nor does it preclude you from using the latest and greatest technologies; it simply asks that you honor your site’s purpose and respect your users by applying technologies in an intelligent way, layer upon layer, to craft an amazing experience.
 
 Source: Aaron Gustafson - Adaptive Web Design
@@ -82,14 +86,37 @@ We will probably introduce a few more tools, but nothing which would dictate us 
 
 * browser support
 
-### long-term / future-friendly / Boring tech
+### Use proven technology
 
-* this should last at least 10 years, probably longer
-* only well-understood tech should be used
+> Prefer technology that’s well understood, with failure modes that are known.
 
-### Less functionality is better
+[Choose Boring Technology](https://boringtechnology.club/)
 
-Simplicity, correctness and consistency are more important than completeness. Better have a small library that does its thing very well instead of having a large buggy one. [Wikipedia](https://en.wikipedia.org/wiki/Worse_is_better)
+Also: [Life is too short to depend on unstable software](https://blog.sidebits.tech/life-is-too-short-to-depend-on-unstable-software/)
+
+### Future-friendly
+
+(future-proof is impossible)
+
+> The best way to be future-friendly is to be backwards-compatible.
+
+[Resilient Web Design](https://resilientwebdesign.com/)
+
+> Progressive enhancement is inherently future friendly.
+
+Source: Aaron Gustafson - Adaptive Web Design p.17
+
+### Software is risk/cost
+
+So keep it small.
+
+### Avoid cargo cult
+
+### Worse is better
+
+> It is far better to have an underfeatured product that is rock solid, fast, and small than one that covers what an expert would consider the complete requirements.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Worse_is_better)
 
 ### Bottom up
 
