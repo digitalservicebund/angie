@@ -2,6 +2,30 @@
 
 pre-pre-alpha. This is just a starting point!
 
+
+## Angie
+
+### A stylesheet
+
+Based on CSS because
+
+> “This declarative language will gracefully continue on failure, allow you to write global and scoped code, and it will work across your entire front-end stack, wether it’s rendered by a framework, a CMS or a static HTML file”
+
+source: [CSS doesn't suck](https://archive.hankchizljaw.com/wrote/css-doesnt-suck/)
+
+CSS methodology: something similar to [Cube CSS](https://cube.fyi/#what-does-cube-css-stand-for), especially
+
+* embrace the nature of CSS (cascade, global scope) not working against it
+* liberal use of element selectors
+
+### A JavaScript file
+
+Goal: JavaScript functionality is always optional, always an enhancement
+
+So it is okay, to not support all browsers. So it is okay, to use Custom Elements, which have a very nice lifecycle behavior: it doesn't matter what comes first: script or element. The browser takes care of it.
+
+
+
 ## Setup
 
 ```
