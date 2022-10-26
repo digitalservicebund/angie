@@ -2,7 +2,10 @@ pre-commit:
   parallel: true
   commands:
     prettier:
-      run: prettier {staged_files} --write
+      run: npx prettier {staged_files} --write
+    stylelint:
+      glob: "*.scss"
+      run: npx stylelint {staged_files}
 #     eslint:
 #       glob: "*.{js,ts,jsx,tsx}"
 #       run: yarn eslint {staged_files}

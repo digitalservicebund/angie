@@ -1,17 +1,15 @@
 :root {
-  --font-sans: BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif;
-  --font-serif: BundesSerifWeb, Cambria, Georgia, "Times New Roman", serif;
-  --font-condensed: BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica,
+  --font-sans: "BundesSansWeb", "Calibri", "Verdana", "Arial", "Helvetica",
     sans-serif;
+  --font-serif: "BundesSerifWeb", "Cambria", "Georgia", "Times New Roman", serif;
+  --font-condensed: "BundesSansCondWeb", "Calibri", "Verdana", "Arial",
+    "Helvetica", sans-serif;
   --font-base: var(--font-sans);
-
   --s1: 1.5rem;
   --stack-space: var(--s1);
   --step-0: 1rem;
-
   --color-base-blue-800: #004b76;
   --color-base-gray-600: #b8bdc3;
-
   --color-ui-primary: var(--color-base-blue-800);
   --color-ui-disabled: var(--color-base-gray-600);
 }
@@ -22,16 +20,17 @@
 //   text-size-adjust: none;
 // }
 
+html {
+  box-sizing: border-box;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-html {
-  box-sizing: border-box;
-}
 *,
-:before,
-:after {
+::before,
+::after {
   box-sizing: inherit;
 }
 

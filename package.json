@@ -23,6 +23,9 @@
     "@11ty/eleventy": "^2.0.0-canary.15",
     "lefthook": "^1.1.3",
     "prettier": "2.7.1",
-    "sass-embedded": "^1.54.9"
+    "sass-embedded": "^1.54.9",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.0.0"
   }
 }
