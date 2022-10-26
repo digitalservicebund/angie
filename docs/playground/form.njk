@@ -3,18 +3,14 @@ tags: playground
 title: Form
 layout: layouts/playground.njk
 ---
+{% from "components/radio.njk" import radio %}
 
-<div>
-  <input type="radio" name="r" value="1" id="r1" class="radio__input">
-  <label for="r1" class="radio__label">Radio label</label>
-</div>
+<h1>Form components</h1>
 
-<div>
-  <input type="radio" name="r" value="2" id="r2" class="radio__input">
-  <label for="r2" class="radio__label">Radio label</label>
-</div>
+<h2>Radio buttons</h2>
 
-<div>
-  <input type="radio" name="r" value="3" id="r3" class="radio__input" disabled>
-  <label for="r3" class="radio__label">Radio label</label>
+<div class="stack" style="--stack-space: .5rem">
+{{ radio(name="radios", value=1, label="Lorem ipsum 1", attrs="checked") }}
+{{ radio(name="radios", value=2, label="Lorem ipsum 2") }}
+{{ radio(name="radios", value=3, label="Lorem ipsum 3 (disabled)", attrs="disabled") }}
 </div>

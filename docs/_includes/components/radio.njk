@@ -1,0 +1,7 @@
+{% macro radio(name, value, label, attrs) %}
+  {% set id = name + value %}
+  <div>
+    <input type="radio" name="{{name}}" value="{{value}}" id="{{id}}" class="ds-radio__input" {{attrs}}>
+    <label for="{{id}}" class="ds-radio__label">{{label}}</label>
+  </div>
+{% endmacro %}

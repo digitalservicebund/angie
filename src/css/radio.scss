@@ -1,59 +1,74 @@
-  .radio__input {
-    // sr-only
-    opacity: 0;
-  }
-  .radio__label {
-    position: relative;
-    display: inline-block;
-    padding-top: 7px;
-    padding-left: 48px;
-    min-height: 40px;
-    touch-action: manipulation;
-    cursor: pointer;
-  }
-  .radio__label::before,
-  .radio__label::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  .radio__label::before {
-    left: 0;
-    width: 40px;
-    height: 40px;
-    box-shadow: inset 0 0 0 2px #004b76;
-    border-radius: 50%;
-  }
-  .radio__input:focus + .radio__label::before {
-    box-shadow: inset 0 0 0 4px #004b76;
-  }
-  .radio__input:not(:focus-visible):focus + .radio__label::before {
-    box-shadow: inset 0 0 0 2px #004b76;
-  }
-  .radio__input:focus-visible + .radio__label::before {
-    box-shadow: inset 0 0 0 4px #004b76;
-  }
-  .radio__input:not(:disabled):hover + .radio__label::before {
-    box-shadow: inset 0 0 0 4px #004b76;
-  }
-  .radio__input:checked + .radio__label::after {
-    left: 8px;
-    width: 0;
-    height: 0;
-    border: solid 12px #004b76;
-    background-color: #004b76;
-    border-radius: 50%;
-  }
-  .radio__input[disabled] + .radio__label::before {
-    box-shadow: inset 0 0 0 2px #b8bdc3;
-  }
-  .radio__input[disabled] + .radio__label::after {
-    border-color: #b8bdc3;
-    background-color: #b8bdc3;
-  }
-  .radio__input[disabled] + .radio__label {
-    cursor: default;
-  }
+@use 'mixins/a11y';
+
+$ring-radius: 1.25rem;
+$ring-diameter: $ring-radius * 2;
+$dot-radius: 0.75rem;
+
+// you cannot really style the actual html radio button, so we hide it
+.ds-radio__input {
+  @include a11y.sr-only;
+}
+
+.ds-radio__label {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.4375rem;
+  padding-left: $ring-diameter + 0.5rem;
+  min-height: $ring-diameter;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+// we construct a visual radio button using the pseudo elements of the label
+.ds-radio__label::before,
+.ds-radio__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $ring-radius;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+// :before = the outer ring
+.ds-radio__label::before {
+  left: 0;
+  width: $ring-diameter;
+  height: $ring-diameter;
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
+  border-radius: 50%;
+}
+.ds-radio__input:focus + .ds-radio__label::before {
+  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
+}
+.ds-radio__input:not(:focus-visible):focus + .ds-radio__label::before {
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
+}
+.ds-radio__input:focus-visible + .ds-radio__label::before {
+  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
+}
+.ds-radio__input:not(:disabled):hover + .ds-radio__label::before {
+  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
+}
+
+// :after = the dot in the middle
+.ds-radio__input:checked + .ds-radio__label::after {
+  left: $ring-radius - $dot-radius;
+  width: 0;
+  height: 0;
+  // use border to fill the dot to keep it checked even when background colors are disabled (e.g. when printed out)
+  border: solid $dot-radius var(--color-ui-primary);
+  background-color: var(--color-ui-primary);
+  border-radius: 50%;
+}
+
+.ds-radio__input[disabled] + .ds-radio__label::before {
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-disabled);
+}
+.ds-radio__input[disabled] + .ds-radio__label::after {
+  border-color: var(--color-ui-disabled);
+  background-color: var(--color-ui-disabled);
+}
+.ds-radio__input[disabled] + .ds-radio__label {
+  cursor: default;
+}
