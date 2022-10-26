@@ -11,12 +11,14 @@ class CharacterCount extends HTMLElement {
 
     if (this.textEl && this.countEl) {
       this.update();
-      this.textEl.addEventListener("keyup", this.update.bind(this))
-      this.textEl.addEventListener("change", this.update.bind(this))
+      this.textEl.addEventListener("keyup", this.update.bind(this));
+      this.textEl.addEventListener("change", this.update.bind(this));
     } else {
-      console.error("<ds-character-count> used without a text element and/or count element.")
+      console.error(
+        "<ds-character-count> used without a text element and/or count element."
+      );
     }
   }
 }
 
-customElements.define('ds-character-count', CharacterCount);
+customElements.define("ds-character-count", CharacterCount);

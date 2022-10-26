@@ -4,7 +4,6 @@ pre-pre-alpha. This is just a starting point!
 
 Standing on the shoulders of GDS giants: [Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
 
-
 ## Angie
 
 ### A stylesheet
@@ -17,16 +16,14 @@ source: [CSS doesn't suck](https://archive.hankchizljaw.com/wrote/css-doesnt-suc
 
 CSS methodology: something similar to [Cube CSS](https://cube.fyi/#what-does-cube-css-stand-for), especially
 
-* embrace the nature of CSS (cascade, global scope) not working against it
-* liberal use of element selectors
+- embrace the nature of CSS (cascade, global scope) not working against it
+- liberal use of element selectors
 
 ### A JavaScript file
 
 Goal: JavaScript functionality is always optional, always an enhancement
 
 So it is okay, to not support all browsers. So it is okay, to use Custom Elements, which have a very nice lifecycle behavior: it doesn't matter what comes first: script or element. The browser takes care of it.
-
-
 
 ## Setup
 
@@ -55,8 +52,8 @@ We have two distinct things here:
 
 The css and js code can be compiled via `npm run build` to:
 
-* `dist/angie.css`
-* `dist/angie.js`
+- `dist/angie.css`
+- `dist/angie.js`
 
 For now these two files are the distributables – the files that can be used in other projects.
 
@@ -76,15 +73,19 @@ This is all just a starting point. Some things will change over time.
 
 Source: Aaron Gustafson - Adaptive Web Design
 
+### Accessibility
+
+For the end-users, but also for the developers. The code itself should be accessible. Low barrier, familiar, habitable. Open, inspectable, evencomprehendable by non-devs.
+
 ### Low dependencies
 
-* the documentation depends on [11ty](https://www.11ty.dev/docs/), which is quite flexible and works with multiple template languages
-* for css composition Sass is used
-* js is currently just concatenated
+- the documentation depends on [11ty](https://www.11ty.dev/docs/), which is quite flexible and works with multiple template languages
+- for css composition Sass is used
+- js is currently just concatenated
 
 We will probably introduce a few more tools, but nothing which would dictate us certains things, e.g.
 
-* browser support
+- browser support
 
 ### Use proven technology
 
@@ -121,5 +122,3 @@ So keep it small.
 ### Bottom up
 
 Start small and maybe stupid and grow from there. Don't get carried away by all the polished boilerplates and starter kits. Learn from them and take only what is useful for us.
-
-

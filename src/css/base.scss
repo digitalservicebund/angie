@@ -1,7 +1,8 @@
 :root {
   --font-sans: BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif;
   --font-serif: BundesSerifWeb, Cambria, Georgia, "Times New Roman", serif;
-  --font-condensed: BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  --font-condensed: BundesSansCondWeb, Calibri, Verdana, Arial, Helvetica,
+    sans-serif;
   --font-base: var(--font-sans);
 
   --s1: 1.5rem;
@@ -28,7 +29,9 @@ html:focus-within {
 html {
   box-sizing: border-box;
 }
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: inherit;
 }
 
@@ -58,23 +61,32 @@ p {
   margin: 0;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
 
-li, p {
+li,
+p {
   max-width: 50ch;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   max-width: 20ch;
 }
 
-img, picture {
+img,
+picture {
   display: block;
   max-width: 100%;
 }
 
-ol[role=list], ul[role=list] {
-  list-style: none
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
 }
