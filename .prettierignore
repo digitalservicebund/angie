@@ -2,3 +2,5 @@ _site
 dist
 .prettierignore
 .gitignore
+*.woff
+*.woff2

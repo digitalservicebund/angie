@@ -13,7 +13,7 @@ $dot-radius: 0.75rem;
   position: relative;
   display: inline-block;
   padding-top: 0.4375rem;
-  padding-left: $ring-diameter + 0.5rem;
+  padding-left: $ring-diameter + 1rem;
   min-height: $ring-diameter;
   touch-action: manipulation;
   cursor: pointer;
