@@ -3,10 +3,12 @@ title: Index
 layout: layouts/default.njk
 ---
 
-<h1>Index</h1>
+<main style="padding: 1rem">
+<h1>Angie <span style="font-weight: normal">Design System</span></h1>
 
 <ul>
   {%- for playground in collections.playground -%}
-  <li><a href="{{ playground.url | url }}">{{ playground.data.title }}</a></li>
+  <li><a href="{{ playground.url | url }}" style="color: black; text-decoration: none">{{ playground.data.title }}</a></li>
   {%- endfor -%}
 </ul>
+</main>
