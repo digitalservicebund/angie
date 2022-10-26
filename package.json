@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy && node tools/compileSass.js && node tools/compileJs.js",
+    "build": "node tools/compileSass.js && node tools/compileJs.js",
+    "build:docs": "eleventy",
+    "build:github": "eleventy --pathprefix 'frontend-playground'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

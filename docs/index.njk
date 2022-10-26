@@ -7,6 +7,6 @@ layout: layouts/default.njk
 
 <ul>
 {%- for playground in collections.playground -%}
-  <li><a href="{{ playground.url }}">{{ playground.data.title }}</a></li>
+  <li><a href="{{ playground.url | url }}">{{ playground.data.title }}</a></li>
 {%- endfor -%}
 </ul>
