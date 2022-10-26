@@ -4,11 +4,17 @@ layout: layouts/default.njk
 ---
 
 <main style="padding: 1rem">
-<h1>Angie <span style="font-weight: normal">Design System</span></h1>
+  <h1>Angie <span style="font-weight: normal">Design System</span></h1>
 
-<ul>
-  {%- for playground in collections.playground -%}
-  <li><a href="{{ playground.url | url }}" style="color: black; text-decoration: none">{{ playground.data.title }}</a></li>
-  {%- endfor -%}
-</ul>
+  <ul>
+    {%- for playground in collections.playground -%}
+    <li>
+      <a
+        href="{{ playground.url | url }}"
+        style="color: black; text-decoration: none"
+        >{{ playground.data.title }}</a
+      >
+    </li>
+    {%- endfor -%}
+  </ul>
 </main>
