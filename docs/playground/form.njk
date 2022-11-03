@@ -4,15 +4,23 @@ title: Form components
 layout: layouts/playground.njk
 ---
 
-{% from "components/radio.njk" import radio %}
-
+{% from "components/radio.njk" import radio %} {% from "components/input.njk"
+import input %}
 <h1>Form components</h1>
-
 <h2>Radio buttons</h2>
-
 <div class="stack" style="--stack-space: 0.5rem">
   {{ radio(name="radios", value=1, label="Lorem ipsum 1", attrs="checked") }} {{
   radio(name="radios", value=2, label="Lorem ipsum 2") }} {{
   radio(name="radios", value=3, label="Lorem ipsum 3 (disabled)",
   attrs="disabled") }}
+</div>
+<h2>Text Inputs</h2>
+<div class="stack" style="--stack-space: 0.5rem">
+  {{ input(name="input", value="Text", label="Lorem ipsum") }} {{
+  input(name="input", value="Text", label="Text input focus", attrs="focus") }}
+  {{ input(name="input", value="Text", label="Text input error", attrs="error")
+  }} {{ input(name="input", value="Text", label="Text input hover",
+  attrs="hover") }} {{ input(name="input", value="Text", label="Text input
+  readonly", attrs="read-only") }} {{ input(name="input", value="Text",
+  label="Text input disabled", attrs="disabled") }}
 </div>
