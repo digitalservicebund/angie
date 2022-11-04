@@ -1,9 +1,5 @@
 @use "mixins/a11y";
 
-$ring-radius: 1.25rem;
-$ring-diameter: $ring-radius * 2;
-$dot-radius: 0.75rem;
-
 .ds-input {
   padding: 17px 24px;
   border: 2px;
@@ -11,34 +7,63 @@ $dot-radius: 0.75rem;
   border-color: var(--color-ui-primary);
   display: block;
   margin-top: 5px;
+
+  &__error {
+    border-color: var(--color-base-red-800);
+    background-color: var(--color-base-red-200);
+  }
 }
 
-.ds-input[focus] {
-  border: 4px;
-  border-style: solid;
-  border-color: var(--color-ui-primary);
+.ds-input:focus {
+  box-shadow: inset 0 0 0 2px var(--color-ui-primary);
   background-color: white;
 }
 
-.ds-input[hover] {
-  border: 4px;
-  border-style: solid;
-  border-color: var(--color-ui-primary);
+.ds-input:focus-visible {
+  outline: 0;
+}
+
+.ds-input:hover {
+  box-shadow: inset 0 0 0 2px var(--color-ui-primary);
   background-color: white;
 }
 
-.ds-input[error] {
-  border-color: var(--color-base-red-800);
-  background-color: var(--color-base-red-200);
+.ds-input:active {
+  box-shadow: inset 0 0 0 2px var(--color-ui-primary);
+  background-color: white;
 }
 
-.ds-input[read-only] {
+.ds-input:read-only {
   border: none;
   background-color: white;
+
+  &.ds-input:focus {
+    box-shadow: none;
+  }
+
+  &.ds-input:hover {
+    box-shadow: none;
+  }
+
+  &.ds-input:active {
+    box-shadow: none;
+  }
 }
 
-.ds-input[disabled] {
-  border-color: var(--color-ui-disabled);
+.ds-input:disabled {
+  box-shadow: inset 0 0 0 2px var(--color-ui-disabled);
   background-color: white;
   color: var(--color-ui-disabled);
+
+  &.ds-input:focus {
+    box-shadow: inset 0 0 0 2px var(--color-ui-disabled);
+  }
+
+  &.ds-input:hover {
+    box-shadow: inset 0 0 0 2px var(--color-ui-disabled);
+  }
+
+  &.ds-input:active {
+    box-shadow: inset 0 0 0 2px var(--color-ui-disabled);
+  }
 }

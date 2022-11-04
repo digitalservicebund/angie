@@ -1,15 +1,7 @@
-{% macro input(name, value, label, attrs) %} {% set id = name + value %}
-<div>
-  <label for="{{ id }}">{{ label }}</label>
-  <input
-    type="text"
-    name="{{ name }}"
-    value="{{ value }}"
-    id="{{ id }}"
-    class="ds-input"
-    {{
-    attrs
-    }}
-  />
-</div>
+{% macro input(name, value, label, attrs) %}
+  {% set id = name + value %}
+  <div>
+    <label for="{{ id }}">{{ label }}</label>
+    <input type="text" name="{{ name }}" value="{{ value }}" id="{{ id }}" class="ds-input" {{ attrs }}/>
+  </div>
 {% endmacro %}
