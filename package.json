@@ -1,5 +1,5 @@
 {
-  "name": "frontend-playground",
+  "name": "angie",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,20 +7,20 @@
     "start": "eleventy --serve",
     "build": "node tools/compileSass.js && node tools/compileJs.js",
     "build:docs": "eleventy",
-    "build:github": "eleventy --pathprefix 'frontend-playground'",
+    "build:github": "eleventy --pathprefix 'angie'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/digitalservicebund/frontend-playground.git"
+    "url": "git+ssh://git@github.com/digitalservicebund/angie.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/digitalservicebund/frontend-playground/issues"
+    "url": "https://github.com/digitalservicebund/angie/issues"
   },
-  "homepage": "https://github.com/digitalservicebund/frontend-playground#readme",
+  "homepage": "https://github.com/digitalservicebund/angie#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-canary.15",
     "lefthook": "^1.1.3",
