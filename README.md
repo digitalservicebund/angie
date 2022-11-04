@@ -1,10 +1,10 @@
-# frontend-playground (angie?)
+# Angie
 
 pre-pre-alpha. This is just a starting point!
 
 Standing on the shoulders of GDS giants: [Building a resilient frontend using progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)
 
-## Angie
+## What is it?
 
 ### A stylesheet
 
