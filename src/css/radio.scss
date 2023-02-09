@@ -3,13 +3,15 @@
 $ring-radius: 1.25rem;
 $ring-diameter: $ring-radius * 2;
 $dot-radius: 0.75rem;
-
+/* stylelint-disable no-descending-specificity */
 // you cannot really style the actual html radio button, so we hide it
-.ds-radio {
+.ds-radio,
+input[type="radio"]:not([class]) {
   @include a11y.sr-only;
 }
 
-.ds-radio + label {
+.ds-radio + label,
+input[type="radio"]:not([class]) + label {
   position: relative;
   display: inline-block;
   padding-top: 0.4375rem;
@@ -21,7 +23,9 @@ $dot-radius: 0.75rem;
 
 // we construct a visual radio button using the pseudo elements of the label
 .ds-radio + label::before,
-.ds-radio + label::after {
+.ds-radio + label::after,
+input[type="radio"]:not([class]) + label::before,
+input[type="radio"]:not([class]) + label::after {
   content: "";
   display: block;
   position: absolute;
@@ -31,7 +35,8 @@ $dot-radius: 0.75rem;
 }
 
 // :before = the outer ring
-.ds-radio + label::before {
+.ds-radio + label::before,
+input[type="radio"]:not([class]) + label::before {
   left: 0;
   width: $ring-diameter;
   height: $ring-diameter;
@@ -40,12 +45,15 @@ $dot-radius: 0.75rem;
 }
 
 .ds-radio:focus + label::before,
-.ds-radio:focus-visible + label::before {
+.ds-radio:focus-visible + label::before,
+input[type="radio"]:not([class]):focus + label::before,
+input[type="radio"]:not([class]):focus-visible + label::before {
   box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
 }
 
 // :after = the dot in the middle
-.ds-radio:checked + label::after {
+.ds-radio:checked + label::after,
+input[type="radio"]:not([class]):checked + label::after {
   left: $ring-radius - $dot-radius;
   width: 0;
   height: 0;
@@ -56,23 +64,29 @@ $dot-radius: 0.75rem;
   border-radius: 50%;
 }
 
-.ds-radio[disabled] + label {
+.ds-radio[disabled] + label,
+input[type="radio"]:not([class])[disabled] + label {
   cursor: default;
 }
 
-.ds-radio[disabled] + label::before {
+.ds-radio[disabled] + label::before,
+input[type="radio"]:not([class])[disabled] + label::before {
   box-shadow: inset 0 0 0 0.125rem var(--color-ui-disabled);
 }
 
-.ds-radio[disabled] + label::after {
+.ds-radio[disabled] + label::after,
+input[type="radio"]:not([class])[disabled] + label::after {
   border-color: var(--color-ui-disabled);
   background-color: var(--color-ui-disabled);
 }
 
-.ds-radio:not(:disabled):hover + label::before {
+.ds-radio:not(:disabled):hover + label::before,
+input[type="radio"]:not([class]):not(:disabled):hover + label::before {
   box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
 }
 
-.ds-radio:not(:focus-visible):focus + label::before {
+.ds-radio:not(:focus-visible):focus + label::before,
+input[type="radio"]:not([class]):not(:focus-visible):focus + label::before {
   box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
 }
+/* stylelint-enable no-descending-specificity */
