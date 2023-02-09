@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/");
   eleventyConfig.addPassthroughCopy("docs/fonts.css");
-  eleventyConfig.addPassthroughCopy("assets/fonts/*");
+  eleventyConfig.addPassthroughCopy("dist/fonts/*");
 
   return {
     dir: {
