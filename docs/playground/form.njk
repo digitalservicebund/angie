@@ -4,8 +4,8 @@ title: Form components
 layout: layouts/playground.njk
 ---
 
-{% from "components/input.njk" import input %}
 <h1>Form components</h1>
+
 <h2>Radio buttons</h2>
 
 <div class="stack" style="--stack-space: 0.5rem">
@@ -41,8 +41,35 @@ layout: layouts/playground.njk
 
 <h2>Text Inputs</h2>
 <div class="stack" style="--stack-space: 0.5rem">
-  {{ input(name="input", value="Text", label="Lorem ipsum") }} {{
-  input(name="input", value="Text", label="Text input readonly",
-  attrs="readonly") }} {{ input(name="input", value="Text", label="Text input
-  disabled", attrs="disabled") }}
+  <div>
+    <label for="i0">Lorem ipsum</label>
+    <input
+      type="text"
+      value="Text"
+      id="i0"
+      class="ds-input"
+    />
+  </div>
+
+  <div>
+    <label for="i1">Text input readonly</label>
+    <input
+      type="text"
+      value="Text"
+      id="i1"
+      class="ds-input"
+      readonly
+    />
+  </div>
+
+  <div>
+    <label for="i2">Text input disabled</label>
+    <input
+      type="text"
+      value="Text"
+      id="i2"
+      class="ds-input"
+      disabled
+    />
+  </div>
 </div>
