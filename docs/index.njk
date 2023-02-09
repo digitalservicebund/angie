@@ -6,12 +6,12 @@ layout: layouts/default.njk
 <main style="padding: 1rem">
   <h1>Angie<span style="font-weight: normal">.css</span></h1>
   <ul>
-    {%- for playground in collections.playground -%}
+    {%- for patterns in collections.patterns -%}
     <li>
       <a
-        href="{{ playground.url | url }}"
+        href="{{ patterns.url | url }}"
         style="color: black; text-decoration: none"
-        >{{ playground.data.title }}</a
+        >{{ patterns.data.title }}</a
       >
     </li>
     {%- endfor -%}
