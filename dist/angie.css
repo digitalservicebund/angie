@@ -91,7 +91,8 @@ ul[role=list] {
 }
 
 [class^=stack] > * + * {
-  margin-block-start: var(--stack-space);
+  -webkit-margin-before: var(--stack-space);
+          margin-block-start: var(--stack-space);
 }
 
 .stack-2 > * + * {
@@ -103,7 +104,8 @@ ul[role=list] {
 input[type=checkbox]:not([class]) {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
-  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
   height: 1px !important;
   margin: -1px !important;
   overflow: hidden !important;
@@ -199,7 +201,8 @@ input[type=checkbox]:not([class]):disabled + label {
 input[type=radio]:not([class]) {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
-  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
   height: 1px !important;
   margin: -1px !important;
   overflow: hidden !important;
@@ -300,6 +303,10 @@ input[type=url]:not([class]) {
   background-color: white;
   outline: 0;
   border: none;
+}
+
+.ds-input:-moz-read-only, input[type=email]:not([class]):-moz-read-only, input[type=number]:not([class]):-moz-read-only, input[type=password]:not([class]):-moz-read-only, input[type=tel]:not([class]):-moz-read-only, input[type=text]:not([class]):-moz-read-only, input[type=url]:not([class]):-moz-read-only {
+  box-shadow: none !important;
 }
 
 .ds-input:read-only,
@@ -405,6 +412,7 @@ input[type=url]:not([class]):hover {
   background-color: #fbfbfb;
 }
 .section p {
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 

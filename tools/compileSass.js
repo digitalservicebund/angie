@@ -1,22 +1,26 @@
 const fs = require("fs");
 const zlib = require("zlib");
 const sass = require("sass-embedded");
+const autoprefixer = require("autoprefixer");
+const postcss = require("postcss");
 const csso = require("csso");
 
-function compile() {
+const compile = async () => {
   let result = sass.compile("./src/css/index.scss", {
     loadPaths: ["./src/css"],
-    sourceMap: true,
+    sourceMap: false,
     style: "expanded",
   });
-  return result.css;
-}
+  const prefixedCss = (
+    await postcss([autoprefixer]).process(result.css, {
+      from: undefined,
+    })
+  ).css;
+  return prefixedCss;
+};
 
-module.exports = compile;
-
-if (require.main === module) {
-  // executed when called directly
-  const css = compile();
+const compileBuild = async () => {
+  const css = await compile();
   const minifiedCss = csso.minify(css).css;
   const compressed = zlib.gzipSync(minifiedCss);
   fs.writeFileSync("./dist/angie.css", css);
@@ -28,4 +32,11 @@ if (require.main === module) {
     compressed.length / 1024.0,
     "kb"
   );
+};
+
+module.exports = compile;
+
+if (require.main === module) {
+  // executed when called directly
+  compileBuild();
 }
