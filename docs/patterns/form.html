@@ -44,7 +44,13 @@ layout: layouts/patterns.njk
 
   <div>
     <input type="checkbox" value="yes" id="c1" />
-    <label for="c1">Lorem ipsum 2</label>
+    <label for="c1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
+      cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
+      a risus iaculis felis eleifend sodales. Morbi ullamcorper congue viverra.
+      Aliquam ullamcorper, neque ac rutrum hendrerit, erat mauris euismod quam,
+      at aliquam diam mauris et magna.
+    </label>
   </div>
 
   <div>
@@ -67,6 +73,11 @@ layout: layouts/patterns.njk
   </div>
 
   <div>
+    <label for="i4">Lorem ipsum (with placeholder)</label>
+    <input type="text" id="i4" placeholder="Platzhalter" />
+  </div>
+
+  <div>
     <label for="i1">Text input readonly</label>
     <input type="text" value="Text" id="i1" class="ds-input" readonly />
   </div>
@@ -74,5 +85,20 @@ layout: layouts/patterns.njk
   <div>
     <label for="i2">Text input disabled</label>
     <input type="text" value="Text" id="i2" class="ds-input" disabled />
+  </div>
+
+  <div>
+    <label for="i3">Text input (with error)</label>
+    <input type="text" value="Text" id="i3" class="ds-input has-error" />
+  </div>
+
+  <div>
+    <label for="im">Lorem ipsum (medium)</label>
+    <input type="text" value="Text" id="im" class="ds-input ds-input-medium" />
+  </div>
+
+  <div>
+    <label for="is">Lorem ipsum (small)</label>
+    <input type="text" value="Text" id="is" class="ds-input ds-input-small" />
   </div>
 </div>

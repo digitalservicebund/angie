@@ -5,4 +5,4 @@ pre-commit:
       run: npx prettier --write {staged_files} && git add {staged_files}
     stylelint:
       glob: "*.scss"
-      run: npx stylelint {staged_files}
+      run: npx stylelint --fix {staged_files}
