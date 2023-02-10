@@ -1,0 +1,27 @@
+---
+tags: form
+title: Textarea
+layout: layouts/patterns.njk
+---
+
+<h2>Textarea</h2>
+
+<div class="stack" style="--stack-space: 0.5rem">
+  <div>
+    <label for="ta">Textarea</label>
+    <textarea id="ta" rows="5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
+      a risus iaculis felis eleifend sodales. Morbi ullamcorper congue viverra.
+      Aliquam ullamcorper, neque ac rutrum hendrerit, erat mauris euismod quam,
+      at aliquam diam mauris et magna.
+    </textarea>
+  </div>
+
+  <ds-character-count>
+    <ds-textarea-auto-resize>
+      <label for="ta2">Textarea auto resize</label>
+      <textarea id="ta2">Lorem ipsum</textarea>
+      <span data-count></span>
+    </ds-textarea-auto-resize>
+  </ds-character-count>
+</div>
