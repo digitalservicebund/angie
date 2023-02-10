@@ -8,10 +8,6 @@ layout: layouts/patterns.njk
 
 <h2>Radio buttons</h2>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio"
-  >MDN Radio buttons</a
->
-
 <div class="stack" style="--stack-space: 0.5rem">
   <div>
     <input type="radio" name="radios" value="1" id="r0" checked />
@@ -28,6 +24,17 @@ layout: layouts/patterns.njk
     <label for="r2">Lorem ipsum 3 (disabled)</label>
   </div>
 </div>
+
+<hr />
+
+<script type="text/plain" class="language-markup">
+  <input type="radio" id="r123" />
+  <label for="r123">label text</label>
+</script>
+<p>Note: input and label must be adjacent and input must preceed label.</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio"
+  >MDN Radio buttons</a
+>
 
 <h2>Checkboxes</h2>
 
