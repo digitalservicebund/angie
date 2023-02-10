@@ -4,13 +4,24 @@ layout: layouts/default.njk
 ---
 
 <main style="padding: 1rem">
-  <h1>Angie<span style="font-weight: normal">.css</span></h1>
+  <h1>Headstart</h1>
+
+  <p style="font-size: 1.25rem">
+    CSS foundation and common UI functionality for
+    <nobr><b>Angie Design System</b></nobr> based products.
+  </p>
+
+  <ul>
+    <li>works everywhere</li>
+    <li>progressive enhancement</li>
+  </ul>
+
+  <h2>Patterns</h2>
+
   <ul>
     {%- for patterns in collections.patterns -%}
     <li>
-      <a
-        href="{{ patterns.url | url }}"
-        style="color: black; text-decoration: none"
+      <a href="{{ patterns.url | url }}" style="color: blue"
         >{{ patterns.data.title }}</a
       >
     </li>
