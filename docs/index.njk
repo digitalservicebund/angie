@@ -12,6 +12,7 @@ layout: layouts/default.njk
   </p>
 
   <ul>
+    <li>rock solid, fast, and small</li>
     <li>works everywhere</li>
     <li>progressive enhancement</li>
   </ul>
@@ -23,18 +24,6 @@ layout: layouts/default.njk
     <li>
       <a href="{{ patterns.url | url }}" style="color: blue"
         >{{ patterns.data.title }}</a
-      >
-    </li>
-    {%- endfor -%}
-  </ul>
-  <h3>Styleguide</h3>
-  <ul>
-    {%- for styleguide in collections.styleguide -%}
-    <li>
-      <a
-        href="{{ styleguide.url | url }}"
-        style="color: black; text-decoration: none"
-        >{{ styleguide.data.title }}</a
       >
     </li>
     {%- endfor -%}
