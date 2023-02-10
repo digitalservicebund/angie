@@ -29,7 +29,7 @@ console.log("something");
 
 class TextareaAutoResize extends HTMLElement {
   update() {
-    console.log("update", this.textarea.scrollHeight);
+    this.textarea.style.height = "auto";
     this.textarea.style.height = this.textarea.scrollHeight + "px";
   }
 
@@ -40,8 +40,7 @@ class TextareaAutoResize extends HTMLElement {
 
     if (this.textarea) {
       this.update();
-      this.textarea.addEventListener("keydown", this.update.bind(this));
-      this.textarea.addEventListener("change", this.update.bind(this));
+      this.textarea.addEventListener("input", this.update.bind(this));
     }
   }
 }
