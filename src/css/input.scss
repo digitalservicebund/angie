@@ -1,7 +1,10 @@
-@use "mixins/a11y";
-
 .ds-input,
-input[type="text"]:not([class]) {
+input[type="email"]:not([class]),
+input[type="number"]:not([class]),
+input[type="password"]:not([class]),
+input[type="tel"]:not([class]),
+input[type="text"]:not([class]),
+input[type="url"]:not([class]) {
   display: block;
   width: 100%;
   height: 4rem;
@@ -13,12 +16,22 @@ input[type="text"]:not([class]) {
 }
 
 .ds-input:read-only,
-input[type="text"]:not([class]):read-only {
+input[type="email"]:not([class]):read-only,
+input[type="number"]:not([class]):read-only,
+input[type="password"]:not([class]):read-only,
+input[type="tel"]:not([class]):read-only,
+input[type="text"]:not([class]):read-only,
+input[type="url"]:not([class]):read-only {
   box-shadow: none !important;
 }
 
 .ds-input:disabled,
-input[type="text"]:not([class]):disabled {
+input[type="email"]:not([class]):disabled,
+input[type="number"]:not([class]):disabled,
+input[type="password"]:not([class]):disabled,
+input[type="tel"]:not([class]):disabled,
+input[type="text"]:not([class]):disabled,
+input[type="url"]:not([class]):disabled {
   box-shadow: inset 0 0 0 2px var(--color-ui-disabled) !important;
   color: var(--color-ui-disabled);
   cursor: not-allowed;
@@ -31,8 +44,18 @@ input[type="text"]:not([class]):disabled {
 
 .ds-input:focus,
 .ds-input:hover,
+input[type="email"]:not([class]):focus,
+input[type="number"]:not([class]):focus,
+input[type="password"]:not([class]):focus,
+input[type="tel"]:not([class]):focus,
 input[type="text"]:not([class]):focus,
-input[type="text"]:not([class]):hover {
+input[type="url"]:not([class]):focus,
+input[type="email"]:not([class]):hover,
+input[type="number"]:not([class]):hover,
+input[type="password"]:not([class]):hover,
+input[type="tel"]:not([class]):hover,
+input[type="text"]:not([class]):hover,
+input[type="url"]:not([class]):hover {
   box-shadow: inset 0 0 0 4px var(--color-ui-primary);
 }
 
