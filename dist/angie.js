@@ -1,4 +1,4 @@
-if (typeof CharacterCount === "undefined") {
+(function () {
   class CharacterCount extends HTMLElement {
     update() {
       this.countEl.innerText = this.textEl.value.length;
@@ -14,10 +14,6 @@ if (typeof CharacterCount === "undefined") {
         this.update();
         this.textEl.addEventListener("keyup", this.update.bind(this));
         this.textEl.addEventListener("change", this.update.bind(this));
-      } else {
-        console.error(
-          "<ds-character-count> used without a text element and/or count element."
-        );
       }
     }
   }
@@ -25,13 +21,10 @@ if (typeof CharacterCount === "undefined") {
   if (!customElements.get("ds-character-count")) {
     customElements.define("ds-character-count", CharacterCount);
   }
-}
+})();
 
 
-console.log("something");
-
-
-if (typeof TextareaAutoResize === "undefined") {
+(function () {
   class TextareaAutoResize extends HTMLElement {
     update() {
       this.textarea.style.height = "auto";
@@ -42,15 +35,21 @@ if (typeof TextareaAutoResize === "undefined") {
       super();
 
       this.textarea = this.querySelector("textarea");
+      this.onChange = this.update.bind(this);
 
       if (this.textarea) {
         this.update();
-        this.textarea.addEventListener("input", this.update.bind(this));
+        this.textarea.addEventListener("input", this.onChange);
+        window.addEventListener("resize", this.onChange);
       }
+    }
+
+    disconnectedCallback() {
+      window.removeEventListener("resize", this.onChange);
     }
   }
 
   if (!customElements.get("ds-textarea-auto-resize")) {
     customElements.define("ds-textarea-auto-resize", TextareaAutoResize);
   }
-}
+})();

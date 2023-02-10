@@ -1,4 +1,4 @@
-if (typeof CharacterCount === "undefined") {
+(function () {
   class CharacterCount extends HTMLElement {
     update() {
       this.countEl.innerText = this.textEl.value.length;
@@ -14,10 +14,6 @@ if (typeof CharacterCount === "undefined") {
         this.update();
         this.textEl.addEventListener("keyup", this.update.bind(this));
         this.textEl.addEventListener("change", this.update.bind(this));
-      } else {
-        console.error(
-          "<ds-character-count> used without a text element and/or count element."
-        );
       }
     }
   }
@@ -25,4 +21,4 @@ if (typeof CharacterCount === "undefined") {
   if (!customElements.get("ds-character-count")) {
     customElements.define("ds-character-count", CharacterCount);
   }
-}
+})();
