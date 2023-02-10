@@ -23,6 +23,7 @@
   "homepage": "https://github.com/digitalservicebund/angie#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "csso": "^5.0.5",
     "lefthook": "^1.2.8",
     "prettier": "^2.8.4",
     "sass-embedded": "^1.57.1",
