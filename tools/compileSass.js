@@ -29,20 +29,19 @@ const compile = async () => {
     sourceMap: false,
     style: "expanded",
   });
-  const prefixedCss = (
+  let prefixedCss = (
     await postcss([autoprefixer]).process(result.css, {
       from: undefined,
     })
   ).css;
+  if (process.env.BUILD_ENV === "GHA") {
+    prefixedCss = replacePathInCSS(prefixedCss, (path) => `/angie${path}`);
+  }
   return prefixedCss;
 };
 
 const compileBuild = async () => {
-  let css = await compile();
-  console.log(process.env);
-  if (process.env.BUILD_ENV === "GHA") {
-    css = replacePathInCSS(css, (path) => `/angie${path}`);
-  }
+  const css = await compile();
   const minifiedCss = csso.minify(css).css;
   const compressed = zlib.gzipSync(minifiedCss);
   fs.writeFileSync("./dist/angie.css", css);
