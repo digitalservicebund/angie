@@ -484,8 +484,8 @@ input[type=url]:not([class]):hover {
 }
 
 .mask1 {
-  -webkit-mask-image: url("/assets/svg/colorvector.svg");
-          mask-image: url("/assets/svg/colorvector.svg");
+  -webkit-mask-image: url("/dist/svg/colorvector.svg");
+          mask-image: url("/dist/svg/colorvector.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
