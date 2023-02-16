@@ -5,6 +5,24 @@ const autoprefixer = require("autoprefixer");
 const postcss = require("postcss");
 const csso = require("csso");
 
+// src: https://github.com/futurist/replace-css-url
+var hasQuote = /^\s*('|")/;
+function replacePathInCSS(css, mapFunc) {
+  return [
+    /(@import\s+)(')(.+?)(')/gi,
+    /(@import\s+)(")(.+?)(")/gi,
+    /(url\s*\()(\s*')([^']+?)(')/gi,
+    /(url\s*\()(\s*")([^"]+?)(")/gi,
+    /(url\s*\()(\s*)([^\s'")].*?)(\s*\))/gi,
+  ].reduce((css, reg, index) => {
+    return css.replace(reg, (all, lead, quote1, path, quote2) => {
+      var ret = mapFunc(path, quote1);
+      if (hasQuote.test(ret) && hasQuote.test(quote1)) quote1 = quote2 = "";
+      return lead + quote1 + ret + quote2;
+    });
+  }, css);
+}
+
 const compile = async () => {
   let result = sass.compile("./src/css/index.scss", {
     loadPaths: ["./src/css"],
@@ -20,7 +38,10 @@ const compile = async () => {
 };
 
 const compileBuild = async () => {
-  const css = await compile();
+  let css = await compile();
+  if (process.env.BUILD_ENV === "GHA") {
+    css = replacePathInCSS(css, (path) => `/angie${path}`);
+  }
   const minifiedCss = csso.minify(css).css;
   const compressed = zlib.gzipSync(minifiedCss);
   fs.writeFileSync("./dist/angie.css", css);

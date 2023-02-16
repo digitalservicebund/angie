@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: Build
 
 on:
   push:
@@ -41,6 +41,8 @@ jobs:
           npm ci
           npm run build
           npm run build:github
+        env:
+          BUILD_ENV: GHA
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
