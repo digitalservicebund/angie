@@ -1,25 +1,33 @@
 (function () {
-  class CharacterCount extends HTMLElement {
+  class RemainingCharacters extends HTMLElement {
     update() {
-      this.countEl.innerText = this.textEl.value.length;
+      const maxLength = this.inputEl.maxLength;
+      if (maxLength !== -1) {
+        this.numberEl.innerText = maxLength - this.inputEl.value.length;
+      }
     }
 
     constructor() {
       super();
 
-      this.textEl = this.querySelector("textarea, input");
-      this.countEl = this.querySelector("[data-count]");
+      this.inputEl = this.querySelector("textarea, input");
+      this.textEl = this.querySelector("[data-remaining-characters-text]");
+      this.numberEl = this.querySelector("[data-remaining-characters-number]");
 
-      if (this.textEl && this.countEl) {
+      if (this.inputEl && this.numberEl) {
         this.update();
-        this.textEl.addEventListener("keyup", this.update.bind(this));
-        this.textEl.addEventListener("change", this.update.bind(this));
+        this.inputEl.addEventListener("input", this.update.bind(this));
+      }
+
+      if (this.textEl) {
+        this.textEl.style.display = 'inline';
+
       }
     }
   }
 
-  if (!customElements.get("ds-character-count")) {
-    customElements.define("ds-character-count", CharacterCount);
+  if (!customElements.get("ds-remaining-characters")) {
+    customElements.define("ds-remaining-characters", RemainingCharacters);
   }
 })();
 
