@@ -1,6 +1,5 @@
 _site
 node_modules
-dist
 .DS_Store
 assets/.DS_Store
 docs/styleguide/.DS_Store

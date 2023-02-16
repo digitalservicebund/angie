@@ -4,8 +4,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/BundesSansWeb-Regular.woff2") format("woff2"),
-    url("assets/fonts/BundesSansWeb-Regular.woff") format("woff");
+  src: url("dist/fonts/BundesSansWeb-Regular.woff2") format("woff2"),
+    url("dist/fonts/BundesSansWeb-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -13,8 +13,8 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/BundesSansWeb-Italic.woff2") format("woff2"),
-    url("assets/fonts/BundesSansWeb-Italic.woff") format("woff");
+  src: url("dist/fonts/BundesSansWeb-Italic.woff2") format("woff2"),
+    url("dist/fonts/BundesSansWeb-Italic.woff") format("woff");
 }
 
 @font-face {
@@ -22,8 +22,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/BundesSansWeb-Bold.woff2") format("woff2"),
-    url("assets/fonts/BundesSansWeb-Bold.woff") format("woff");
+  src: url("dist/fonts/BundesSansWeb-Bold.woff2") format("woff2"),
+    url("dist/fonts/BundesSansWeb-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -31,8 +31,8 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/BundesSansWeb-BoldItalic.woff2") format("woff2"),
-    url("assets/fonts/BundesSansWeb-BoldItalic.woff") format("woff");
+  src: url("dist/fonts/BundesSansWeb-BoldItalic.woff2") format("woff2"),
+    url("dist/fonts/BundesSansWeb-BoldItalic.woff") format("woff");
 }
 
 /* BundesSerif */
@@ -41,8 +41,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/BundesSerifWeb-Regular.woff2") format("woff2"),
-    url("assets/fonts/BundesSerifWeb-Regular.woff") format("woff");
+  src: url("dist/fonts/BundesSerifWeb-Regular.woff2") format("woff2"),
+    url("dist/fonts/BundesSerifWeb-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -50,8 +50,8 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/BundesSerifWeb-Italic.woff2") format("woff2"),
-    url("assets/fonts/BundesSerifWeb-Italic.woff") format("woff");
+  src: url("dist/fonts/BundesSerifWeb-Italic.woff2") format("woff2"),
+    url("dist/fonts/BundesSerifWeb-Italic.woff") format("woff");
 }
 
 @font-face {
@@ -59,8 +59,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/BundesSerifWeb-Bold.woff2") format("woff2"),
-    url("assets/fonts/BundesSerifWeb-Bold.woff") format("woff");
+  src: url("dist/fonts/BundesSerifWeb-Bold.woff2") format("woff2"),
+    url("dist/fonts/BundesSerifWeb-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -68,8 +68,8 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/BundesSerifWeb-BoldItalic.woff2") format("woff2"),
-    url("assets/fonts/BundesSerifWeb-BoldItalic.woff") format("woff");
+  src: url("dist/fonts/BundesSerifWeb-BoldItalic.woff2") format("woff2"),
+    url("dist/fonts/BundesSerifWeb-BoldItalic.woff") format("woff");
 }
 
 /* BundesSans Condensed */
@@ -78,8 +78,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/BundesSansCondWeb.woff2") format("woff2"),
-    url("assets/fonts/BundesSansCondWeb.woff") format("woff");
+  src: url("dist/fonts/BundesSansCondWeb.woff2") format("woff2"),
+    url("dist/fonts/BundesSansCondWeb.woff") format("woff");
 }
 
 /* Inter Font for Styleguide */
