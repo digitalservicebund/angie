@@ -39,6 +39,7 @@ const compile = async () => {
 
 const compileBuild = async () => {
   let css = await compile();
+  console.log(process.env);
   if (process.env.BUILD_ENV === "GHA") {
     css = replacePathInCSS(css, (path) => `/angie${path}`);
   }
