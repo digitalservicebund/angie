@@ -1,10 +1,12 @@
 :root {
   --font-sans: "BundesSansWeb", "Calibri", "Verdana", "Arial", "Helvetica",
-    sans-serif;
+    serif;
   --font-serif: "BundesSerifWeb", "Cambria", "Georgia", "Times New Roman", serif;
   --font-condensed: "BundesSansCondWeb", "Calibri", "Verdana", "Arial",
     "Helvetica", sans-serif;
   --font-base: var(--font-sans);
+  --font-styleguide: "Inter", "BundesSansWeb", "Calibri", "Verdana", "Arial",
+    "Helvetica", serif;
   --s1: 1.5rem;
   --stack-space: var(--s1);
   --step-0: 1rem;

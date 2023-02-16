@@ -4,3 +4,9 @@ dist
 .gitignore
 *.woff
 *.woff2
+*.ttf
+*.jpg
+*.jpeg
+*.png
+*.svg
+

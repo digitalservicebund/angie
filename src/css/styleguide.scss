@@ -2,10 +2,35 @@
 
 .heading {
   color: #00f;
+  font-family: var(--font-styleguide);
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 1.5;
 }
 
 .subheading {
   color: #00f;
+  font-family: var(--font-styleguide);
+  font-weight: bold;
+  font-size: 24px;
+  max-width: 800px;
+}
+
+.subheading-invers {
+  color: #fff;
+  background: #00f;
+  font-family: var(--font-styleguide);
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0 4px;
+}
+
+.subsubheading {
+  color: #000;
+  font-family: var(--font-styleguide);
+  font-weight: normal;
+  font-size: 16px;
+  max-width: 800px;
 }
 
 .section {
@@ -17,17 +42,13 @@
     margin-bottom: 2.75rem;
     background-color: #fbfbfb;
   }
-
-  p {
-    max-width: max-content;
-  }
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
   margin-top: 2.75rem;
-  gap: 10%;
+  gap: 0.1rem;
 }
 
 .flex-1 {
@@ -36,4 +57,258 @@
 
 .flex-2 {
   flex: 2;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2.75rem;
+  gap: 2rem;
+}
+
+.mask1 {
+  mask-image: url("/assets/svg/colorvector.svg");
+  mask-repeat: no-repeat;
+}
+
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 330px;
+  box-shadow: 5px 5px 10px 3px #eee;
+}
+
+.check {
+  border-top: 3px solid green;
+  background-color: green;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.do {
+  border-top: 3px solid green;
+  background-color: #fff;
+}
+
+.dont {
+  border-top: 3px solid red;
+  background-color: #bebebe;
+}
+
+.colorshapebox {
+  width: 80px;
+  height: 82px;
+  margin-bottom: 8px;
+}
+
+.colordefinitionbox {
+  width: 96px;
+  height: 160px;
+  padding-left: 8px;
+  padding-top: 16px;
+  background-color: #fff;
+}
+
+.colorname {
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hexvalue {
+  color: #6f7785;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.blue100 {
+  background-color: #f2f6f8;
+}
+
+.blue200 {
+  background-color: #ecf1f4;
+}
+
+.blue300 {
+  background-color: #dce8ef;
+}
+
+.blue400 {
+  background-color: #ccdbe4;
+}
+
+.blue500 {
+  background-color: #b3c9d6;
+}
+
+.blue600 {
+  background-color: #6693ad;
+}
+
+.blue700 {
+  background-color: #336f91;
+}
+
+.blue800 {
+  background-color: #004b76;
+}
+
+.blue900 {
+  background-color: #003350;
+}
+
+.yellow100 {
+  background-color: #fefcef;
+}
+
+.yellow200 {
+  background-color: #fff9d2;
+}
+
+.yellow300 {
+  background-color: #f9ec9e;
+}
+
+.yellow400 {
+  background-color: #f7e67d;
+}
+
+.yellow500 {
+  background-color: #f5e05d;
+}
+
+.yellow600 {
+  background-color: #f2dc5d;
+}
+
+.yellow700 {
+  background-color: #e5ce5c;
+}
+
+.yellow800 {
+  background-color: #dac13c;
+}
+
+.yellow900 {
+  background-color: #c3a91e;
+}
+
+.black {
+  background-color: #000;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.grey100 {
+  background-color: #f6f7f8;
+}
+
+.grey200 {
+  background-color: #eff2f4;
+}
+
+.grey300 {
+  background-color: #edeef0;
+}
+
+.grey400 {
+  background-color: #dcdee1;
+}
+
+.grey500 {
+  background-color: #cacdd2;
+}
+
+.grey600 {
+  background-color: #b8bdc3;
+}
+
+.grey700 {
+  background-color: #a6acb5;
+}
+
+.grey800 {
+  background-color: #6f7785;
+}
+
+.grey900 {
+  background-color: #4e596a;
+}
+
+.red100 {
+  background-color: #fcf2f5;
+}
+
+.red200 {
+  background-color: #f9e5ec;
+}
+
+.red300 {
+  background-color: #f2ccd8;
+}
+
+.red400 {
+  background-color: #ecb3c5;
+}
+
+.red500 {
+  background-color: #e699b1;
+}
+
+.red600 {
+  background-color: #d9668b;
+}
+
+.red700 {
+  background-color: #c61a50;
+}
+
+.red800 {
+  background-color: #b0243f;
+}
+
+.red900 {
+  background-color: #8e001b;
+}
+
+.green100 {
+  background-color: #e8f7f0;
+}
+
+.green200 {
+  background-color: #ccebdd;
+}
+
+.green300 {
+  background-color: #b0d8c6;
+}
+
+.green400 {
+  background-color: #97ccb4;
+}
+
+.green500 {
+  background-color: #65b491;
+}
+
+.green600 {
+  background-color: #349d6e;
+}
+
+.green700 {
+  background-color: #01854a;
+}
+
+.green800 {
+  background-color: #006538;
+}
+
+.green900 {
+  background-color: #003e22;
 }
