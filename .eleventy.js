@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("docs/*.css");
   eleventyConfig.addPassthroughCopy("docs/prism.js");
   eleventyConfig.addPassthroughCopy("dist/fonts/*");
+  eleventyConfig.addPassthroughCopy("dist/fonts.css");
   eleventyConfig.addPassthroughCopy("dist/svg/*");
 
   return {
