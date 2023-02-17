@@ -1,4 +1,53 @@
 :root {
+  --color-base-blue-100: #f2f6f8;
+  --color-base-blue-200: #ecf1f4;
+  --color-base-blue-300: #dce8ef;
+  --color-base-blue-400: #ccdbe4;
+  --color-base-blue-500: #b3c9d6;
+  --color-base-blue-600: #6693ad;
+  --color-base-blue-700: #336f91;
+  --color-base-blue-800: #004b76;
+  --color-base-blue-900: #003350;
+  --color-base-yellow-100: #fefcef;
+  --color-base-yellow-200: #fff9d2;
+  --color-base-yellow-300: #f9ec9e;
+  --color-base-yellow-400: #f7e67d;
+  --color-base-yellow-500: #f5e05d;
+  --color-base-yellow-600: #f2dc5d;
+  --color-base-yellow-700: #e5ce5c;
+  --color-base-yellow-800: #dac23c;
+  --color-base-yellow-900: #c3a91e;
+  --color-base-white: #fff;
+  --color-base-black: #0b0c0c;
+  --color-base-gray-100: #f6f7f8;
+  --color-base-gray-200: #eff2f4;
+  --color-base-gray-300: #edeef0;
+  --color-base-gray-400: #dcdee1;
+  --color-base-gray-500: #cacdd2;
+  --color-base-gray-600: #b8bdc3;
+  --color-base-gray-700: #a6acb5;
+  --color-base-gray-800: #6f7785;
+  --color-base-gray-900: #4e596a;
+  --color-base-red-100: #fcf2f5;
+  --color-base-red-200: #f9e5ec;
+  --color-base-red-300: #f2ccd8;
+  --color-base-red-400: #ecb3c5;
+  --color-base-red-500: #e699b1;
+  --color-base-red-600: #d9668b;
+  --color-base-red-700: #c61a50;
+  --color-base-red-800: #b0243f;
+  --color-base-red-900: #8e001b;
+  --color-base-green-100: #e8f7f0;
+  --color-base-green-200: #ccebdd;
+  --color-base-green-300: #b0d8c6;
+  --color-base-green-400: #97ccb4;
+  --color-base-green-500: #65b491;
+  --color-base-green-600: #349d6e;
+  --color-base-green-700: #01854a;
+  --color-base-green-800: #006538;
+  --color-base-green-900: #003e22;
+}
+:root {
   --font-sans: "BundesSansWeb", "Calibri", "Verdana", "Arial", "Helvetica",
     serif;
   --font-serif: "BundesSerifWeb", "Cambria", "Georgia", "Times New Roman", serif;
@@ -540,192 +589,4 @@ input[type=url]:not([class]):hover {
   color: #6f7785;
   font-weight: bold;
   font-size: 12px;
-}
-
-.blue100 {
-  background-color: #f2f6f8;
-}
-
-.blue200 {
-  background-color: #ecf1f4;
-}
-
-.blue300 {
-  background-color: #dce8ef;
-}
-
-.blue400 {
-  background-color: #ccdbe4;
-}
-
-.blue500 {
-  background-color: #b3c9d6;
-}
-
-.blue600 {
-  background-color: #6693ad;
-}
-
-.blue700 {
-  background-color: #336f91;
-}
-
-.blue800 {
-  background-color: #004b76;
-}
-
-.blue900 {
-  background-color: #003350;
-}
-
-.yellow100 {
-  background-color: #fefcef;
-}
-
-.yellow200 {
-  background-color: #fff9d2;
-}
-
-.yellow300 {
-  background-color: #f9ec9e;
-}
-
-.yellow400 {
-  background-color: #f7e67d;
-}
-
-.yellow500 {
-  background-color: #f5e05d;
-}
-
-.yellow600 {
-  background-color: #f2dc5d;
-}
-
-.yellow700 {
-  background-color: #e5ce5c;
-}
-
-.yellow800 {
-  background-color: #dac13c;
-}
-
-.yellow900 {
-  background-color: #c3a91e;
-}
-
-.black {
-  background-color: #000;
-}
-
-.white {
-  background-color: #fff;
-}
-
-.grey100 {
-  background-color: #f6f7f8;
-}
-
-.grey200 {
-  background-color: #eff2f4;
-}
-
-.grey300 {
-  background-color: #edeef0;
-}
-
-.grey400 {
-  background-color: #dcdee1;
-}
-
-.grey500 {
-  background-color: #cacdd2;
-}
-
-.grey600 {
-  background-color: #b8bdc3;
-}
-
-.grey700 {
-  background-color: #a6acb5;
-}
-
-.grey800 {
-  background-color: #6f7785;
-}
-
-.grey900 {
-  background-color: #4e596a;
-}
-
-.red100 {
-  background-color: #fcf2f5;
-}
-
-.red200 {
-  background-color: #f9e5ec;
-}
-
-.red300 {
-  background-color: #f2ccd8;
-}
-
-.red400 {
-  background-color: #ecb3c5;
-}
-
-.red500 {
-  background-color: #e699b1;
-}
-
-.red600 {
-  background-color: #d9668b;
-}
-
-.red700 {
-  background-color: #c61a50;
-}
-
-.red800 {
-  background-color: #b0243f;
-}
-
-.red900 {
-  background-color: #8e001b;
-}
-
-.green100 {
-  background-color: #e8f7f0;
-}
-
-.green200 {
-  background-color: #ccebdd;
-}
-
-.green300 {
-  background-color: #b0d8c6;
-}
-
-.green400 {
-  background-color: #97ccb4;
-}
-
-.green500 {
-  background-color: #65b491;
-}
-
-.green600 {
-  background-color: #349d6e;
-}
-
-.green700 {
-  background-color: #01854a;
-}
-
-.green800 {
-  background-color: #006538;
-}
-
-.green900 {
-  background-color: #003e22;
 }

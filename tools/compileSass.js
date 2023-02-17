@@ -29,8 +29,23 @@ const compile = async () => {
     sourceMap: false,
     style: "expanded",
   });
+
+  // prepend base colors
+  delete require.cache[require.resolve("../docs/_data/colors.js")];
+  const colors = require("../docs/_data/colors");
+  let block = ":root {\n";
+  Object.keys(colors).forEach((group) => {
+    colors[group].forEach((c) => {
+      block += `  --color-base-${group === "bw" ? "" : group + "-"}${
+        c.name
+      }: ${c.hex.toLowerCase()};\n`;
+    });
+  });
+  block += "}\n";
+
+  const completeCss = block + result.css;
   let prefixedCss = (
-    await postcss([autoprefixer]).process(result.css, {
+    await postcss([autoprefixer]).process(completeCss, {
       from: undefined,
     })
   ).css;

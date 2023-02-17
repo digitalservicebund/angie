@@ -1,0 +1,27 @@
+{% macro colorDefinition(name, hex) %}
+<div class="colordefinitionbox">
+  {% if name == "white" %}
+
+  <div
+    style="background-color: var(--color-base-black)"
+    class="colorshapebox mask1"
+  >
+    <div
+      style="background-color: var(--color-base-white); transform: scale(0.95)"
+      class="colorshapebox mask1"
+    ></div>
+  </div>
+
+  {% else %}
+
+  <div
+    style="background-color: var(--color-base-{{ name.replace(' ', '-') }}"
+    class="colorshapebox mask1"
+  ></div>
+  {% endif %}
+
+  <span class="colorname">{{ name }}</span>
+  <br />
+  <span class="hexvalue">{{ hex | upper }}</span>
+</div>
+{% endmacro %}
