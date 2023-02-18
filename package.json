@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "node tools/compileSass.js && node tools/compileJs.js",
-    "build:docs": "eleventy",
+    "build": "eleventy",
     "build:github": "eleventy --pathprefix 'angie'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,9 +27,11 @@
     "lefthook": "^1.2.8",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
     "sass-embedded": "^1.57.1",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier-scss": "^0.0.1",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint-config-standard-scss": "^6.1.0",
+    "uglify-js": "^3.17.4"
   }
 }

@@ -17,11 +17,15 @@ layout: layouts/patterns.njk
     </textarea>
   </div>
 
-  <ds-character-count>
-    <ds-textarea-auto-resize>
-      <label for="ta2">Textarea auto resize</label>
-      <textarea id="ta2">Lorem ipsum</textarea>
-      <span data-count></span>
-    </ds-textarea-auto-resize>
-  </ds-character-count>
+  <div>
+    <ds-remaining-characters>
+      <ds-textarea-auto-resize>
+        <label for="ta3">Nachricht (max. Zeichen 255)</label>
+        <textarea id="ta3" maxlength="255">Lorem ipsum</textarea>
+        <span data-remaining-characters-text style="display: none">
+          noch <span data-remaining-characters-number></span> Zeichen verfügbar
+        </span>
+      </ds-textarea-auto-resize>
+    </ds-remaining-characters>
+  </div>
 </div>
