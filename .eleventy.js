@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const sass = require("sass-embedded");
 const autoprefixer = require("autoprefixer");
 const postcss = require("postcss");
@@ -69,6 +70,7 @@ const compileJs = () => {
 };
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addWatchTarget("src");
   eleventyConfig.addWatchTarget("docs/styles");
   eleventyConfig.addWatchTarget("docs/scripts");
