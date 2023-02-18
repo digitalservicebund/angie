@@ -64,8 +64,8 @@ const prependColors = (css) => {
 
 const compileJs = () => {
   return fs
-    .readdirSync("./src/js")
-    .map((file) => fs.readFileSync("./src/js/" + file).toString())
+    .readdirSync("./src/scripts")
+    .map((file) => fs.readFileSync("./src/scripts/" + file).toString())
     .join("\n\n");
 };
 
@@ -87,13 +87,13 @@ module.exports = function (eleventyConfig) {
 
     // build headstart
     let headstartCss = await compileSass({
-      entry: "./src/css/index.scss",
-      loadPaths: ["./src/css"],
+      entry: "./src/styles/index.scss",
+      loadPaths: ["./src/styles"],
     });
     headstartCss = prependColors(headstartCss);
     fs.writeFileSync("dist/headstart.css", headstartCss);
 
-    let fontsCss = await compileSass({ entry: "./src/css/fonts.scss" });
+    let fontsCss = await compileSass({ entry: "./src/styles/fonts.scss" });
     fs.writeFileSync("dist/fonts.css", fontsCss);
 
     let headstartJs = compileJs();
