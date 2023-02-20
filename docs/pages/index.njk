@@ -4,19 +4,21 @@ layout: layouts/default.njk
 ---
 
 <main style="padding: 1rem">
-  <h1>Headstart</h1>
+  <h1>Angie</h1>
 
-  <p style="font-size: 1.25rem">
-    CSS foundation and common UI functionality for
-    <nobr><b>Angie Design System</b></nobr> based products.
-  </p>
+  <h2>Styleguide</h2>
 
   <ul>
-    <li>works everywhere</li>
-    <li>progressive enhancement</li>
+    {%- for styleguide in collections.styleguide -%}
+    <li>
+      <a href="{{ styleguide.url }}" style="color: blue"
+        >{{ styleguide.data.title }}</a
+      >
+    </li>
+    {%- endfor -%}
   </ul>
 
-  <h2>Patterns</h2>
+  <h2>Components</h2>
 
   <h3>Form</h3>
   <ul>
@@ -32,16 +34,6 @@ layout: layouts/default.njk
     {%- for f in collections.text -%}
     <li>
       <a href="{{ f.url }}" style="color: blue">{{ f.data.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-  <h3>Styleguide</h3>
-  <ul>
-    {%- for styleguide in collections.styleguide -%}
-    <li>
-      <a href="{{ styleguide.url }}" style="color: black; text-decoration: none"
-        >{{ styleguide.data.title }}</a
-      >
     </li>
     {%- endfor -%}
   </ul>
