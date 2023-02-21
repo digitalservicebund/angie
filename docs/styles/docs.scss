@@ -47,6 +47,40 @@
   --font-styleguide: "Inter", "Arial", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.page {
+  display: flex;
+  flex-grow: 1;
+}
+
+.page-sidebar {
+  display: none;
+  width: 10rem;
+  padding: 1rem;
+  flex-shrink: 0;
+  background: var(--color-base-gray-400);
+
+  @media (min-width: 700px) {
+    display: block;
+  }
+}
+
+.page-content {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.page-footer {
+  border-top: 2px solid black;
+  padding: 1rem;
+}
+
 .heading {
   color: #00f;
   font-family: var(--font-styleguide);

@@ -1,0 +1,9 @@
+<ul>
+  {%- for styleguide in collections.styleguide -%}
+  <li>
+    <a href="{{ styleguide.url }}" style="color: blue"
+      >{{ styleguide.data.title }}</a
+    >
+  </li>
+  {%- endfor -%}
+</ul>

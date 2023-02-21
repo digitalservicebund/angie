@@ -3,38 +3,16 @@ title: Index
 layout: layouts/default.njk
 ---
 
-<main style="padding: 1rem">
-  <h1>Angie</h1>
+<div class="page">
+  <main class="page-content">
+    <h1>Angie</h1>
 
-  <h2>Styleguide</h2>
+    <h2>Styleguide</h2>
 
-  <ul>
-    {%- for styleguide in collections.styleguide -%}
-    <li>
-      <a href="{{ styleguide.url }}" style="color: blue"
-        >{{ styleguide.data.title }}</a
-      >
-    </li>
-    {%- endfor -%}
-  </ul>
+    {% include "styleguide/links.njk" %}
 
-  <h2>Components</h2>
+    <h2>Components</h2>
 
-  <h3>Form</h3>
-  <ul>
-    {%- for f in collections.form -%}
-    <li>
-      <a href="{{ f.url }}" style="color: blue">{{ f.data.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-
-  <h3>Text(?)</h3>
-  <ul>
-    {%- for f in collections.text -%}
-    <li>
-      <a href="{{ f.url }}" style="color: blue">{{ f.data.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-</main>
+    {% include "components/links.njk" %}
+  </main>
+</div>
