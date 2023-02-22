@@ -1,0 +1,88 @@
+---
+tags: [component, form]
+title: Select (dropdown)
+layout: layouts/sidebar.njk
+---
+
+<h1>Select</h1>
+
+<p>Note: Options can't be styled.</p>
+
+<div class="stack" style="--stack-space: 1.5rem">
+  <div>
+    <label for="s0">Lorem ipsum 1</label>
+    <select id="s0">
+      <option value="">Bitte auswählen</option>
+      <option value="1">Option 1</option>
+      <option value="2" disabled>Option 2 (disabled)</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <script type="text/plain" class="language-markup">
+      <select id="s0">
+        <option value="">Bitte auswählen</option>
+        <option value="1">Option 1</option>
+        <option value="2" disabled>Option 2 (disabled)</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+    </script>
+  </div>
+
+  <h2>with error</h2>
+  <div>
+    <label for="s1">Lorem ipsum 2 with error</label>
+    <select id="s1" class="ds-select has-error">
+      <option value="">Bitte auswählen</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <script type="text/plain" class="language-markup">
+      <select id="s1" class="ds-select has-error">
+        <option value="">Bitte auswählen</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+    </script>
+  </div>
+
+  <h2>disabled</h2>
+  <div>
+    <label for="s2">Lorem ipsum 3 disabled</label>
+    <select id="s2" disabled>
+      <option value="">Bitte auswählen</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+    </select>
+    <script type="text/plain" class="language-markup">
+      <select id="s2" disabled>
+        <option value="">Bitte auswählen</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+    </script>
+  </div>
+</div>
+
+<hr />
+
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"
+      >MDN: The HTML Select element</a
+    >
+  </li>
+  <li>
+    <a href="https://design-system.service.gov.uk/components/select/"
+      >GOV.UK Design System - Components - Select</a
+    >
+  </li>
+</ul>

@@ -243,98 +243,6 @@ input[type=checkbox]:not([class]):disabled + label {
 }
 
 /* stylelint-enable no-descending-specificity */
-/* stylelint-disable no-descending-specificity */
-.ds-radio,
-input[type=radio]:not([class]) {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-          clip-path: inset(50%) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}
-
-.ds-radio + label,
-input[type=radio]:not([class]) + label {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.4375rem;
-  padding-left: 3.5rem;
-  min-height: 2.5rem;
-  touch-action: manipulation;
-  cursor: pointer;
-}
-
-.ds-radio + label::before,
-.ds-radio + label::after,
-input[type=radio]:not([class]) + label::before,
-input[type=radio]:not([class]) + label::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 1.25rem;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.ds-radio + label::before,
-input[type=radio]:not([class]) + label::before {
-  left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
-  border-radius: 50%;
-}
-
-.ds-radio:focus + label::before,
-.ds-radio:focus-visible + label::before,
-input[type=radio]:not([class]):focus + label::before,
-input[type=radio]:not([class]):focus-visible + label::before {
-  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
-}
-
-.ds-radio:checked + label::after,
-input[type=radio]:not([class]):checked + label::after {
-  left: 0.5rem;
-  width: 0;
-  height: 0;
-  border: solid 0.75rem var(--color-ui-primary);
-  background-color: var(--color-ui-primary);
-  border-radius: 50%;
-}
-
-.ds-radio[disabled] + label,
-input[type=radio]:not([class])[disabled] + label {
-  cursor: default;
-}
-
-.ds-radio[disabled] + label::before,
-input[type=radio]:not([class])[disabled] + label::before {
-  box-shadow: inset 0 0 0 0.125rem var(--color-ui-disabled);
-}
-
-.ds-radio[disabled] + label::after,
-input[type=radio]:not([class])[disabled] + label::after {
-  border-color: var(--color-ui-disabled);
-  background-color: var(--color-ui-disabled);
-}
-
-.ds-radio:not(:disabled):hover + label::before,
-input[type=radio]:not([class]):not(:disabled):hover + label::before {
-  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
-}
-
-.ds-radio:not(:focus-visible):focus + label::before,
-input[type=radio]:not([class]):not(:focus-visible):focus + label::before {
-  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
-}
-
-/* stylelint-enable no-descending-specificity */
 .ds-input,
 .ds-textarea,
 input[type=email]:not([class]),
@@ -459,4 +367,142 @@ input[type=url]:not([class]):hover {
   height: 2.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* stylelint-disable no-descending-specificity */
+.ds-radio,
+input[type=radio]:not([class]) {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.ds-radio + label,
+input[type=radio]:not([class]) + label {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.4375rem;
+  padding-left: 3.5rem;
+  min-height: 2.5rem;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.ds-radio + label::before,
+.ds-radio + label::after,
+input[type=radio]:not([class]) + label::before,
+input[type=radio]:not([class]) + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.ds-radio + label::before,
+input[type=radio]:not([class]) + label::before {
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
+  border-radius: 50%;
+}
+
+.ds-radio:focus + label::before,
+.ds-radio:focus-visible + label::before,
+input[type=radio]:not([class]):focus + label::before,
+input[type=radio]:not([class]):focus-visible + label::before {
+  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
+}
+
+.ds-radio:checked + label::after,
+input[type=radio]:not([class]):checked + label::after {
+  left: 0.5rem;
+  width: 0;
+  height: 0;
+  border: solid 0.75rem var(--color-ui-primary);
+  background-color: var(--color-ui-primary);
+  border-radius: 50%;
+}
+
+.ds-radio[disabled] + label,
+input[type=radio]:not([class])[disabled] + label {
+  cursor: default;
+}
+
+.ds-radio[disabled] + label::before,
+input[type=radio]:not([class])[disabled] + label::before {
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-disabled);
+}
+
+.ds-radio[disabled] + label::after,
+input[type=radio]:not([class])[disabled] + label::after {
+  border-color: var(--color-ui-disabled);
+  background-color: var(--color-ui-disabled);
+}
+
+.ds-radio:not(:disabled):hover + label::before,
+input[type=radio]:not([class]):not(:disabled):hover + label::before {
+  box-shadow: inset 0 0 0 0.25rem var(--color-ui-primary);
+}
+
+.ds-radio:not(:focus-visible):focus + label::before,
+input[type=radio]:not([class]):not(:focus-visible):focus + label::before {
+  box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
+}
+
+/* stylelint-enable no-descending-specificity */
+select:not([class]),
+.ds-select {
+  display: block;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 4.5rem;
+  box-shadow: inset 0 0 0 2px var(--color-ui-primary);
+  background-color: white;
+  outline: 0;
+  border: none;
+  height: 4rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41.295 6 4.875l4.59-4.58L12 1.705l-6 6-6-6L1.41.295Z' fill='%23000'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+}
+
+select:not([class]):hover,
+select:not([class]):focus,
+.ds-select:hover,
+.ds-select:focus {
+  outline: solid 4px var(--color-ui-primary);
+  outline-offset: -4px;
+}
+
+select:not([class]):disabled,
+.ds-select:disabled {
+  outline: 0;
+  box-shadow: inset 0 0 0 2px var(--color-ui-disabled);
+  color: var(--color-ui-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41.295 6 4.875l4.59-4.58L12 1.705l-6 6-6-6L1.41.295Z' fill='%23B8BDC3'/%3E%3C/svg%3E");
+}
+
+.ds-select.has-error {
+  box-shadow: inset 0 0 0 2px var(--color-ui-error);
+  background-color: var(--color-base-red-200);
+}
+
+option {
+  background-color: white !important;
 }
