@@ -39,3 +39,24 @@ Allow you to define reusable chunks of content.
 ## Contribute to the components
 
 Most of the time you will work in the `/src` folder.
+
+## Build process
+
+What is `npm start` doing.
+
+### 3 stages
+
+1. 11ty before build: distributables are created from the `src` folder
+2. 11ty (regular) build: doc pages and doc assets are compiled from the `docs` folder
+3. 11ty after build: distributables from stage 1 are copied over to the `_site` folder to make them available in the docs
+
+```mermaid
+flowchart TD
+    A["/data"] --> B["/src"]
+    A --> D["/docs"]
+    B -->|<b>1.</b> 11ty before build| C["/dist"]
+    D -->|<b>2.</b> 11ty build| S["/_site"]
+    C -->|<b>3.</b> 11ty after build| S
+    S -->|GitHub Action| G(GitHub Pages)
+    C -->|manual copy| P(external projects, e.g. A2J)
+```
