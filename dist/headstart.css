@@ -46,6 +46,16 @@
   --color-base-green-700: #01854a;
   --color-base-green-800: #006538;
   --color-base-green-900: #003e22;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+  --space-6xl: 8rem;
 }
 
 :root {

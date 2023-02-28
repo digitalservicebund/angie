@@ -39,6 +39,7 @@ const compileSass = async ({ entry, loadPaths }) => {
 
   if (process.env.BUILD_ENV === "GHA") {
     css = replacePathInCSS(css, (path) => {
+      if (/^data:/.test(path)) return path;
       return "/angie" + path;
     });
   }
@@ -46,9 +47,11 @@ const compileSass = async ({ entry, loadPaths }) => {
   return css;
 };
 
-const prependColors = (css) => {
+const prependVariables = (css) => {
   delete require.cache[require.resolve("./data/colors.js")];
+  delete require.cache[require.resolve("./data/spacing.js")];
   const colors = require("./data/colors");
+  const spacing = require("./data/spacing");
   let block = ":root {\n";
   Object.keys(colors).forEach((group) => {
     colors[group].forEach((c) => {
@@ -56,6 +59,9 @@ const prependColors = (css) => {
         c.name
       }: ${c.hex.toLowerCase()};\n`;
     });
+  });
+  Object.keys(spacing).forEach((name) => {
+    block += `  --space-${name}: ${spacing[name]};\n`;
   });
   block += "}\n";
 
@@ -90,7 +96,7 @@ module.exports = function (eleventyConfig) {
       entry: "./src/styles/index.scss",
       loadPaths: ["./src/styles"],
     });
-    headstartCss = prependColors(headstartCss);
+    headstartCss = prependVariables(headstartCss);
     fs.writeFileSync("dist/headstart.css", headstartCss);
 
     let fontsCss = await compileSass({ entry: "./src/styles/fonts.scss" });
