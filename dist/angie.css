@@ -146,10 +146,22 @@ ul[role=list] {
   list-style: none;
 }
 
+.ds-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ds-stack > * {
+  margin-block: 0;
+}
+
 .ds-stack > * + * {
   -webkit-margin-before: var(--stack-space);
           margin-block-start: var(--stack-space);
-} /* stylelint-disable no-descending-specificity */
+}
+
+/* stylelint-disable no-descending-specificity */
 .ds-checkbox,
 input[type=checkbox]:not([class]) {
   border: 0 !important;
