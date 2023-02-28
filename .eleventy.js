@@ -91,26 +91,26 @@ module.exports = function (eleventyConfig) {
     // clean
     rimrafSync("_site");
 
-    // build headstart
-    let headstartCss = await compileSass({
+    // build angie
+    let angieCss = await compileSass({
       entry: "./src/styles/index.scss",
       loadPaths: ["./src/styles"],
     });
-    headstartCss = prependVariables(headstartCss);
-    fs.writeFileSync("dist/headstart.css", headstartCss);
+    angieCss = prependVariables(angieCss);
+    fs.writeFileSync("dist/angie.css", angieCss);
 
     let fontsCss = await compileSass({ entry: "./src/styles/fonts.scss" });
     fs.writeFileSync("dist/fonts.css", fontsCss);
 
-    let headstartJs = compileJs();
-    fs.writeFileSync("dist/headstart.js", headstartJs);
+    let angieJs = compileJs();
+    fs.writeFileSync("dist/angie.js", angieJs);
 
     if (runMode === "build") {
-      headstartCss = csso.minify(headstartCss).css;
-      fs.writeFileSync("dist/headstart.min.css", headstartCss);
+      angieCss = csso.minify(angieCss).css;
+      fs.writeFileSync("dist/angie.min.css", angieCss);
 
-      headstartJs = uglifyJs.minify(headstartJs).code;
-      fs.writeFileSync("dist/headstart.min.js", headstartJs);
+      angieJs = uglifyJs.minify(angieJs).code;
+      fs.writeFileSync("dist/angie.min.js", angieJs);
     }
   });
 
@@ -119,10 +119,10 @@ module.exports = function (eleventyConfig) {
     const docsCss = await compileSass({ entry: "./docs/styles/docs.scss" });
     fs.writeFileSync("./_site/docs.css", docsCss);
 
-    // copy over headstart distributables
-    fs.copyFileSync("dist/headstart.css", "_site/headstart.css");
+    // copy over angie distributables
+    fs.copyFileSync("dist/angie.css", "_site/angie.css");
     fs.copyFileSync("dist/fonts.css", "_site/fonts.css");
-    fs.copyFileSync("dist/headstart.js", "_site/headstart.js");
+    fs.copyFileSync("dist/angie.js", "_site/angie.js");
   });
 
   return {
