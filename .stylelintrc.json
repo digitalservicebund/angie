@@ -4,6 +4,7 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "selector-not-notation": "simple"
+    "selector-not-notation": "simple",
+    "number-max-precision": 5
   }
 }

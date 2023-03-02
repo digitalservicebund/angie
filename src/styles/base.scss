@@ -1,3 +1,5 @@
+@use "mixins/a11y";
+
 :root {
   --font-sans: "BundesSansWeb", "Calibri", "Verdana", "Arial", "Helvetica",
     serif;
@@ -90,4 +92,8 @@ picture {
 ol[role="list"],
 ul[role="list"] {
   list-style: none;
+}
+
+.sr-only {
+  @include a11y.sr-only;
 }
