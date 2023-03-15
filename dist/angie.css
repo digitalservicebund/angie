@@ -636,13 +636,26 @@ input[type=radio]:not([class]) {
   white-space: nowrap !important;
 }
 
+input[type=radio]:not([class]) + label,
+input[type=radio]:not([class]) + label::before,
+input[type=radio]:not([class]) + label::after,
+.ds-radio + label,
+.ds-radio + label::before,
+.ds-radio + label::after {
+  --ring-radius: 1.25rem;
+  --ring-diameter: calc(var(--ring-radius) * 2);
+  --dot-radius: 0.75rem;
+  --text-padding-left: 1rem;
+  --text-padding-top: 0.4375rem;
+}
+
 .ds-radio + label,
 input[type=radio]:not([class]) + label {
   position: relative;
   display: inline-block;
-  padding-top: 0.4375rem;
-  padding-left: 3.5rem;
-  min-height: 2.5rem;
+  padding-top: var(--text-padding-top);
+  padding-left: calc(var(--ring-diameter) + var(--text-padding-left));
+  min-height: var(--ring-diameter);
   touch-action: manipulation;
   cursor: pointer;
 }
@@ -654,7 +667,7 @@ input[type=radio]:not([class]) + label::after {
   content: "";
   display: block;
   position: absolute;
-  top: 1.25rem;
+  top: var(--ring-radius);
   left: 0;
   transform: translateY(-50%);
 }
@@ -662,8 +675,8 @@ input[type=radio]:not([class]) + label::after {
 .ds-radio + label::before,
 input[type=radio]:not([class]) + label::before {
   left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--ring-diameter);
+  height: var(--ring-diameter);
   box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
   border-radius: 50%;
 }
@@ -677,10 +690,10 @@ input[type=radio]:not([class]):focus-visible + label::before {
 
 .ds-radio:checked + label::after,
 input[type=radio]:not([class]):checked + label::after {
-  left: 0.5rem;
+  left: calc(var(--ring-radius) - var(--dot-radius));
   width: 0;
   height: 0;
-  border: solid 0.75rem var(--color-ui-primary);
+  border: solid var(--dot-radius) var(--color-ui-primary);
   background-color: var(--color-ui-primary);
   border-radius: 50%;
 }
@@ -709,6 +722,24 @@ input[type=radio]:not([class]):not(:disabled):hover + label::before {
 .ds-radio:not(:focus-visible):focus + label::before,
 input[type=radio]:not([class]):not(:focus-visible):focus + label::before {
   box-shadow: inset 0 0 0 0.125rem var(--color-ui-primary);
+}
+
+.ds-radio-small + label,
+.ds-radio-small + label::before,
+.ds-radio-small + label::after {
+  --ring-radius: 1rem;
+  --dot-radius: 0.5rem;
+  --text-padding-left: 0.75rem;
+  --text-padding-top: 0.3125rem;
+}
+
+.ds-radio-mini + label,
+.ds-radio-mini + label::before,
+.ds-radio-mini + label::after {
+  --ring-radius: 0.75rem;
+  --dot-radius: 0.3125rem;
+  --text-padding-left: 0.625rem;
+  --text-padding-top: 0.0625rem;
 }
 
 /* stylelint-enable no-descending-specificity */
