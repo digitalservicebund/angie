@@ -65,7 +65,7 @@ const prependVariables = (css) => {
     }
   });
   Object.keys(spacing).forEach((name) => {
-    block += `  --s-${name}: ${spacing[name]};\n`;
+    block += `  --s-${name}: ${spacing[name]}rem;\n`;
   });
   block += "}\n";
 
