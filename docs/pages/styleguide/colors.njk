@@ -24,16 +24,16 @@ layout: layouts/sidebar.njk
     Primary Colors, vielleicht sogar in welchen Komponenten sie vorkommen?
   </p>
   <div class="flex-container">
-    {% for color in colors.blue %} {{ macros.colorDefinition("blue " +
-    color.name, color.hex) }} {% endfor %}
+    {% for name, hex in colors.blue %} {{ macros.colorDefinition("blue " + name,
+    hex) }} {% endfor %}
   </div>
   <div class="flex-container">
-    {% for color in colors.yellow %} {{ macros.colorDefinition("yellow " +
-    color.name, color.hex) }} {% endfor %}
+    {% for name, hex in colors.yellow %} {{ macros.colorDefinition("yellow " +
+    name, hex) }} {% endfor %}
   </div>
   <div class="flex-container">
-    {% for color in colors.bw %} {{ macros.colorDefinition(color.name,
-    color.hex) }} {% endfor %}
+    {{ macros.colorDefinition("black", colors.black) }} {{
+    macros.colorDefinition("white", colors.white) }}
   </div>
 </section>
 
@@ -45,16 +45,23 @@ layout: layouts/sidebar.njk
     Primary Colors, vielleicht sogar in welchen Komponenten sie vorkommen?
   </p>
   <div class="flex-container">
-    {% for color in colors.grey %} {{ macros.colorDefinition("grey " +
-    color.name, color.hex) }} {% endfor %}
+    {% for name, hex in colors.gray %} {{ macros.colorDefinition("gray " + name,
+    hex) }} {% endfor %}
   </div>
   <div class="flex-container">
-    {% for color in colors.red %} {{ macros.colorDefinition("red " + color.name,
-    color.hex) }} {% endfor %}
+    {% for name, hex in colors.red %} {{ macros.colorDefinition("red " + name,
+    hex) }} {% endfor %}
   </div>
   <div class="flex-container">
-    {% for color in colors.green %} {{ macros.colorDefinition("green " +
-    color.name, color.hex) }} {% endfor %}
+    {% for name, hex in colors.green %} {{ macros.colorDefinition("green " +
+    name, hex) }} {% endfor %}
+  </div>
+</section>
+<section class="section-grey">
+  <h3 class="subheading">Fallback</h3>
+  <div class="flex-container">
+    {% for name, hex in colors.orange %} {{ macros.colorDefinition("orange " +
+    name, hex) }} {% endfor %}
   </div>
 </section>
 <section class="section-grey">

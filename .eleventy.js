@@ -54,11 +54,15 @@ const prependVariables = (css) => {
   const spacing = require("./data/spacing");
   let block = ":root {\n";
   Object.keys(colors).forEach((group) => {
-    colors[group].forEach((c) => {
-      block += `  --color-base-${group === "bw" ? "" : group + "-"}${
-        c.name
-      }: ${c.hex.toLowerCase()};\n`;
-    });
+    if (group === "black" || group === "white") {
+      block += `  --color-base-${group}: ${colors[group].toLowerCase()};\n`;
+    } else {
+      Object.keys(colors[group]).forEach((name) => {
+        block += `  --color-base-${group}-${name}: ${colors[group][
+          name
+        ].toLowerCase()};\n`;
+      });
+    }
   });
   Object.keys(spacing).forEach((name) => {
     block += `  --s-${name}: ${spacing[name]};\n`;
