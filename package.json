@@ -1,7 +1,7 @@
 {
-  "name": "angie",
+  "name": "@digitalservice4germany/angie",
   "version": "0.0.1",
-  "description": "",
+  "description": "CSS framework for the Angie Design System",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
