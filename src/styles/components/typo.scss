@@ -1,0 +1,85 @@
+.ds-heading-01-reg {
+  font-size: 4rem;
+  line-height: 1.0625;
+  letter-spacing: 0.01rem;
+}
+
+.ds-heading-02-reg {
+  font-size: 1.875rem;
+  line-height: 1.2333;
+  letter-spacing: 0.01rem;
+}
+
+.ds-heading-03-reg {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: 0.01rem;
+}
+
+.ds-heading-03-bold {
+  @extend .ds-heading-03-reg;
+
+  font-weight: bold;
+}
+
+.ds-subhead {
+  font-size: 1.125rem;
+  line-height: 1.4444;
+  letter-spacing: 0.01rem;
+}
+
+.ds-label-01-reg {
+  font-size: 1.125rem;
+  line-height: 1.4444;
+  letter-spacing: 0.01rem;
+}
+
+.ds-label-01-bold {
+  @extend .ds-label-01-reg;
+
+  font-weight: bold;
+}
+
+.ds-label-02-reg {
+  font-size: 1rem;
+  line-height: 1.375;
+}
+
+.ds-label-02-bold {
+  @extend .ds-label-02-reg;
+
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+}
+
+.ds-label-03-reg {
+  font-size: 0.875rem;
+  line-height: 1.2857;
+
+  letter-spacing: 0.01rem;
+}
+
+.ds-label-03-bold {
+  @extend .ds-label-03-reg;
+
+  font-weight: bold;
+}
+
+.ds-label-section {
+  font-size: 0.6875rem;
+  line-height: 1.4545;
+  letter-spacing: 0.0625rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ds-body-01-reg {
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: 0.01rem;
+}
+
+.ds-body-02-reg {
+  font-size: 0.875rem;
+  line-height: 1.5714;
+}

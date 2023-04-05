@@ -5,6 +5,7 @@
   ],
   "rules": {
     "selector-not-notation": "simple",
+    "scss/at-extend-no-missing-placeholder": null,
     "number-max-precision": 5
   }
 }
