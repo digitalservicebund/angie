@@ -9,7 +9,12 @@ Components and documentation (styleguide).
 ### Components (CSS and JavaScript)
 
 - source code in the `/src` folder
-- distributable code in the `/dist` folder (consumed by other projects)
+
+#### Installation
+
+```sh
+npm install @digitalservice4germany/angie
+```
 
 ### Documentation (styleguide)
 

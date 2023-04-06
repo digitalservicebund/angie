@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("docs/styles");
   eleventyConfig.addWatchTarget("docs/scripts");
 
-  eleventyConfig.addPassthroughCopy({ "dist/fonts/*": "fonts" }); // Bundes
+  eleventyConfig.addPassthroughCopy({ "assets/fonts/*": "fonts" }); // Bundes
   eleventyConfig.addPassthroughCopy({ "docs/fonts/*": "fonts" }); // Inter
   eleventyConfig.addPassthroughCopy({ "docs/images/*": "images" });
   eleventyConfig.addPassthroughCopy({ "docs/styles/prism.css": "prism.css" });
@@ -94,6 +94,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
     // clean
     rimrafSync("_site");
+    rimrafSync("dist");
+    fs.mkdirSync("dist");
 
     // build angie
     let angieCss = await compileSass({
@@ -115,6 +117,8 @@ module.exports = function (eleventyConfig) {
 
       angieJs = uglifyJs.minify(angieJs).code;
       fs.writeFileSync("dist/angie.min.js", angieJs);
+
+      fs.cpSync("assets", "dist", { recursive: true });
     }
   });
 

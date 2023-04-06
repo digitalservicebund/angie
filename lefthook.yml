@@ -1,8 +1,6 @@
 pre-commit:
   parallel: true
   commands:
-    build:
-      run: npm run build && git add ./dist
     prettier:
       run: npx prettier --write {staged_files} && git add {staged_files}
     stylelint:
