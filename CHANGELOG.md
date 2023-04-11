@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
+## [0.1.1] - 2023-04-11
+
+### Added
+
+- Display regular typos as regular, even with bold user agent styles
+
 ## [0.1.0] - 2023-04-11
 
 ### Added
