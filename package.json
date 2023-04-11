@@ -1,6 +1,6 @@
 {
   "name": "@digitalservice4germany/angie",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "CSS framework for the Angie Design System",
   "main": "index.js",
   "scripts": {
