@@ -34,9 +34,9 @@
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
     "sass-embedded": "^1.57.1",
-    "stylelint": "^14.14.0",
+    "stylelint": "^15.6.0",
     "stylelint-config-prettier-scss": "^0.0.1",
-    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-config-standard-scss": "^8.0.0",
     "uglify-js": "^3.17.4"
   }
 }
