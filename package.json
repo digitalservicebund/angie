@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@digitalservice4germany/style-dictionary": "^1.1.0",
+    "@digitalservice4germany/style-dictionary": "^2.0.0",
     "autoprefixer": "^10.4.13",
     "csso": "^5.0.5",
     "lefthook": "^1.2.8",
