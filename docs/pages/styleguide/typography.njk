@@ -66,6 +66,82 @@ layout: layouts/sidebar.njk
 </section>
 
 <section class="section-grey">
+  <h3>Labels</h3>
+  <p>
+    Einsatzgebiet: Komponenten, Bezeichnungen, Texttrenner<br />
+    Größen: 4<br />
+    Farben: Schwarz, Weiss, Grau900<br />
+  </p>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg">
+      <button class="ds-button ds-button-primary ds-button-large">
+        Registrieren</button
+      ><br />
+      <span class="ds-body-02-reg"
+        ><i>label-01-bold in Anwendung: Button Größe L</i></span
+      >
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-01-reg" ,"ds-label-01-reg", "18 pt / 24
+      pt")}}
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-01-bold" ,"ds-label-01-bold", "18 pt / 24
+      pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg">
+      <button class="ds-button ds-button-primary ds-button-small">
+        Registrieren</button
+      ><br />
+      <span class="ds-body-02-reg"
+        ><i>label-02-bold in Anwendung: Button Größe S</i></span
+      >
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-02-reg" ,"ds-label-02-reg", "16 pt / 22
+      pt")}}
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-02-bold" ,"ds-label-02-bold", "16 pt / 22
+      pt")}}
+    </div>
+  </div>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg">
+      <label class="label-grey" for="is">Label (small)</label>
+      <input
+        type="text"
+        value="Text"
+        id="is"
+        class="ds-input ds-input-small short"
+      />
+      <span class="ds-body-02-reg"
+        ><i>label-02-bold in Anwendung: Button Größe S</i></span
+      >
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-03-reg" ,"ds-label-03-reg", "14 pt / 22
+      pt")}}
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("label-03-bold" ,"ds-label-03-bold", "14 pt / 22
+      pt")}}
+    </div>
+  </div>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg"></div>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("label-section" ,"ds-label-section", "11 pt / 16
+      pt")}}
+    </div>
+  </div>
+</section>
+
+<section class="section-grey">
   <h3>Body</h3>
   <p>
     Einsatzgebiet: lange Fließtexte, kurze Fließtexte, kurze Textabschnitte<br />
