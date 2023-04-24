@@ -125,6 +125,23 @@ body {
   }
 }
 
+.sectionheading {
+  color: #000;
+  font-family: var(--font-styleguide);
+  font-weight: bold;
+  font-size: 24px;
+  max-width: 800px;
+}
+
+.sectionsubheading {
+  color: #000;
+  margin-top: 2.75rem;
+  font-family: var(--font-styleguide);
+  font-weight: bold;
+  font-size: 16px;
+  max-width: 800px;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
