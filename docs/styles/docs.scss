@@ -159,11 +159,32 @@ body {
 
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 2.75rem;
   gap: 2rem;
+}
+
+.flex-table {
+  display: flex;
+  background: coral3;
+}
+
+.flex-row1 {
+  flex: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.flex-row2 {
+  flex: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.short {
+  width: 600px;
 }
 
 .mask1 {
@@ -201,6 +222,15 @@ body {
   width: 80px;
   height: 82px;
   margin-bottom: 8px;
+}
+
+.fontdefinitionbox {
+  width: 208px;
+  height: 160px;
+  padding-left: 8px;
+  padding-top: 16px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .colordefinitionbox {

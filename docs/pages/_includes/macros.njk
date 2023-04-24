@@ -24,4 +24,22 @@
   <br />
   <span class="hexvalue">{{ hex | upper }}</span>
 </div>
+{% endmacro %} {% macro fontDefinition(name, fontclass, fontsize) %}
+<div class="fontdefinitionbox">
+  <div class="{{fontclass}}">Neuris</div>
+  <span class="colorname">{{ name }}</span>
+  <br />
+  <span class="hexvalue">{{ fontsize | upper }}</span>
+</div>
+{% endmacro %} {% macro linkDefinition(name, fontclass, fontsize) %}
+<div class="fontdefinitionbox">
+  <div>
+    <a href="https://google.com" target="blank" class="{{fontclass}}"
+      > Neuris</a
+    >
+  </div>
+  <span class="colorname">{{ name }}</span>
+  <br />
+  <span class="hexvalue">{{ fontsize | upper }}</span>
+</div>
 {% endmacro %}

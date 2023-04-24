@@ -9,71 +9,160 @@ layout: layouts/sidebar.njk
 <section class="section">
   <h2 class="heading">Typography</h2>
   <p class="subheading">
-    Was machen Farben, Einsatz von Farben, kurzer Vermerk Accessibility und
-    Farben. Es gibt <span class="subheading-invers">Primäre</span> und
-    <span class="subheading-invers">Sekundäre</span>, hier im Spektrum
-    aufgeführt. Warum brauchen wir das Spektrum?
+    Typografie kann in ihrer Größe, Farbe und ihrem Schriftschnitt variieren.
+    Durch diese Parameter kann ihr an entsprechenden Stellen mehr oder weniger
+    Aufmerksamkeit geschenkt werden. So lassen sich Hierarchien zwischen
+    Elementen erzeugen.
   </p>
 </section>
 
 <section class="section-grey">
-  <h3>Section Title</h3>
+  <h3>Heading</h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
+    Einsatzgebiet: Überschriften, Unterüberschriften <br />
+    Größen: 4<br />
+    Farben: Schwarz<br />
   </p>
-</section>
-
-<section class="section-grey">
-  <h3>Section Title</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
-  </p>
-  <div class="flex-row">
-    <p class="flex-1">
-      <b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </b>
-    </p>
-    <img src="https://via.placeholder.com/250" />
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-heading-01-reg">Überschriften</div>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("heading-01-reg" ,"ds-heading-01-reg", "64 pt /
+      68 pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-heading-02-reg">
+      Überschriften und Unterüberschriften
+    </div>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("heading-02-reg" ,"dcos-heading-02-reg", "30 pt /
+      37 pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1">
+      <div class="ds-heading-03-reg">Überschriften und Unterüberschriften</div>
+      <div class="ds-heading-03-bold">Überschriften und Unterüberschriften</div>
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("heading-03-reg" ,"ds-heading-03-reg", "24 pt /
+      30 pt")}}
+    </div>
+    <div class="flex-row2">
+      {{ macros.fontDefinition("heading-03-bold" ,"ds-heading-03-bold", "24 pt /
+      30 pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-subheading">Unterüberschriften</div>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("subheading" ,"ds-subheading", "30 pt / 37 pt")}}
+    </div>
   </div>
 </section>
 
 <section class="section-grey">
-  <h3>Section Title</h3>
+  <h3>Body</h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.
+    Einsatzgebiet: lange Fließtexte, kurze Fließtexte, kurze Textabschnitte<br />
+    Größen: 2<br />
+    Farben: Schwarz<br />
   </p>
-  <div class="flex-row">
-    <div class="flex-1">
-      <p>
-        <b>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </b>
-      </p>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg">
+      <div class="short">
+        Der Bundesgerichtshof (BGH)[2] in Karlsruhe ist das oberste
+        Gericht der Bundesrepublik Deutschland auf dem Gebiet der ordentlichen
+        Gerichtsbarkeit und damit letzte Instanz in Zivil- und Strafverfahren.
+        Ferner ist er für verwandte Spezialrechtsgebiete zuständig wie etwa
+        das Berufsrecht in der Rechtspflege.
+      </div>
     </div>
-    <div class="flex-2">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("body-01-reg" ,"ds-body-01-reg", "16 pt / 26
+      pt")}}
     </div>
-    <div class="flex-1"><img src="https://via.placeholder.com/250" /></div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-02-reg">
+      <div class="short">
+        Der Bundesgerichtshof (BGH)[2] in Karlsruhe ist das oberste
+        Gericht der Bundesrepublik Deutschland auf dem Gebiet der ordentlichen
+        Gerichtsbarkeit und damit letzte Instanz in Zivil- und Strafverfahren.
+        Ferner ist er für verwandte Spezialrechtsgebiete zuständig wie etwa
+        das Berufsrecht in der Rechtspflege.
+      </div>
+    </div>
+    <div class="flex-row1">
+      {{ macros.fontDefinition("body-02-reg" ,"ds-body-02-reg", "14 pt / 22
+      pt")}}
+    </div>
+  </div>
+</section>
+
+<section class="section-grey">
+  <h3>Links</h3>
+  <p>
+    Einsatzgebiet: Links in Textabschnitten, Navigationselemente<br />
+    Größen: 3<br />
+    Farben: Blue800<br />
+  </p>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-01-reg">
+      <div class="short">
+        Der Bundesgerichtshof (BGH)[2] in <a
+          href="https://google.com"
+          target="blank"
+          class="ds-link-01-bold"
+          >Karlsruhe</a
+        > ist das oberste Gericht der Bundesrepublik Deutschland auf dem Gebiet
+        der ordentlichen Gerichtsbarkeit und damit
+        letzte Instanz in Zivil- und Strafverfahren. Ferner ist er für verwandte
+        Spezialrechtsgebiete zuständig wie etwa das Berufsrecht in der
+        Rechtspflege.
+      </div>
+    </div>
+    <div class="flex-row1">
+      {{ macros.linkDefinition("link-01-bold" ,"ds-link-01-bold", "16 pt / 26
+      pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1 ds-body-02-reg">
+      <div class="short">
+        Der Bundesgerichtshof (BGH)[2] in
+        <a href="https://google.com" target="blank" class="ds-link-02-bold"
+          >Karlsruhe</a
+        >  das oberste Gericht der Bundesrepublik Deutschland auf dem Gebiet
+        der ordentlichen Gerichtsbarkeit und damit
+        letzte Instanz in Zivil- und Strafverfahren. Ferner ist er für verwandte
+        Spezialrechtsgebiete zuständig wie etwa das Berufsrecht in der
+        Rechtspflege.
+      </div>
+    </div>
+    <div class="flex-row1">
+      {{ macros.linkDefinition("link-02-bold" ,"ds-link-02-bold", "14 pt / 22
+      pt")}}
+    </div>
+  </div>
+  <p></p>
+  <div class="flex-table">
+    <div class="flex-row1">
+      <a href="https://google.com" target="blank" class="ds-link-03-bold"
+        >Karlsruhe</a
+      >
+    </div>
+    <div class="flex-row1">
+      {{ macros.linkDefinition("link-03-bold" ,"ds-link-03-bold", "18 pt / 24
+      pt")}}
+    </div>
   </div>
 </section>
