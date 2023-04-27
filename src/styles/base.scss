@@ -71,6 +71,10 @@ textarea {
   font: inherit;
 }
 
+a {
+  color: currentcolor;
+}
+
 li,
 p {
   max-width: 70ch;
@@ -80,13 +84,19 @@ h1,
 h2,
 h3,
 h4 {
-  max-width: 50ch;
+  max-width: 70ch;
 }
 
 img,
 picture {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
 }
 
 ol[role="list"],
