@@ -31,4 +31,7 @@ layout: layouts/sidebar.njk
     <div class="ds-label-section">ds-label-section</div>
     <div class="ds-body-01-reg">ds-body-01-reg</div>
     <div class="ds-body-02-reg">ds-body-02-reg</div>
+    <div class="ds-link-01-bold">ds-link-01-bold</div>
+    <div class="ds-link-02-bold">ds-link-02-bold</div>
+    <div class="ds-link-03-bold">ds-link-03-bold</div>
 </div>

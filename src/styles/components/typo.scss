@@ -91,25 +91,30 @@
   line-height: 1.5714;
 }
 
-.ds-link-01-bold {
-  font-size: 1rem;
+%ds-link {
   font-weight: bold;
+  color: var(--color-base-blue-800);
+}
+
+.ds-link-01-bold {
+  @extend %ds-link;
+
+  font-size: 1rem;
   line-height: 1.625;
   letter-spacing: 0.01rem;
-  color: #004b76;
 }
 
 .ds-link-02-bold {
+  @extend %ds-link;
+
   font-size: 0.875rem;
-  font-weight: bold;
   line-height: 1.5714;
-  color: #004b76;
 }
 
 .ds-link-03-bold {
+  @extend %ds-link;
+
   font-size: 1.125rem;
-  font-weight: bold;
   line-height: 1.4444;
   letter-spacing: 0.01rem;
-  color: #004b76;
 }
