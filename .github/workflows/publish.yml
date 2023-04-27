@@ -10,6 +10,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -40,7 +43,7 @@ jobs:
           git commit -m "Release ${{ env.NEW_VERSION }}"
           git tag ${{ env.NEW_VERSION }}
 
-      - run: npm publish
+      - run: npm publish --provenance --access public
         working-directory: dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
