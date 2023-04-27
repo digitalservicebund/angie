@@ -35,7 +35,7 @@ layout: layouts/sidebar.njk
 
 ### Regular size (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-l)">
+<div class="ds-stack" style="--stack-space: var(--s-24)">
   <div>
     <input type="checkbox" value="yes" id="c0" checked />
     <label for="c0">Lorem ipsum 1</label>
@@ -70,7 +70,7 @@ layout: layouts/sidebar.njk
 
 ### Small size
 
-<div class="ds-stack" style="--stack-space: var(--s-m)">
+<div class="ds-stack" style="--stack-space: var(--s-16)">
   <div>
     <input type="checkbox" value="yes" id="sc0" checked class="ds-checkbox ds-checkbox-small" />
     <label for="sc0">Lorem ipsum 1</label>

@@ -16,7 +16,7 @@ layout: layouts/sidebar.njk
 
 ## Classes
 
-<div class="ds-stack" style="--stack-space: var(--s-l)">
+<div class="ds-stack" style="--stack-space: var(--s-24)">
     <div class="ds-heading-01-reg">ds-heading-01-reg</div>
     <div class="ds-heading-02-reg">ds-heading-02-reg</div>
     <div class="ds-heading-03-reg">ds-heading-03-reg</div>

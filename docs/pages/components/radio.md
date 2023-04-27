@@ -35,7 +35,7 @@ layout: layouts/sidebar.njk
 
 ### Regular size (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-l)">
+<div class="ds-stack" style="--stack-space: var(--s-24)">
   <div>
     <input type="radio" name="radios" value="1" id="r0" checked />
     <label for="r0">Lorem ipsum 1</label>
@@ -65,7 +65,7 @@ layout: layouts/sidebar.njk
 
 ### Small size
 
-<div class="ds-stack" style="--stack-space: var(--s-m)">
+<div class="ds-stack" style="--stack-space: var(--s-16)">
   <div>
     <input type="radio" name="sradios" value="1" id="sr0" checked class="ds-radio ds-radio-small" />
     <label for="sr0">Lorem ipsum 1</label>
@@ -95,7 +95,7 @@ layout: layouts/sidebar.njk
 
 ### Mini size
 
-<div class="ds-stack" style="--stack-space: var(--s-s)">
+<div class="ds-stack" style="--stack-space: var(--s-8)">
   <div>
     <input type="radio" name="mradios" value="1" id="mr0" checked class="ds-radio ds-radio-mini" />
     <label for="mr0">Lorem ipsum 1</label>
