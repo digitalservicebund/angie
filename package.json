@@ -32,7 +32,7 @@
     "lefthook": "^1.2.8",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
-    "rimraf": "^4.1.2",
+    "rimraf": "^5.0.0",
     "sass-embedded": "^1.57.1",
     "stylelint": "^15.6.0",
     "stylelint-config-prettier-scss": "^0.0.1",
