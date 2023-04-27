@@ -41,4 +41,25 @@ layout: layouts/sidebar.njk
     <label for="is">Lorem ipsum (small)</label>
     <input type="text" value="Text" id="is" class="ds-input ds-input-small" />
   </div>
+
+  <div>
+    <label for="prefix">Input with prefix</label>
+    <div class="ds-input-group">
+      <div class="ds-input-prefix">Prefix:</div>
+      <input
+        type="text"
+        value="Text"
+        id="prefix"
+        class="ds-input ds-input-small has-error"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="suffix">Input with suffix</label>
+    <div class="ds-input-group">
+      <input type="text" value="Text" id="suffix" />
+      <div class="ds-input-suffix">€</div>
+    </div>
+  </div>
 </div>

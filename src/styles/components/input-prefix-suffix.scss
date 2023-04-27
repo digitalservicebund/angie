@@ -1,0 +1,23 @@
+%ds-input-prefix-suffix {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 2px solid var(--color-ui-primary);
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--color-ui-primary);
+}
+
+.ds-input-prefix {
+  @extend %ds-input-prefix-suffix;
+
+  border-right: 0;
+}
+
+.ds-input-suffix {
+  @extend %ds-input-prefix-suffix;
+
+  border-left: 0;
+}
