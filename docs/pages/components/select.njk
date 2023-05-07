@@ -8,10 +8,10 @@ layout: layouts/sidebar.njk
 
 <p>Note: Options can't be styled.</p>
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <label for="s0">Lorem ipsum 1</label>
-    <select id="s0">
+    <select id="s0" class="ds-select">
       <option value="">Bitte auswählen</option>
       <option value="1">Option 1</option>
       <option value="2" disabled>Option 2 (disabled)</option>
@@ -19,7 +19,7 @@ layout: layouts/sidebar.njk
       <option value="4">Option 4</option>
     </select>
     <script type="text/plain" class="language-markup">
-      <select id="s0">
+      <select id="s0" class="ds-select">
         <option value="">Bitte auswählen</option>
         <option value="1">Option 1</option>
         <option value="2" disabled>Option 2 (disabled)</option>
@@ -53,7 +53,7 @@ layout: layouts/sidebar.njk
   <h2>disabled</h2>
   <div>
     <label for="s2">Lorem ipsum 3 disabled</label>
-    <select id="s2" disabled>
+    <select id="s2" disabled class="ds-select">
       <option value="">Bitte auswählen</option>
       <option value="1">Option 1</option>
       <option value="2">Option 2</option>
@@ -61,7 +61,7 @@ layout: layouts/sidebar.njk
       <option value="4">Option 4</option>
     </select>
     <script type="text/plain" class="language-markup">
-      <select id="s2" disabled>
+      <select id="s2" disabled class="ds-select">
         <option value="">Bitte auswählen</option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>

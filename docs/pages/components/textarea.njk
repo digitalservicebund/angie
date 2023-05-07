@@ -6,10 +6,10 @@ layout: layouts/sidebar.njk
 
 <h2>Textarea</h2>
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <label for="ta">Textarea</label>
-    <textarea id="ta" rows="5">
+    <textarea id="ta" rows="5" class="ds-textarea">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
       a risus iaculis felis eleifend sodales. Morbi ullamcorper congue viverra.
       Aliquam ullamcorper, neque ac rutrum hendrerit, erat mauris euismod quam,
@@ -21,7 +21,9 @@ layout: layouts/sidebar.njk
     <ds-remaining-characters>
       <ds-textarea-auto-resize>
         <label for="ta3">Nachricht (max. Zeichen 255)</label>
-        <textarea id="ta3" maxlength="255">Lorem ipsum</textarea>
+        <textarea id="ta3" maxlength="255" class="ds-textarea">
+Lorem ipsum</textarea
+        >
         <span data-remaining-characters-text style="display: none">
           noch <span data-remaining-characters-number></span> Zeichen verfügbar
         </span>

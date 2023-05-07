@@ -68,7 +68,7 @@ layout: layouts/sidebar.njk
 
 ### Large
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <button class="ds-button ds-button-large">Registrieren</button>
   </div>
@@ -100,7 +100,7 @@ layout: layouts/sidebar.njk
 
 ### Medium (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button>Registrieren</button>
   </div>
@@ -132,7 +132,7 @@ layout: layouts/sidebar.njk
 
 ### Small
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-small">Registrieren</button>
   </div>
@@ -164,7 +164,7 @@ layout: layouts/sidebar.njk
 
 ### Disabled
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-large" disabled>Registrieren</button>
   </div>
@@ -188,7 +188,7 @@ layout: layouts/sidebar.njk
 
 ### Full width
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-large ds-button-full-width">Registrieren</button>
   </div>
@@ -212,7 +212,7 @@ layout: layouts/sidebar.njk
 
 ### Long text (edge case)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</button>
   </div>
@@ -246,7 +246,7 @@ layout: layouts/sidebar.njk
 
 ### Large
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <button class="ds-button ds-button-secondary ds-button-large">Registrieren</button>
   </div>
@@ -278,7 +278,7 @@ layout: layouts/sidebar.njk
 
 ### Medium (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-secondary">Registrieren</button>
   </div>
@@ -310,7 +310,7 @@ layout: layouts/sidebar.njk
 
 ### Small
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-secondary ds-button-small">Registrieren</button>
   </div>
@@ -342,7 +342,7 @@ layout: layouts/sidebar.njk
 
 ### Disabled
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-secondary ds-button-large" disabled>Registrieren</button>
   </div>
@@ -366,7 +366,7 @@ layout: layouts/sidebar.njk
 
 ### Full width
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-secondary ds-button-large ds-button-full-width">Registrieren</button>
   </div>
@@ -390,7 +390,7 @@ layout: layouts/sidebar.njk
 
 ### Long text (edge case)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-secondary ds-button-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</button>
   </div>
@@ -424,7 +424,7 @@ layout: layouts/sidebar.njk
 
 ### Large
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large">Registrieren</button>
   </div>
@@ -456,7 +456,7 @@ layout: layouts/sidebar.njk
 
 ### Medium (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-tertiary">Registrieren</button>
   </div>
@@ -488,7 +488,7 @@ layout: layouts/sidebar.njk
 
 ### Small
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small">Registrieren</button>
   </div>
@@ -520,7 +520,7 @@ layout: layouts/sidebar.njk
 
 ### Disabled
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large" disabled>Registrieren</button>
   </div>
@@ -544,7 +544,7 @@ layout: layouts/sidebar.njk
 
 ### Full width
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large ds-button-full-width">Registrieren</button>
   </div>
@@ -568,7 +568,7 @@ layout: layouts/sidebar.njk
 
 ### Long text (edge case)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</button>
   </div>
@@ -602,7 +602,7 @@ layout: layouts/sidebar.njk
 
 ### Large
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
     <button class="ds-button ds-button-ghost ds-button-large">Registrieren</button>
   </div>
@@ -634,7 +634,7 @@ layout: layouts/sidebar.njk
 
 ### Medium (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-ghost">Registrieren</button>
   </div>
@@ -666,7 +666,7 @@ layout: layouts/sidebar.njk
 
 ### Small
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-ghost ds-button-small">Registrieren</button>
   </div>
@@ -698,7 +698,7 @@ layout: layouts/sidebar.njk
 
 ### Disabled
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-ghost ds-button-large" disabled>Registrieren</button>
   </div>
@@ -722,7 +722,7 @@ layout: layouts/sidebar.njk
 
 ### Full width
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-ghost ds-button-large ds-button-full-width">Registrieren</button>
   </div>
@@ -746,7 +746,7 @@ layout: layouts/sidebar.njk
 
 ### Long text (edge case)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <button class="ds-button ds-button-ghost ds-button-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</button>
   </div>
@@ -780,7 +780,7 @@ layout: layouts/sidebar.njk
 
 ### Input type submit (use `<button>` where possible)
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <input type="submit" class="ds-button ds-button-tertiary ds-button-large" value="Registrieren" />
   </div>
@@ -794,7 +794,7 @@ layout: layouts/sidebar.njk
 
 ### Link
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <a href="https://digitalservice.bund.de" role="button" class="ds-button ds-button-primary ds-button-with-icon">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

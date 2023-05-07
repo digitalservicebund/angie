@@ -1,7 +1,7 @@
 {
   "name": "@digitalservice4germany/angie",
-  "version": "0.1.1",
-  "description": "CSS framework for the Angie Design System",
+  "version": "0.2.0",
+  "description": "Tailwind plugin for the Angie Design System",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -28,7 +28,6 @@
     "@11ty/eleventy": "^2.0.0",
     "@digitalservice4germany/style-dictionary": "^2.0.0",
     "autoprefixer": "^10.4.13",
-    "csso": "^5.0.5",
     "lefthook": "^1.2.8",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
@@ -37,6 +36,7 @@
     "stylelint": "^15.6.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^8.0.0",
+    "tailwindcss": "^3.3.2",
     "uglify-js": "^3.17.4"
   }
 }

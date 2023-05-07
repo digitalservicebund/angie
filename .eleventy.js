@@ -2,8 +2,8 @@ const fs = require("fs");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const sass = require("sass-embedded");
 const autoprefixer = require("autoprefixer");
+const tailwind = require("tailwindcss");
 const postcss = require("postcss");
-const csso = require("csso");
 const uglifyJs = require("uglify-js");
 const { rimrafSync } = require("rimraf");
 
@@ -45,6 +45,18 @@ const compileSass = async ({ entry, loadPaths }) => {
   }
 
   return css;
+};
+
+const compileTailwind = async () => {
+  const source = `
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  `;
+
+  const css = await postcss([tailwind()]).process(source, { from: undefined });
+
+  return css.css;
 };
 
 const prependVariables = (css) => {
@@ -97,14 +109,6 @@ module.exports = function (eleventyConfig) {
     rimrafSync("dist");
     fs.mkdirSync("dist");
 
-    // build angie
-    let angieCss = await compileSass({
-      entry: "./src/styles/index.scss",
-      loadPaths: ["./src/styles"],
-    });
-    angieCss = prependVariables(angieCss);
-    fs.writeFileSync("dist/angie.css", angieCss);
-
     let fontsCss = await compileSass({ entry: "./src/styles/fonts.scss" });
     fs.writeFileSync("dist/fonts.css", fontsCss);
 
@@ -112,23 +116,27 @@ module.exports = function (eleventyConfig) {
     fs.writeFileSync("dist/angie.js", angieJs);
 
     if (runMode === "build") {
-      angieCss = csso.minify(angieCss).css;
-      fs.writeFileSync("dist/angie.min.css", angieCss);
-
       angieJs = uglifyJs.minify(angieJs).code;
       fs.writeFileSync("dist/angie.min.js", angieJs);
 
       fs.cpSync("assets", "dist", { recursive: true });
+      fs.cpSync("src/index.js", "dist/index.js");
+      fs.cpSync("src/components", "dist/components", { recursive: true });
+      fs.cpSync("src/utils", "dist/utils", { recursive: true });
     }
   });
 
   eleventyConfig.on("eleventy.after", async (args) => {
     // docs.css
-    const docsCss = await compileSass({ entry: "./docs/styles/docs.scss" });
+    let docsCss = await compileSass({ entry: "./docs/styles/docs.scss" });
+    docsCss = prependVariables(docsCss);
     fs.writeFileSync("./_site/docs.css", docsCss);
 
+    // build tailwind
+    let tailwindCss = await compileTailwind();
+    fs.writeFileSync("./_site/tailwind.css", tailwindCss);
+
     // copy over angie distributables
-    fs.copyFileSync("dist/angie.css", "_site/angie.css");
     fs.copyFileSync("dist/fonts.css", "_site/fonts.css");
     fs.copyFileSync("dist/angie.js", "_site/angie.js");
   });

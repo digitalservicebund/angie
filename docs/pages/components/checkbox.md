@@ -35,14 +35,14 @@ layout: layouts/sidebar.njk
 
 ### Regular size (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
-    <input type="checkbox" value="yes" id="c0" checked />
+    <input type="checkbox" value="yes" id="c0" checked class="ds-checkbox" />
     <label for="c0">Lorem ipsum 1</label>
   </div>
 
   <div>
-    <input type="checkbox" value="yes" id="c1" />
+    <input type="checkbox" value="yes" id="c1" class="ds-checkbox" />
     <label for="c1">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
       cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
@@ -53,12 +53,12 @@ layout: layouts/sidebar.njk
   </div>
 
   <div>
-    <input type="checkbox" value="yes" id="c2" disabled />
+    <input type="checkbox" value="yes" id="c2" disabled class="ds-checkbox" />
     <label for="c2">Lorem ipsum 3 (disabled)</label>
   </div>
 
   <div>
-    <input type="checkbox" value="yes" id="c4" disabled checked />
+    <input type="checkbox" value="yes" id="c4" disabled checked class="ds-checkbox" />
     <label for="c4">Lorem ipsum 4 (checked, disabled)</label>
   </div>
 
@@ -70,7 +70,7 @@ layout: layouts/sidebar.njk
 
 ### Small size
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <input type="checkbox" value="yes" id="sc0" checked class="ds-checkbox ds-checkbox-small" />
     <label for="sc0">Lorem ipsum 1</label>

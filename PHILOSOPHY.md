@@ -23,6 +23,8 @@ So it is okay, to not support all browsers. So it is okay, to use Custom Element
 
 ## Conceptual overview
 
+**outdated!**
+
 We have two distinct things here:
 
 1. the css and js code in the `src` directory

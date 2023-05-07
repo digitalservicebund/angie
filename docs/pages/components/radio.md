@@ -35,19 +35,19 @@ layout: layouts/sidebar.njk
 
 ### Regular size (default)
 
-<div class="ds-stack" style="--stack-space: var(--s-24)">
+<div class="ds-stack-24">
   <div>
-    <input type="radio" name="radios" value="1" id="r0" checked />
+    <input type="radio" name="radios" value="1" id="r0" checked class="ds-radio" />
     <label for="r0">Lorem ipsum 1</label>
   </div>
 
   <div>
-    <input type="radio" name="radios" value="2" id="r1" />
+    <input type="radio" name="radios" value="2" id="r1" class="ds-radio" />
     <label for="r1">Lorem ipsum 2</label>
   </div>
 
   <div>
-    <input type="radio" name="radios" value="4" id="r3" />
+    <input type="radio" name="radios" value="4" id="r3" class="ds-radio" />
     <label for="r3">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
       cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
@@ -58,14 +58,14 @@ layout: layouts/sidebar.njk
   </div>
 
   <div>
-    <input type="radio" name="radios" value="3" id="r2" disabled />
+    <input type="radio" name="radios" value="3" id="r2" disabled class="ds-radio" />
     <label for="r2">Lorem ipsum 3 (disabled)</label>
   </div>
 </div>
 
 ### Small size
 
-<div class="ds-stack" style="--stack-space: var(--s-16)">
+<div class="ds-stack-16">
   <div>
     <input type="radio" name="sradios" value="1" id="sr0" checked class="ds-radio ds-radio-small" />
     <label for="sr0">Lorem ipsum 1</label>
@@ -95,7 +95,7 @@ layout: layouts/sidebar.njk
 
 ### Mini size
 
-<div class="ds-stack" style="--stack-space: var(--s-8)">
+<div class="ds-stack-8">
   <div>
     <input type="radio" name="mradios" value="1" id="mr0" checked class="ds-radio ds-radio-mini" />
     <label for="mr0">Lorem ipsum 1</label>
