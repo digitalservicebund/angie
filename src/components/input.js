@@ -9,6 +9,8 @@ module.exports = function ({ addComponents, theme }) {
       backgroundColor: "white",
       outline: "0",
       border: "none",
+      borderRadius: "0",
+      appearance: "none",
     },
     ".ds-input": {
       height: "4rem",
