@@ -139,6 +139,8 @@ module.exports = function (eleventyConfig) {
     // copy over angie distributables
     fs.copyFileSync("dist/fonts.css", "_site/fonts.css");
     fs.copyFileSync("dist/angie.js", "_site/angie.js");
+
+    fs.copyFileSync("package.json", "dist/package.json");
   });
 
   return {
