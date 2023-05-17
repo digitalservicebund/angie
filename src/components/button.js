@@ -21,7 +21,7 @@ module.exports = function ({ addComponents, theme }) {
       backgroundColor: theme("colors.blue.500"),
       color: theme("colors.blue.800"),
     },
-    ".ds-button:disabled": {
+    ".ds-button:disabled, .ds-button.is-disabled": {
       cursor: "not-allowed",
       backgroundColor: theme("colors.gray.400"),
       color: theme("colors.gray.600"),
@@ -50,13 +50,15 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 2px ${theme("colors.blue.800")}`,
       color: theme("colors.blue.800"),
     },
-    ".ds-button-secondary:not(:disabled):hover": {
+    ".ds-button-secondary:not(:disabled):not(.is-disabled):hover": {
       backgroundColor: theme("colors.yellow.700"),
     },
-    ".ds-button-secondary:not(:disabled):active": {
+    ".ds-button-secondary:not(:disabled):not(.is-disabled):active": {
       backgroundColor: theme("colors.yellow.400"),
     },
-    ".ds-button-secondary:disabled": { boxShadow: "none" },
+    ".ds-button-secondary:disabled, .ds-button-secondary.is-disabled": {
+      boxShadow: "none",
+    },
     ".ds-button-secondary:focus-visible": { boxShadow: "none" },
     ".ds-button-tertiary": {
       backgroundColor: "transparent",
@@ -68,7 +70,7 @@ module.exports = function ({ addComponents, theme }) {
         backgroundColor: theme("colors.blue.200"),
       },
     ".ds-button-tertiary:active": { boxShadow: "none" },
-    ".ds-button-tertiary:disabled": {
+    ".ds-button-tertiary:disabled, .ds-button-tertiary.is-disabled": {
       backgroundColor: "transparent",
       boxShadow: `inset 0 0 0 2px ${theme("colors.gray.600")}`,
       color: theme("colors.gray.600"),
@@ -77,6 +79,8 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-button-ghost": {
       backgroundColor: "transparent",
       color: theme("colors.blue.800"),
+    },
+    ".ds-button-ghost > .ds-button-label": {
       textDecoration: "underline",
     },
     ".ds-button-ghost:active, .ds-button-ghost:focus, .ds-button-ghost:hover": {
@@ -86,7 +90,7 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 2px ${theme("colors.gray.600")}`,
     },
     ".ds-button-ghost:active": { boxShadow: "none" },
-    ".ds-button-ghost:disabled": {
+    ".ds-button-ghost:disabled, .ds-button-ghost.is-disabled": {
       backgroundColor: "transparent",
       boxShadow: "none",
       color: theme("colors.gray.600"),
@@ -100,7 +104,7 @@ module.exports = function ({ addComponents, theme }) {
       paddingTop: "0.875rem",
       paddingBottom: "0.875rem",
     },
-    ".ds-button-with-icon > svg": {
+    ".ds-button-with-icon > .ds-button-icon": {
       flexShrink: 0,
       width: "1.5rem",
       height: "1.5rem",
@@ -118,22 +122,24 @@ module.exports = function ({ addComponents, theme }) {
       paddingLeft: "0.875rem",
       paddingRight: "0.875rem",
     },
-    ".ds-button-with-icon.ds-button-large > svg": {
+    ".ds-button-with-icon.ds-button-large > .ds-button-icon": {
       width: "2.25rem",
       height: "2.25rem",
     },
-    ".ds-button-with-icon > span": {
+    ".ds-button-with-icon > .ds-button-label": {
       paddingTop: "0.0625rem",
       paddingBottom: "0.0625rem",
     },
-    ".ds-button-with-icon.ds-button-large > span": {
+    ".ds-button-with-icon.ds-button-large > .ds-button-label": {
       paddingTop: "0.34375rem",
       paddingBottom: "0.34375rem",
     },
-    ".ds-button-with-icon > svg + span:not(.sr-only)": {
+    ".ds-button-with-icon > .ds-button-icon + .ds-button-label": {
       display: "block",
       marginLeft: "0.5rem",
     },
-    ".ds-button-with-icon > span:not(.sr-only) + svg": { marginLeft: "0.5rem" },
+    ".ds-button-with-icon > .ds-button-label + .ds-button-icon": {
+      marginLeft: "0.5rem",
+    },
   });
 };

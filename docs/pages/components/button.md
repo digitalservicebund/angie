@@ -15,9 +15,9 @@ layout: layouts/sidebar.njk
 
 ### Button with icon
 
-- use `svg` for the icon
+- use `svg` for the icon, add `ds-button-icon` class to the icon
 - add `ds-button-with-icon` class
-- wrap text in a `span`
+- wrap text in a `span` with the class `ds-button-label`
 
 #### Button with icon only (avoid!)
 
@@ -26,26 +26,28 @@ layout: layouts/sidebar.njk
 
 ### Links that look like buttons
 
-> In an ideal world links look like links and buttons look like buttons
-
--- [source](https://github.com/alphagov/govuk_elements/pull/272#issuecomment-233028270)
-
 - add `role="button"` to the link
+
+#### Disabled links
+
+- use a `div` as tag and add `is-disabled` class
 
 ### Code examples
 
 #### Secondary & small
 
 ```
-<button class="ds-button ds-button-secondary ds-button-small">Registrieren</button>
+<button class="ds-button ds-button-secondary ds-button-small">
+    <span class="ds-button-label">Registrieren</span>
+</button>
 ```
 
 #### With icon
 
 ```
 <button class="ds-button ds-button-with-icon">
-    <svg>...</svg>
-    <span>Registrieren</span>
+    <svg class="ds-button-icon">...</svg>
+    <span class="ds-button-label">Registrieren</span>
 </button>
 ```
 
@@ -54,7 +56,7 @@ layout: layouts/sidebar.njk
 ```
 <button class="ds-button ds-button-with-icon ds-button-with-icon-only">
     <span class="sr-only">Registrieren</span>
-    <svg>...</svg>
+    <svg class="ds-button-icon">...</svg>
 </button>
 ```
 
@@ -70,20 +72,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-24">
   <div>
-    <button class="ds-button ds-button-large">Registrieren</button>
+    <button class="ds-button ds-button-large"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-large ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -91,7 +93,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-large ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -102,20 +104,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button>Registrieren</button>
+    <button class="ds-button"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -123,7 +125,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -134,20 +136,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-small">Registrieren</button>
+    <button class="ds-button ds-button-small"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -155,7 +157,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -166,20 +168,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-large" disabled>Registrieren</button>
+    <button class="ds-button ds-button-large" disabled><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-with-icon" disabled>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon ds-button-with-icon-only" disabled>
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -190,20 +192,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-large ds-button-full-width">Registrieren</button>
+    <button class="ds-button ds-button-large ds-button-full-width"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-with-icon ds-button-full-width">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon ds-button-full-width">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -218,7 +220,7 @@ layout: layouts/sidebar.njk
   </div>
   <div>
     <button class="ds-button ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
@@ -226,7 +228,7 @@ layout: layouts/sidebar.njk
   </div>
   <div>
     <button class="ds-button ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
@@ -235,7 +237,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-small ds-button-with-icon">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -248,20 +250,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-24">
   <div>
-    <button class="ds-button ds-button-secondary ds-button-large">Registrieren</button>
+    <button class="ds-button ds-button-secondary ds-button-large"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-large ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -269,7 +271,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-secondary ds-button-large ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -280,20 +282,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-secondary">Registrieren</button>
+    <button class="ds-button ds-button-secondary"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -301,7 +303,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -312,20 +314,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-secondary ds-button-small">Registrieren</button>
+    <button class="ds-button ds-button-secondary ds-button-small"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -333,7 +335,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -344,20 +346,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-secondary ds-button-large" disabled>Registrieren</button>
+    <button class="ds-button ds-button-secondary ds-button-large" disabled><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon" disabled>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon ds-button-with-icon-only" disabled>
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -368,20 +370,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-secondary ds-button-large ds-button-full-width">Registrieren</button>
+    <button class="ds-button ds-button-secondary ds-button-large ds-button-full-width"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon ds-button-full-width">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon ds-button-full-width">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -396,7 +398,7 @@ layout: layouts/sidebar.njk
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
@@ -404,7 +406,7 @@ layout: layouts/sidebar.njk
   </div>
   <div>
     <button class="ds-button ds-button-secondary ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
@@ -413,7 +415,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-secondary ds-button-small ds-button-with-icon">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -426,20 +428,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-24">
   <div>
-    <button class="ds-button ds-button-tertiary ds-button-large">Registrieren</button>
+    <button class="ds-button ds-button-tertiary ds-button-large"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -447,7 +449,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -458,20 +460,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-tertiary">Registrieren</button>
+    <button class="ds-button ds-button-tertiary"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -479,7 +481,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -490,20 +492,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-tertiary ds-button-small">Registrieren</button>
+    <button class="ds-button ds-button-tertiary ds-button-small"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -511,7 +513,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -522,20 +524,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-tertiary ds-button-large" disabled>Registrieren</button>
+    <button class="ds-button ds-button-tertiary ds-button-large" disabled><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon" disabled>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon ds-button-with-icon-only" disabled>
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -546,20 +548,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-tertiary ds-button-large ds-button-full-width">Registrieren</button>
+    <button class="ds-button ds-button-tertiary ds-button-large ds-button-full-width"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon ds-button-full-width">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon ds-button-full-width">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -574,24 +576,24 @@ layout: layouts/sidebar.njk
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-tertiary ds-button-small ds-button-with-icon">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -604,20 +606,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-24">
   <div>
-    <button class="ds-button ds-button-ghost ds-button-large">Registrieren</button>
+    <button class="ds-button ds-button-ghost ds-button-large"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-large ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -625,7 +627,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-ghost ds-button-large ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -636,20 +638,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-ghost">Registrieren</button>
+    <button class="ds-button ds-button-ghost"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -657,7 +659,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -668,20 +670,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-ghost ds-button-small">Registrieren</button>
+    <button class="ds-button ds-button-ghost ds-button-small"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -689,7 +691,7 @@ layout: layouts/sidebar.njk
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon ds-button-with-icon-only">
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -700,20 +702,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-ghost ds-button-large" disabled>Registrieren</button>
+    <button class="ds-button ds-button-ghost ds-button-large" disabled><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon" disabled>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon ds-button-with-icon-only" disabled>
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -724,20 +726,20 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-ghost ds-button-large ds-button-full-width">Registrieren</button>
+    <button class="ds-button ds-button-ghost ds-button-large ds-button-full-width"><span class="ds-button-label">Registrieren</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon ds-button-full-width">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon ds-button-full-width">
-        <span>Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Registrieren</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -748,28 +750,28 @@ layout: layouts/sidebar.njk
 
 <div class="ds-stack-16">
   <div>
-    <button class="ds-button ds-button-ghost ds-button-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</button>
+    <button class="ds-button ds-button-ghost ds-button-large"><span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-large ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
     </button>
   </div>
   <div>
     <button class="ds-button ds-button-ghost ds-button-small ds-button-with-icon">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span class="ds-button-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </button>
@@ -797,26 +799,34 @@ layout: layouts/sidebar.njk
 <div class="ds-stack-16">
   <div>
     <a href="https://digitalservice.bund.de" role="button" class="ds-button ds-button-primary ds-button-with-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
     </a>
   </div>
   <div>
     <a href="https://digitalservice.bund.de" role="button" class="ds-button ds-button-ghost ds-button-small ds-button-with-icon ds-button-with-icon-only" disabled>
         <span class="sr-only">Registrieren</span>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
     </a>
   </div>
   <div>
     <a href="https://digitalservice.bund.de" role="button" class="ds-button ds-button-secondary ds-button-with-icon ds-button-full-width">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
         </svg>
-        <span>Registrieren</span>
+        <span class="ds-button-label">Registrieren</span>
+    </a>
+  </div>
+  <div>
+    <div class="ds-button ds-button-secondary ds-button-with-icon is-disabled" role="button" aria-disabled>
+        <svg class="ds-button-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.5 9.615L26.385 7.5L18 15.885L9.615 7.5L7.5 9.615L15.885 18L7.5 26.385L9.615 28.5L18 20.115L26.385 28.5L28.5 26.385L20.115 18L28.5 9.615Z" />
+        </svg>
+        <span class="ds-button-label">Registrieren</span>
     </a>
   </div>
 </div>

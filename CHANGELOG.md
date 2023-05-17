@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - No border on input fields in Safari
 
+### Changed
+
+- Button: Icon and label now need a class. This makes the CSS more flexible for different markup (e.g. no svg icon).
+
 ## [0.0.3] - 2023-05-07
 
 ### Added
