@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ...
 
-## [0.0.4] - 2023-05-17
+## [0.4.0] - 2023-05-17
 
 ### Fixed
 
@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Button: Icon and label now need a class. This makes the CSS more flexible for different markup (e.g. no svg icon).
 
-## [0.0.3] - 2023-05-07
+## [0.3.0] - 2023-05-07
 
 ### Added
 
@@ -66,7 +66,8 @@ Angie transitions from a standalone CSS Framework to a Tailwind plugin. All our 
 
 - Published as npm package
 
-[Unreleased]: https://github.com/digitalservicebund/angie/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/digitalservicebund/angie/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/digitalservicebund/angie/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/digitalservicebund/angie/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/digitalservicebund/angie/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/digitalservicebund/angie/compare/v0.1.0...v0.1.1
