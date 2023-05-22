@@ -203,6 +203,43 @@ pre {
   max-width: 800px;
 }
 
+.persona {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.persona-header {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 660px;
+}
+
+.persona-description {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+
+.persona-description-line {
+  max-width: 4px;
+  background-color: #7a7a7a;
+  flex: 1;
+}
+
+.persona-description-content {
+  max-width: 500px;
+  flex: 1;
+}
+
+.persona-description-content-img {
+  max-width: 400px;
+  margin: 2rem;
+  flex: 2;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;

@@ -10,37 +10,67 @@ layout: layouts/sidebar.njk
   <h2 class="heading">Accessibility</h2>
   <h3 class="subheading">Was ist Barrierefreiheit?</h3>
   <p>
-    Nach den Accessibility
-    <a href="https://accessibility.18f.gov/checklist/" target="blank"
-      >Guidelines von 18F</a
-    >
-    ist die Barrierefreiheit einer der wichtigsten Komponenten der modernen
-    Webentwicklung und sorgt dafür, dass die Inhalte für möglichst alle
-    Nutzer:innen zugänglich sind.
-    <br />
+    Barrierefreiheit im Kontext digitaler Service bedeutet, allen Mitgliedern
+    der Gesellschaft gleichen Zugang zu staatlichen Leistungen zu ermöglichen.
+    Durch die BITV und WCAG Richtlinien ist weltweit verbindlich definiert,
+    welche technischen Kriterien zu erfüllen sind, um Barrierefreiheit für
+    möglichst viele Menschen zu erzielen.
+  </p>
+  <p>
     Am besten kann Barrierefreiheit umgesetzt werden, wenn sie fester
     Bestandteil des agilen Entwicklungsprozesses ist und von Beginn an
-    berücksichtigt wird.
+    berücksichtigt wird. Deshalb setzen wir während unseres gesamten
+    Gestaltungs- und Entwicklungsprozess regelmäßig ein diverses Methodenset
+    ein, um weitgehend sicherstellen zu können, dass wir ein hohes Maß an
+    Barrierefreiheit erreichen. Die folgenden Methoden bilden die wichtigsten
+    Elemente unserer a11y-Strategie und sind als feste Bestandteile in unsere
+    Prozesses integriert:
   </p>
-  <h3 class="subheading">Warum ist es für uns besonders wichtig?</h3>
+  <ul>
+    <li>Automatisierte Tests der Fronten Komponenten</li>
+    <li>
+      Checklisten (18f) mit Prüfkriterien als Guidance für die gestalterische
+      und technische Entwicklung
+    </li>
+    <li>Testunterstützung durch Browser Plugins</li>
+    <li>Inhouse Tests anhand prototypischer Personas</li>
+    <li>Externe Tests mit echten Nutzer:innen</li>
+  </ul>
+
+  <h3 class="subheading">Accessibility Personas</h3>
   <p>
-    Jedes Mitglied des Produktteams soll daher in unserem Team das gleiche
-    Verständnis von Barrierefreiheit haben und wissen, wie und wo sie zu testen
-    ist und wo Fehler adressiert werden können.
-    <br />
-    Folgende Kriterien nach der Kategorie A sind im MVP zu beachten und
-    umzusetzen:
+    In Anlehnung an die
+    <a href="https://alphagov.github.io/accessibility-personas/" target="blank"
+      >Arbeit mit Personas des GDS </a
+    >haben wir für unsere Arbeit vier Personas ins Deutsche übertragen. Diese
+    Personas helfen uns, Szenarien-basierte inhouse Tests durchzuführen. Sie
+    bieten Kontext, sowie eine technische Beschreibung, um Software und Services
+    im Gesamtablauf für spezifische Zugriffsanforderungen zu testen.
+  </p>
+  <br />
+  <p><b>Einschränkungen</b></p>
+  <p>
+    Persona-basierte Tests sind kein Ersatz dafür, Benutzer mit
+    Zugriffsanforderungen in Ihre Benutzertests einzubeziehen.
   </p>
 
+  <p>
+    Eine Simulation ist niemals eine echte Darstellung einer Beeinträchtigung.
+    Es ist nur ein Werkzeug, das versucht, manche Dinge für jemanden ohne diese
+    Beeinträchtigung ungefähr genauso schwierig zu machen.
+  </p>
   <ul>
-    <li>Die Seite ist Tastaturbedienbar</li>
-    <li>Die Seite hat keine Tastatur-Fallen</li>
-    <li>Alle Formularfelder haben entsprechende Labels</li>
-    <li>Alle Bilder haben ein Img-Tag und Alternativtext</li>
-    <li>Der Text hat ausreichenden Farbkontrast</li>
     <li>
-      Multimediainhalte haben entsprechende Untertitel und Audiobeschriebungen
-      (für neuris im Moment nicht relevant)
+      <a href="./../a11ychristopher/"
+        >Christopher - Nutzer mit rheumatoider Arthritis</a
+      >
     </li>
+    <li>
+      <a href="./../a11yclaudia/"
+        >Claudia - Nutzerin mit einer Sehbehinderung</a
+      >
+    </li>
+    <li><a href="./../a11ypawel/">Pawel - Nutzer mit Asperger-Syndrom</a></li>
+    <li><a href="./../a11ysimone/">Simone - Screenreader-Nutzerin</a></li>
   </ul>
 </section>

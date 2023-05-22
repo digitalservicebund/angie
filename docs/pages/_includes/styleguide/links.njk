@@ -1,9 +1,13 @@
 <ul>
-  {%- for styleguide in collections.styleguide -%}
+  {%- for styleguide in collections.styleguide -%} {% if styleguide.data.title
+  == "Accessibility Persona - Pawel"%} {% elseif styleguide.data.title ==
+  "Accessibility Persona - Claudia"%} {% elseif styleguide.data.title ==
+  "Accessibility Persona - Simone"%} {% elseif styleguide.data.title ==
+  "Accessibility Persona - Christopher"%} {% else %}
   <li>
     <a href="{{ styleguide.url }}" style="color: blue"
       >{{ styleguide.data.title }}</a
     >
   </li>
-  {%- endfor -%}
+  {% endif %} {%- endfor -%}
 </ul>
