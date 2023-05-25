@@ -186,6 +186,12 @@ pre {
   }
 }
 
+.introsection {
+  padding-left: 2.25rem;
+  padding-bottom: 0.25rem;
+  max-width: 800px;
+}
+
 .sectionheading {
   color: #000;
   font-family: var(--font-styleguide);
@@ -212,8 +218,7 @@ pre {
 
 .persona-header {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  flex-flow: column nowrap;
   max-width: 660px;
 }
 

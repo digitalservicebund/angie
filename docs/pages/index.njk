@@ -1,18 +1,194 @@
 ---
-title: Index
-layout: layouts/default.njk
+tags: styleguide
+title: Digital Service Design System - Startseite
+layout: layouts/sidebar.njk
 ---
 
-<div class="page">
-  <main class="page-content">
-    <h1>Angie</h1>
+{% import "macros.njk" as macros %}
 
-    <h2>Styleguide</h2>
+<section class="introsection">
+  <h2 class="heading">Digital Service Design System</h2>
+  <section class="section-grey">
+    <p class="subheading">
+      Das Design System des Digital Services bietet Frontend-Ressourcen für eine
+      konsistente und effiziente Service Delivery, welche sich am
+      Bundesstyleguide orientiert.
+    </p>
+  </section>
 
-    {% include "styleguide/links.njk" %}
+  <section class="introsection">
+    <h3 class="subheading">Ziele</h3>
+    <p></p>
+    <ul>
+      <li>Konsistenz in visueller Darstellung und Interaktion</li>
+      <li>Effizienz durch Wiederverwenden bereits entwickelter Lösungen</li>
+      <li>Relevanz sicherstellen durch schnelle Adoption</li>
+      <li>Barrierefreiheit fördern und vereinfachen</li>
+      <li>
+        Etablieren von “sensible defaults” innerhalb des Digital Services für
+        das Gestalten und Entwickeln von Benutzerinteraktion
+      </li>
+      <li>
+        Transparenz und Teilhabe hinsichtlich Arbeitsweisen und Arbeitsstände
+        (open source)
+      </li>
+    </ul>
+  </section>
+  <section class="introsection">
+    <h3 class="subheading">Short-term Vision</h3>
+    <p>
+      Das Design System ist aktuell auf das interne Teilen von Frontend
+      Komponenten ausgerichtet. Dabei arbeiten Designer und Entwickler aus
+      verschiedenen Projekt-Teams gemeinsam an einer geteilten Komponenten
+      Bibliothek. Wir wollen pragmatische Lösungsansätze erarbeiten und
+      bereitstellen, die innerhalb des DS als “sensible defaults” für die
+      Frontend-Entwicklung eingesetzt werden können.
+    </p>
+  </section>
+  <section class="introsection">
+    <h3 class="subheading">Design System als <i>sensible default</i></h3>
+    <p>
+      Mit dem Design System wollen wir einen
+      <a
+        href="https://www.thoughtworks.com/insights/podcasts/technology-podcasts/sensible-defaults"
+        target="blank"
+        ><i>sensible default</i></a
+      >
+      für die Entwicklung von Frontends im Digital Service zu definieren. Ein
+      sensible default ist ein Prinzip oder Lösungsweg auf dessen Einsatz man
+      sich zur Lösung eines konkreten Problems geeinigt hat. Sensible defaults
+      helfen, Lösungsansätze zu standardisieren, unterstützen
+      Wiederverwendbarkeit und bieten Orientierung für Neueinsteiger. Sensible
+      defaults bilden einen sinnvollen Startpunkt, von dem aus weitere
+      Lösungswege iteriert werden können.
+    </p>
+  </section>
+  <section class="introsection">
+    <h3 class="subheading">Aktuelle Bestandteile des Design Systems</h3>
+    <p>
+      <b>Dokumentation</b>
+    </p>
 
-    <h2>Components</h2>
+    <ul>
+      <li>
+        Styleguide (Grundlagen, vorgesehener Einsatz)<br />
+        <a href="	https://digitalservicebund.github.io/angie/" target="blank">
+          https://digitalservicebund.github.io/angie/</a
+        >
+      </li>
+      <li>
+        Komponentenübersicht mit technischen Hinweisen<br />
+        <a href="	https://digitalservicebund.github.io/angie/" target="blank">
+          https://digitalservicebund.github.io/angie/</a
+        >
+      </li>
+      <li>
+        Vorgehen zur Sicherstellung der Barrierefreiheit (Prozess und
+        Empfehlungen)
+      </li>
+    </ul>
+    <br />
+    <p>
+      <b>Für Designer:innen</b>
+    </p>
 
-    {% include "components/links.njk" %}
-  </main>
-</div>
+    <ul>
+      <li>
+        Figma Bibliotheks Datei, welche grundlegende Styles und fertige
+        Komponenten zur weiteren Verwendung in Figma bereitstellt<br />
+        <a
+          href="https://www.figma.com/files/943548099806762732/project/42669439/Component-Library"
+          target="blank"
+          >https://www.figma.com/files/943548099806762732/project/42669439/Component-Library</a
+        >
+      </li>
+    </ul>
+    <br />
+    <p>
+      <b>Für Entwickler:innen</b>
+    </p>
+
+    <ul>
+      <li>
+        Tailwind Preset (grundlegende Konfiguration)<br />
+        <a
+          href="	https://github.com/digitalservicebund/style-dictionary"
+          target="blank"
+        >
+          https://github.com/digitalservicebund/style-dictionary</a
+        >
+      </li>
+      <li>
+        Komponentenübersicht mit technischen Hinweisen<br />
+        <a href="	https://digitalservicebund.github.io/angie/" target="blank">
+          https://digitalservicebund.github.io/angie/</a
+        >
+      </li>
+      <li>
+        Tailwind Plugin (Komponenten)<br />
+        <a href="	https://github.com/digitalservicebund/angie" target="blank">
+          https://github.com/digitalservicebund/angie</a
+        >
+      </li>
+    </ul>
+    <br />
+  </section>
+  <section class="introsection">
+    <h3 class="subheading">Contribution-Model</h3>
+    <p>
+      Das Angie Team ist als eine Community of Practice organisiert. Es gibt
+      eine Vielzahl an Aufgaben die gemeinschaftlich übernommen werden
+      (Kommunikation, Moderation, Reinzeichnen, Testing, Coding, Reviews,
+      Dokumentation etc.) Alle Teammitglieder erbringen ihren Beitrag parallel
+      zu ihrem Hauptprojekt. Einige Teammitglieder haben ein festes
+      Stundenkontingent pro Woche, um die Planbarkeit zwischen Angie-Aufgaben
+      und Projektaufgaben zu erleichtern.
+    </p>
+    <br />
+    <p>
+      Aktuell finden wöchentliche Arbeits- und Planungsmeetings mit Designern
+      aus unterschiedlichen Teams statt. Unser Ansatz sieht es vor
+      bedarfsorientiert vorzugehen. D. h. Wir arbeiten keine vollständige
+      Komponenten-Liste ab, sondern bauen die Komponenten welche zeitnah von den
+      Teams gebraucht werden. So stellen wir sicher, dass alle unsere
+      Komponenten auch wirklich in einem echten Anwendungsfall eingesetzt und
+      erprobt werden und alle unsere Elemente tatsächlich praxistauglich sind.
+    </p>
+  </section>
+
+  <section class="introsection">
+    <h3 class="subheading">Frontend-Entwicklung</h3>
+    <p>
+      Angie stellt Artefakte zur Verfügung, die – in Projekte integriert – die
+      Arbeit von Entwickler:innen im DigitalService unterstützen.
+    </p>
+    <br />
+    <p>
+      Der Fokus liegt dabei auf Web und CSS, welches über Tailwind (Preset +
+      Plugin) in Projekte integriert wird. Eine Ausfertigung als
+      JavaScript-Komponenten (z.B. React, Vue) bzw. als Web Components ist
+      aktuell nicht vorhanden. Ebenso werden mobile Use Cases (Android, iOS)
+      aktuell nicht durch Angie abgedeckt.
+    </p>
+    <br />
+    <p>
+      <a href="	/styleguide/frontend_development"> Mehr Informationen</a>
+    </p>
+  </section>
+
+  <section class="introsection">
+    <h3 class="subheading">Ausblick</h3>
+    <p>
+      In Zukunft wollen wir gerne das Vorgehen einer einheitlichen Komponenten
+      Library auf Bundesebene unterstützen. Da es aktuell sehr viele
+      unterschiedliche Ansätze gibt (Kern, Colibri, ITZ Bund, BPA Styleguide)
+      aus denen sich noch kein einheitliches Vorgehen herauskristallisiert hat,
+      scheint es uns lohnenswert vorerst mit einem internen System zu starten,
+      was unsere eigenen Anforderungen und Lösungsideen zusammenbringt und uns
+      hilft innerhalb unserer Organisation erhöhte Effizienz zu erzielen. Wir
+      sind zuversichtlich, dass wir durch unsere Learnings anhand von Angie
+      zukünftig einen konstruktiven Beitrag zu einer bundesweit einheitlichen
+      Lösung erbringen können.
+    </p>
+  </section>
+</section>
