@@ -1,6 +1,6 @@
 {
   "name": "@digitalservice4germany/angie",
-  "version": "0.3.0",
+  "version": "0.0.0-development",
   "description": "Tailwind plugin for the Angie Design System",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,18 @@
   },
   "homepage": "https://github.com/digitalservicebund/angie#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@digitalservice4germany/style-dictionary": "^2.0.0",
     "autoprefixer": "^10.4.13",
     "lefthook": "^1.2.8",
@@ -33,6 +41,7 @@
     "prettier": "^2.8.4",
     "rimraf": "^5.0.0",
     "sass-embedded": "^1.57.1",
+    "semantic-release": "^21.0.5",
     "stylelint": "^15.6.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^9.0.0",
