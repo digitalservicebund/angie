@@ -19,6 +19,7 @@ jobs:
           scope: "@digitalservice4germany"
       - run: npm ci
       - run: npm run build
+      - run: cp package.json LICENSE README.md ./dist/
       - run: cd dist && npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
