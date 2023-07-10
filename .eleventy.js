@@ -40,7 +40,8 @@ const compileSass = async ({ entry, loadPaths }) => {
   if (process.env.BUILD_ENV === "GHA") {
     css = replacePathInCSS(css, (path) => {
       if (/^data:/.test(path)) return path;
-      return "/angie" + path;
+      if (/^\./.test(path)) return `/angie${path.slice(1)}`;
+      return `/angie${path}`;
     });
   }
 
