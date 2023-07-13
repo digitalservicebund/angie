@@ -33,6 +33,25 @@ layout: layouts/sidebar.njk
 <label for="r1">Lorem ipsum</label>
 ```
 
+#### with multiple lines
+
+If the label text is too long to fit on one line, wrap the radio and label in a container (e.g. a `div` or a `span`) containing nothing else. This will prevent the label text from wrapping under the radio.
+
+```
+<div>
+  <input type="radio" name="radios" value="4" id="r3" class="ds-radio" />
+  <label for="r3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
+    cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
+    a risus iaculis felis eleifend sodales. Morbi ullamcorper congue viverra.
+    Aliquam ullamcorper, neque ac rutrum hendrerit, erat mauris euismod quam,
+    at aliquam diam mauris et magna.
+  </label>
+</div>
+```
+
+Note that this uses the `has` selector, which is only available on recent versions of Chrome and Safari for now. If you need to support Firefox or older browsers, add the `flex` class to the wrapping container instead.
+
 ### Regular size (default)
 
 <div class="ds-stack-24">
@@ -46,7 +65,7 @@ layout: layouts/sidebar.njk
     <label for="r1">Lorem ipsum 2</label>
   </div>
 
-  <div>
+  <div class="flex">
     <input type="radio" name="radios" value="4" id="r3" class="ds-radio" />
     <label for="r3">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
@@ -76,7 +95,7 @@ layout: layouts/sidebar.njk
     <label for="sr1">Lorem ipsum 2</label>
   </div>
 
-  <div>
+  <div class="flex">
     <input type="radio" name="sradios" value="4" id="sr3" class="ds-radio ds-radio-small" />
     <label for="sr3">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
@@ -106,7 +125,7 @@ layout: layouts/sidebar.njk
     <label for="mr1">Lorem ipsum 2</label>
   </div>
 
-  <div>
+  <div class="flex">
     <input type="radio" name="mradios" value="4" id="mr3" class="ds-radio ds-radio-mini" />
     <label for="mr3">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
