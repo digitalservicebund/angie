@@ -1,26 +1,35 @@
-const a11y = require("../utils/a11y");
-
 module.exports = function ({ addComponents, theme }) {
   addComponents({
-    ".ds-radio": a11y.srOnly,
-    ".ds-radio + label, .ds-radio + label::before, .ds-radio + label::after": {
+    ".ds-radio, .ds-radio + label, .ds-radio::after": {
       "--radio-ring-radius": "1.25rem",
       "--radio-ring-diameter": "calc(var(--radio-ring-radius) * 2)",
       "--radio-dot-radius": "0.75rem",
       "--radio-text-padding-left": "1rem",
       "--radio-text-padding-top": "0.4375rem",
     },
+    ".ds-radio": {
+      appearance: "none",
+      width: "var(--radio-ring-diameter)",
+      height: "var(--radio-ring-diameter)",
+      boxShadow: `inset 0 0 0 0.125rem ${theme("colors.blue.800")}`,
+      position: "relative",
+      outline: "none",
+      cursor: "pointer",
+      borderRadius: "50%",
+      float: "left",
+      flex: "none",
+    },
     ".ds-radio + label": {
       position: "relative",
-      display: "inline-block",
       paddingTop: "var(--radio-text-padding-top)",
-      paddingLeft:
-        "calc(var(--radio-ring-diameter) + var(--radio-text-padding-left))",
+      paddingLeft: "var(--radio-text-padding-left)",
       minHeight: "var(--radio-ring-diameter)",
       touchAction: "manipulation",
       cursor: "pointer",
+      verticalAlign: "top",
+      float: "left",
     },
-    ".ds-radio + label::before, .ds-radio + label::after": {
+    ".ds-radio::after": {
       content: '""',
       display: "block",
       position: "absolute",
@@ -28,18 +37,10 @@ module.exports = function ({ addComponents, theme }) {
       left: "0",
       transform: "translateY(-50%)",
     },
-    ".ds-radio + label::before": {
-      left: "0",
-      width: "var(--radio-ring-diameter)",
-      height: "var(--radio-ring-diameter)",
-      boxShadow: `inset 0 0 0 0.125rem ${theme("colors.blue.800")}`,
-      borderRadius: "50%",
+    ".ds-radio:focus, .ds-radio:focus-visible": {
+      boxShadow: `inset 0 0 0 0.25rem ${theme("colors.blue.800")}`,
     },
-    ".ds-radio:focus + label::before, .ds-radio:focus-visible + label::before":
-      {
-        boxShadow: `inset 0 0 0 0.25rem ${theme("colors.blue.800")}`,
-      },
-    ".ds-radio:checked + label::after": {
+    ".ds-radio:checked::after": {
       left: "calc(var(--radio-ring-radius) - var(--radio-dot-radius))",
       width: "0",
       height: "0",
@@ -47,35 +48,36 @@ module.exports = function ({ addComponents, theme }) {
       backgroundColor: theme("colors.blue.800"),
       borderRadius: "50%",
     },
-    ".ds-radio[disabled] + label": {
+    ".ds-radio[disabled], .ds-radio[disabled] + label": {
       cursor: "default",
     },
-    ".ds-radio[disabled] + label::before": {
+    ".ds-radio[disabled]": {
       boxShadow: `inset 0 0 0 0.125rem ${theme("colors.gray.600")}`,
     },
-    ".ds-radio[disabled] + label::after": {
+    ".ds-radio[disabled]::after": {
       borderColor: theme("colors.gray.600"),
       backgroundColor: theme("colors.gray.600"),
     },
-    ".ds-radio:not(:disabled):hover + label::before": {
+    ".ds-radio:not(:disabled):hover": {
       boxShadow: `inset 0 0 0 0.25rem ${theme("colors.blue.800")}`,
     },
-    ".ds-radio:not(:focus-visible):focus + label::before": {
+    ".ds-radio:not(:focus-visible):focus": {
       boxShadow: `inset 0 0 0 0.125rem ${theme("colors.blue.800")}`,
     },
-    ".ds-radio-small + label, .ds-radio-small + label::before, .ds-radio-small + label::after":
-      {
-        "--radio-ring-radius": "1rem",
-        "--radio-dot-radius": "0.5rem",
-        "--radio-text-padding-left": "0.75rem",
-        "--radio-text-padding-top": "0.3125rem",
-      },
-    ".ds-radio-mini + label, .ds-radio-mini + label::before, .ds-radio-mini + label::after":
-      {
-        "--radio-ring-radius": "0.75rem",
-        "--radio-dot-radius": "0.3125rem",
-        "--radio-text-padding-left": "0.625rem",
-        "--radio-text-padding-top": "0.0625rem",
-      },
+    ".ds-radio-small, .ds-radio-small + label, .ds-radio-small::after": {
+      "--radio-ring-radius": "1rem",
+      "--radio-dot-radius": "0.5rem",
+      "--radio-text-padding-left": "0.75rem",
+      "--radio-text-padding-top": "0.3125rem",
+    },
+    " .ds-radio-mini, .ds-radio-mini + label, .ds-radio-mini::after": {
+      "--radio-ring-radius": "0.75rem",
+      "--radio-dot-radius": "0.3125rem",
+      "--radio-text-padding-left": "0.625rem",
+      "--radio-text-padding-top": "0.0625rem",
+    },
+    ":has(> .ds-radio + label):has(> :nth-child(2):last-child)": {
+      display: "flex",
+    },
   });
 };
