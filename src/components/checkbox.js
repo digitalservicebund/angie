@@ -74,6 +74,21 @@ module.exports = function ({ addComponents, theme }) {
       top: "1rem",
       left: "0.875rem",
     },
+    ".ds-checkbox-mini + label": {
+      paddingTop: "0",
+      paddingLeft: "0.75rem",
+      minHeight: "1.5rem",
+    },
+    ".ds-checkbox-mini": {
+      width: "1.5rem",
+      height: "1.5rem",
+    },
+    ".ds-checkbox-mini:checked::after": {
+      top: "0.85rem",
+      left: "0.75rem",
+      width: "0.73rem",
+      height: "0.35rem",
+    },
     ":has(> .ds-checkbox + label):has(> :nth-child(2):last-child)": {
       display: "flex",
     },

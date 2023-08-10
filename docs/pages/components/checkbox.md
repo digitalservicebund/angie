@@ -26,6 +26,13 @@ layout: layouts/sidebar.njk
 <label for="c3">Lorem ipsum</label>
 ```
 
+#### mini
+
+```
+<input type="checkbox" value="yes" id="c3" class="ds-checkbox ds-checkbox-mini" />
+<label for="c3">Lorem ipsum</label>
+```
+
 #### with error state
 
 ```
@@ -119,6 +126,41 @@ Note that this uses the `has` selector, which is only available on recent versio
   <div>
     <input type="checkbox" value="yes" id="sc3" class="ds-checkbox ds-checkbox-small has-error" />
     <label for="sc3">Lorem ipsum 5 (with error)</label>
+  </div>
+</div>
+
+### Mini size
+
+<div class="ds-stack-16">
+  <div>
+    <input type="checkbox" value="yes" id="mc0" checked class="ds-checkbox ds-checkbox-mini" />
+    <label for="mc0">Lorem ipsum 1</label>
+  </div>
+
+  <div class="flex">
+    <input type="checkbox" value="yes" id="mc1" class="ds-checkbox ds-checkbox-mini" />
+    <label for="mc1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt
+      cursus mi, a dictum magna venenatis vitae. Nunc a sollicitudin libero. In
+      a risus iaculis felis eleifend sodales. Morbi ullamcorper congue viverra.
+      Aliquam ullamcorper, neque ac rutrum hendrerit, erat mauris euismod quam,
+      at aliquam diam mauris et magna.
+    </label>
+  </div>
+
+  <div>
+    <input type="checkbox" value="yes" id="mc2" disabled class="ds-checkbox ds-checkbox-mini" />
+    <label for="mc2">Lorem ipsum 3 (disabled)</label>
+  </div>
+
+  <div>
+    <input type="checkbox" value="yes" id="mc4" disabled checked class="ds-checkbox ds-checkbox-mini" />
+    <label for="mc4">Lorem ipsum 4 (checked, disabled)</label>
+  </div>
+
+  <div>
+    <input type="checkbox" value="yes" id="mc3" class="ds-checkbox ds-checkbox-mini has-error" />
+    <label for="mc3">Lorem ipsum 5 (with error)</label>
   </div>
 </div>
 
