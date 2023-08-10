@@ -14,7 +14,7 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-checkbox + label": {
       position: "relative",
       paddingTop: "0.4375rem",
-      paddingLeft: "0.5rem",
+      paddingLeft: "1rem",
       minHeight: "2.5rem",
       touchAction: "manipulation",
       cursor: "pointer",
@@ -63,7 +63,7 @@ module.exports = function ({ addComponents, theme }) {
     },
     ".ds-checkbox-small + label": {
       paddingTop: "0.25rem",
-      paddingLeft: "0.5rem",
+      paddingLeft: "0.75rem",
       minHeight: "2rem",
     },
     ".ds-checkbox-small": {
