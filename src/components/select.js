@@ -33,6 +33,12 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 2px ${theme("colors.red.800")}`,
       backgroundColor: theme("colors.red.200"),
     },
+    ".ds-select-medium": {
+      height: "3rem",
+    },
+    ".ds-select-small": {
+      height: "2.5rem",
+    },
     option: { backgroundColor: "white !important" },
   });
 };
