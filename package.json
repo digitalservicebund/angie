@@ -40,7 +40,7 @@
     "prettier": "^3.0.1",
     "rimraf": "^5.0.1",
     "sass-embedded": "^1.64.2",
-    "semantic-release": "^21.0.7",
+    "semantic-release": "^22.0.0",
     "stylelint": "^15.10.2",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^10.0.0",
