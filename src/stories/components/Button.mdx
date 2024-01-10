@@ -1,0 +1,98 @@
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+## Usage notes
+
+Please refer to [GOV.UK Design System documentation on
+buttons](https://design-system.service.gov.uk/components/button/) for more
+information.
+
+## Example
+
+<Canvas of={ButtonStories.Default} />
+<Controls of={ButtonStories.Default} />
+
+## Variants
+
+### Small size
+
+<Canvas of={ButtonStories.Small} />
+
+### Large size
+
+<Canvas of={ButtonStories.Large} />
+
+## Icons
+
+### with left icon
+
+<Canvas of={ButtonStories.WithIcon} />
+
+### with right icon
+
+<Canvas of={ButtonStories.WithIconRight} />
+
+### with icon only
+
+<Canvas of={ButtonStories.WithIconOnly} />
+
+## States
+
+### Disabled
+
+<Canvas of={ButtonStories.Disabled} />
+
+## Button as link
+
+<Canvas of={ButtonStories.Link} />
+
+## Implementation notes
+
+- add `ds-button` as base class to a `button` element
+- combine with one size modifier: `ds-button-small` or `ds-button-large`
+- combine with one appearance modifier: `ds-button-secondary`, `ds-button-tertiary`, `ds-button-ghost`
+
+<Source of={ButtonStories.Large} />
+
+- for full with add `ds-button-full-width`
+
+<Source of={ButtonStories.FullWidth} />
+
+### with icons
+
+- use `svg` for the icon, add `ds-button-icon` class to the icon
+- add `ds-button-with-icon` class to the button
+- wrap text in a `span` with the class `ds-button-label`
+
+<Source of={ButtonStories.WithIcon} />
+
+### with icon only
+
+- add `ds-button-with-icon-only` class
+- wrap (invisible) text in a `span` with class `sr-only`
+- have a look at [Accessible Icon Buttons](https://www.sarasoueidan.com/blog/accessible-icon-buttons/)
+
+<Source of={ButtonStories.WithIconOnly} />
+
+### links that look like buttons
+
+- add `role="button"` to the link
+- have a look at this [discussion on links styled as buttons and a11y implications](https://github.com/alphagov/govuk_elements/pull/272)
+
+<Source of={ButtonStories.Link} />
+
+### "disabled" buttons
+
+- use a `div` as tag and add `is-disabled` class
+
+<Source of={ButtonStories.Disabled} />
+
+## Further documentation
+
+Please check out the code on the given examples and otherwise
+refer to [mdn web docs on \<button\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+for more technical information.
