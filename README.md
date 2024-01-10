@@ -41,3 +41,9 @@ tldr; `npm install && npm start`
 ## More
 
 - [PHILOSOPHY](PHILOSOPHY.md)
+
+## Experimental: Storybook
+
+```
+npm run storybook
+```

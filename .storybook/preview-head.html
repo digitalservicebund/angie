@@ -1,0 +1,159 @@
+<style>
+  @font-face {
+    font-family: BundesSansWeb;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSansWeb-Regular.woff2") format("woff2"),
+      url("./fonts/BundesSansWeb-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSansWeb;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSansWeb-Italic.woff2") format("woff2"),
+      url("./fonts/BundesSansWeb-Italic.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSansWeb;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSansWeb-Bold.woff2") format("woff2"),
+      url("./fonts/BundesSansWeb-Bold.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSansWeb;
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSansWeb-BoldItalic.woff2") format("woff2"),
+      url("./fonts/BundesSansWeb-BoldItalic.woff") format("woff");
+  }
+  /* BundesSerif */
+  @font-face {
+    font-family: BundesSerifWeb;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSerifWeb-Regular.woff2") format("woff2"),
+      url("./fonts/BundesSerifWeb-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSerifWeb;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSerifWeb-Italic.woff2") format("woff2"),
+      url("./fonts/BundesSerifWeb-Italic.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSerifWeb;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSerifWeb-Bold.woff2") format("woff2"),
+      url("./fonts/BundesSerifWeb-Bold.woff") format("woff");
+  }
+  @font-face {
+    font-family: BundesSerifWeb;
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSerifWeb-BoldItalic.woff2") format("woff2"),
+      url("./fonts/BundesSerifWeb-BoldItalic.woff") format("woff");
+  }
+  /* BundesSans Condensed */
+  @font-face {
+    font-family: BundesSansCondWeb;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url("./fonts/BundesSansCondWeb.woff2") format("woff2"),
+      url("./fonts/BundesSansCondWeb.woff") format("woff");
+  }
+  @font-face {
+    font-family: Inter;
+    src:
+      url("/fonts/Inter-Light.woff2") format("woff2"),
+      url("/fonts/Inter-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Inter;
+    src:
+      url("/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/fonts/Inter-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Inter;
+    src:
+      url("/fonts/Inter-Medium.woff2") format("woff2"),
+      url("/fonts/Inter-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Inter;
+    src:
+      url("/fonts/Inter-SemiBold.woff2") format("woff2"),
+      url("/fonts/Inter-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Inter;
+    src:
+      url("/fonts/Inter-Bold.woff2") format("woff2"),
+      url("/fonts/Inter-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  .sbdocs-content > :not(.sb-unstyled),
+  .sbdocs-content > :not(.sb-unstyled) * {
+    font-family: Inter, Arial, sans-serif;
+  }
+
+  .sbdocs-preview,
+  #storybook-root * {
+    font-family: BundesSansWeb, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  }
+
+  .sbdocs a {
+    color: #00f;
+    text-decoration: underline;
+  }
+</style>
+
+<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+<script>
+  window.sfLoaded = false;
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.sfLoaded) {
+      var sf = new Snowflakes({
+        color: "#0000ff",
+        count: 10,
+        minOpacity: 0.2,
+      });
+      window.sfLoaded = true;
+    }
+  });
+</script>
