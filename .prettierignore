@@ -10,4 +10,5 @@ LICENSE
 *.jpeg
 *.png
 *.svg
+.env.example
 

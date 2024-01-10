@@ -1,0 +1,101 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Startseite" />
+
+# Digital Service Design System
+
+**Das Design System des Digital Services bietet Frontend-Ressourcen für eine
+konsistente und effiziente Service Delivery, welche sich am Bundesstyleguide
+orientiert.**
+
+## Vision
+
+Das Design System ist aktuell auf das interne Teilen von Frontend Komponenten
+ausgerichtet. Dabei arbeiten Designer und Entwickler aus verschiedenen
+Projekt-Teams gemeinsam an einer geteilten Komponenten Bibliothek.  
+Dabei fokussieren wir aktuell auf folgende Ziele:
+
+- Konsistenz in visueller Darstellung und Interaktion
+- Effizienz durch Wiederverwenden bereits entwickelter Lösungen
+- Relevanz sicherstellen durch schnelle Adoption
+- Barrierefreiheit fördern und vereinfachen
+- Etablieren von “sensible defaults” innerhalb des Digital Services für das Gestalten und Entwickeln von Benutzerinteraktion
+- Transparenz und Teilhabe hinsichtlich Arbeitsweisen und Arbeitsstände (open source)
+
+## Design System als _sensible default_
+
+Mit dem Design System wollen wir damit starten, [_sensible
+default_](https://www.thoughtworks.com/insights/podcasts/technology-podcasts/sensible-defaults)
+für die Entwicklung von Frontends im Digital Service zu definieren. Ein
+_sensible default_ ist ein Prinzip oder Lösungsweg, auf dessen Einsatz man sich
+zur Lösung eines konkreten Problems geeinigt hat. _Sensible defaults_ helfen,
+Lösungsansätze zu standardisieren, unterstützen Wiederverwendbarkeit und bieten
+Orientierung für Neueinsteiger.{" "} _Sensible defaults_ bilden einen sinnvollen
+Startpunkt, von dem aus weitere Lösungswege iteriert werden können. Frei nach
+dem Motto “Understand the rules and know when to break them…”
+
+## Aktuelle Bestandteile des Design Systems
+
+### Dokumentation
+
+- Styleguide (Grundlagen, vorgesehener Einsatz)  
+  [https://digitalservicebund.github.io/angie/](https://digitalservicebund.github.io/angie/)
+- Komponentenübersicht mit technischen Hinweisen  
+  [https://digitalservicebund.github.io/angie/](https://digitalservicebund.github.io/angie/)
+- Vorgehen zur Sicherstellung der [Barrierefreiheit](/docs/accessibility-übersicht--docs) (Prozess und Empfehlungen)
+
+### Für Designer:innen
+
+- Figma Datei, mit allen grundlegenden Styles  
+  [hhttps://www.figma.com/file/nMUUyvtI2vQxiC5hW2bjCS/Angie-Foundation?type=design&node-id=15%3A380&t=Fs3khDh79ITLA8JW-1](https://www.figma.com/file/nMUUyvtI2vQxiC5hW2bjCS/Angie-Foundation?type=design&node-id=15%3A380&t=Fs3khDh79ITLA8JW-1)
+- Figma Datei welche die UI-Komponenten beinhaltet  
+  [https://www.figma.com/file/49Gxm2IajuwbGhj37zu9x0/Angie-Components?type=design&node-id=850%3A2880&t=c7mqv6gkhiV3EKoT-1](https://www.figma.com/file/49Gxm2IajuwbGhj37zu9x0/Angie-Components?type=design&node-id=850%3A2880&t=c7mqv6gkhiV3EKoT-1)
+
+### Für Entwickler:innen
+
+- Tailwind Preset (grundlegende Konfiguration)  
+  [https://github.com/digitalservicebund/style-dictionary](https://github.com/digitalservicebund/style-dictionary)
+- Komponentenübersicht mit technischen Hinweisen  
+  [https://digitalservicebund.github.io/angie/](https://digitalservicebund.github.io/angie/)
+- Tailwind Plugin (Komponenten)  
+  [https://github.com/digitalservicebund/angie](https://github.com/digitalservicebund/angie)
+
+## Contribution-Model
+
+Das Team ist als eine Community of Practice organisiert. Es gibt eine Vielzahl
+an Aufgaben die gemeinschaftlich übernommen werden (Kommunikation, Moderation,
+Reinzeichnen, Testing, Coding, Reviews, Dokumentation etc.) Alle Teammitglieder
+erbringen ihren Beitrag parallel zu ihrem Hauptprojekt. Einige Teammitglieder
+haben ein festes Stundenkontingent pro Woche, um die Planbarkeit zwischen
+Design-System-Aufgaben und Projektaufgaben zu erleichtern.
+
+Aktuell finden wöchentliche Arbeits- und Planungsmeetings mit Designer:innen aus
+unterschiedlichen Teams statt. Unser Ansatz sieht es vor bedarfsorientiert
+vorzugehen. D. h. wir arbeiten keine vollständige Komponenten-Liste ab, sondern
+bauen die Komponenten, welche zeitnah von den Teams gebraucht werden. So stellen
+wir sicher, dass alle unsere Komponenten in einem echten Anwendungsfall
+eingesetzt und hinsichtlich Praxistauglichkeit erprobt werden.
+
+## Frontend-Entwicklung
+
+Angie stellt Artefakte zur Verfügung, die – in Projekte integriert – die Arbeit
+von Entwickler:innen im DigitalService unterstützen.
+
+Der Fokus liegt dabei auf Web und CSS, welches über Tailwind (Preset + Plugin)
+in Projekte integriert wird. Eine Ausfertigung als JavaScript-Komponenten (z.B.
+React, Vue) bzw. als Web Components ist aktuell nicht vorhanden. Ebenso werden
+mobile Use Cases (Android, iOS) aktuell nicht durch Angie abgedeckt.
+
+[Mehr Informationen](/docs/development-übersicht--docs)
+
+## Ausblick
+
+In Zukunft wollen wir gerne das Vorgehen einer einheitlichen Komponenten Library
+auf Bundesebene unterstützen. Da es aktuell sehr viele unterschiedliche Ansätze
+gibt (Kern, Colibri, ITZ Bund, BPA Styleguide) aus denen sich noch kein
+einheitliches Vorgehen ergeben hat, scheint es uns lohnenswert vorerst mit einem
+internen System zu starten, was unsere eigenen Anforderungen und Lösungsideen
+zusammenbringt und uns hilft intern erhöhte Effizienz zu erzielen. Wir sind
+zuversichtlich, dass wir durch unsere Learnings aus diesem Projekt zukünftig
+einen konstruktiven Beitrag zu einer bundesweit einheitlichen Lösung erbringen
+können.

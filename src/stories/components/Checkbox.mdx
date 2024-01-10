@@ -1,0 +1,65 @@
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import * as CheckboxStories from "./Checkbox.stories";
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+## Usage notes
+
+Use checkboxes when **users can select one or more options**.
+
+Please also refer to [GOV.UK Design System documentation on
+checkboxes](https://design-system.service.gov.uk/components/checkboxes/) for more
+information.
+
+## Example
+
+<Canvas of={CheckboxStories.Default} />
+<Controls of={CheckboxStories.Default} />
+
+## Variants
+
+### Small size
+
+<Canvas of={CheckboxStories.Small} />
+
+### Mini size
+
+<Canvas of={CheckboxStories.Mini} />
+
+## States
+
+### Checked
+
+<Canvas of={CheckboxStories.Checked} />
+
+### Disabled
+
+<Canvas of={CheckboxStories.Disabled} />
+
+### Checked and disabled
+
+<Canvas of={CheckboxStories.CheckedDisabled} />
+
+### Error
+
+<Canvas of={CheckboxStories.Error} />
+
+## Implementation notes
+
+- add `ds-checkbox` as base class to a `input[type=checkbox]` element
+- combine with one size modifier: `ds-checkbox-small` or `ds-checkbox-mini`
+- important: `input` element must be followed by `label` element in the markup
+- If the label text is too long to fit on one line,
+  wrap the radio and label in a container (e.g. a `div` or a `span`) containing nothing else.
+  This will prevent the label text from wrapping under the radio.
+  Note that this uses the `has` selector, which is only available on
+  recent versions of Chrome and Safari for now. If you need to support
+  Firefox or older browsers, add the `flex` class to the wrapping container instead.
+
+<Source of={CheckboxStories.Small} />
+
+Please check out the code on the given examples and otherwise
+refer to [mdn web docs on \<input type="checkbox"\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+for more technical information.
