@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta, Source } from "@storybook/blocks";
+import * as SelectStories from "./Select.stories";
+
+<Meta of={SelectStories} />
+
+# Select
+
+## Usage notes
+
+> The select component should only be used as a last resort in
+> public-facing services because research shows that some users
+> find selects very difficult to use.
+
+Please also refer to [GOV.UK Design System documentation on
+Select](https://design-system.service.gov.uk/components/select/) for more
+information.
+
+## Example
+
+<Canvas of={SelectStories.Default} />
+<Controls of={SelectStories.Default} />
+
+## Variants
+
+### Medium size
+
+<Canvas of={SelectStories.Medium} />
+
+### Small size
+
+<Canvas of={SelectStories.Small} />
+
+## States
+
+### Disabled
+
+<Canvas of={SelectStories.Disabled} />
+
+### Error
+
+<Canvas of={SelectStories.Error} />
+
+## Implementation notes
+
+- add `ds-Select` as base class to a `select` element
+- combine with one size modifier: `ds-select-small` or `ds-select-medium`
+- note: `options` can't be styled
+
+<Source of={SelectStories.Small} />
+
+Please check out the code on the given examples and otherwise
+refer to [mdn web docs on \<select>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+for more technical information.
