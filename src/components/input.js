@@ -37,24 +37,20 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 4px ${theme("colors.blue.800")}`,
     },
     "::-webkit-input-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
+      fontFamily: "BundesSansWeb, sans-serif",
+      color: `${theme("colors.gray.800")} !important`,
     },
     "::-moz-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
+      fontFamily: "BundesSansWeb, sans-serif",
+      color: `${theme("colors.gray.800")} !important`,
     },
     ":-ms-input-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
+      fontFamily: "BundesSansWeb, sans-serif",
+      color: `${theme("colors.gray.800")} !important`,
     },
     ":-moz-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
+      fontFamily: "BundesSansWeb, sans-serif",
+      color: `${theme("colors.gray.800")} !important`,
     },
     ".ds-input-medium": {
       height: "3rem",
