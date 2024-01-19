@@ -43,25 +43,21 @@ jobs:
           npm ci
           npm run build
           npm run build:github
+          npm run build-storybook
         env:
           BUILD_ENV: GHA
 
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v2
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: ./_site
-
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v1
-
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: storybook-static # default: dist/storybook
-          checkout: false # default: true
+          path: ./storybook-static
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
       - name: Deploy Storybook to Chromatic
         run: npm run chromatic
