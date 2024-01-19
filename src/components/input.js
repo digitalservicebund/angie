@@ -23,11 +23,13 @@ module.exports = function ({ addComponents, theme }) {
     },
     ".ds-input:read-only": {
       boxShadow: "none !important",
+      backgroundColor: theme("colors.blue.300"),
     },
     ".ds-input:disabled": {
       boxShadow: `inset 0 0 0 2px ${theme("colors.gray.600")} !important`,
       color: theme("colors.gray.600"),
       cursor: "not-allowed",
+      backgroundColor: theme("colors.white"),
     },
     ".ds-input.has-error": {
       boxShadow: `inset 0 0 0 2px ${theme("colors.red.800")}`,
