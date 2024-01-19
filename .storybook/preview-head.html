@@ -142,18 +142,3 @@
     text-decoration: underline !important;
   }
 </style>
-
-<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-<script>
-  window.sfLoaded = false;
-  document.addEventListener("DOMContentLoaded", function () {
-    if (!window.sfLoaded) {
-      var sf = new Snowflakes({
-        color: "#0000ff",
-        count: 10,
-        minOpacity: 0.2,
-      });
-      window.sfLoaded = true;
-    }
-  });
-</script>
