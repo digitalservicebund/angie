@@ -9,7 +9,7 @@
     "watch:tailwind": "tailwindcss -i ./.storybook/styles.css -o ./build/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./build-package",
-    "build-storybook": "storybook build",
+    "build-storybook": "tailwindcss -i ./.storybook/styles.css -o ./build/styles.css && storybook build",
     "chromatic": "npx chromatic --auto-accept-changes"
   },
   "repository": {
