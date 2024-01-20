@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+rm -rf ./dist
+mkdir -p ./dist/fonts
+cp ./src/styles/fonts.css ./dist
+cp ./.storybook/assets/fonts/Bundes* ./dist/fonts
+cp ./src/index.js ./dist
+cp -r ./src/components ./dist
+cp -r ./src/utils ./dist

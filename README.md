@@ -1,4 +1,4 @@
-# Angie
+# Angie Design System
 
 [![version](https://img.shields.io/npm/v/@digitalservice4germany/angie)](https://www.npmjs.com/package/@digitalservice4germany/angie)
 [![npm downloads](https://img.shields.io/npm/dw/@digitalservice4germany/angie)](https://www.npmjs.com/package/@digitalservice4germany/angie)
@@ -27,23 +27,10 @@ module.exports = {
 
 ## Documentation (styleguide)
 
-- source code in the `/docs` folder
-- find the [current version](https://digitalservicebund.github.io/angie/) online
+Find the [current version](https://digitalservicebund.github.io/angie/) online.
 
 ## Contributing
 
 We are using [conventional commits](https://www.conventionalcommits.org/).
 
-You want to contribute? Welcome. Please read the [CONTRIBUTING](CONTRIBUTING.md) guide.
-
 tldr; `npm install && npm start`
-
-## More
-
-- [PHILOSOPHY](PHILOSOPHY.md)
-
-## Experimental: Storybook
-
-```
-npm run storybook
-```

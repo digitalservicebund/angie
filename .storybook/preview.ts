@@ -1,4 +1,3 @@
-import "../_site/fonts.css";
 import "../build/styles.css";
 
 /** @type { import('@storybook/html').Preview } */

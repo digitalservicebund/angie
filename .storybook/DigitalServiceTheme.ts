@@ -8,8 +8,8 @@ export default create({
   brandImage: digitalServiceLogo,
   brandTarget: "_self",
 
-  fontBase: "Inter, Arial, sans-serif", // UI only (sidebar), does not affect preview + docs
-  colorPrimary: "blue", // where is that used? not links
+  fontBase: "Inter, Arial, sans-serif",
+  colorPrimary: "blue",
   colorSecondary: "blue",
 
   appBorderRadius: 0,

@@ -2,35 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-#storybook-docs {
-  .mask1 {
-    mask-image: svg-load("./assets/images/colorvector.svg");
-    mask-repeat: no-repeat;
-  }
+#storybook-docs .mask1 {
+  mask-image: url("/images/colorvector.svg");
+  mask-repeat: no-repeat;
+}
 
-  .colorshapebox {
-    width: 80px;
-    height: 82px;
-    margin-bottom: 8px !important;
-  }
+#storybook-docs .colorshapebox {
+  width: 80px;
+  height: 82px;
+  margin-bottom: 8px !important;
+}
 
-  .colordefinitionbox {
-    width: 96px;
-    height: 160px;
-    padding-left: 8px;
-    padding-top: 16px;
-    background-color: #fff;
-  }
+#storybook-docs .colordefinitionbox {
+  width: 96px;
+  height: 160px;
+  padding-left: 8px;
+  padding-top: 16px;
+  background-color: #fff;
+}
 
-  .colorname {
-    color: #000;
-    font-weight: bold;
-    font-size: 16px;
-  }
+#storybook-docs .colorname {
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
 
-  .hexvalue {
-    color: #6f7785;
-    font-weight: bold;
-    font-size: 12px !important;
-  }
+#storybook-docs .hexvalue {
+  color: #6f7785;
+  font-weight: bold;
+  font-size: 12px !important;
 }
