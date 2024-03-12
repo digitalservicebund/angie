@@ -36,7 +36,7 @@
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "@digitalservice4germany/style-dictionary": "^2.0.0",
-    "@storybook/addon-a11y": "^7.6.17",
+    "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-designs": "^7.0.9",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
