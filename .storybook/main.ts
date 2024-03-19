@@ -14,7 +14,6 @@ const config = {
         },
       },
     },
-    "@storybook/addon-designs",
   ],
   framework: {
     name: "@storybook/html-vite",
