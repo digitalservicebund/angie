@@ -18,6 +18,7 @@ module.exports = function ({ addComponents, theme }) {
       borderRadius: "50%",
       float: "left",
       flex: "none",
+      background: "transparent" /* for old Safari */,
     },
     ".ds-radio + label": {
       position: "relative",
