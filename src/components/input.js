@@ -31,7 +31,7 @@ module.exports = function ({ addComponents, theme }) {
       cursor: "not-allowed",
       backgroundColor: theme("colors.white"),
     },
-    ".ds-input.has-error": {
+    ".ds-input.has-error, .ds-textarea.has-error": {
       boxShadow: `inset 0 0 0 2px ${theme("colors.red.800")}`,
       backgroundColor: theme("colors.red.200"),
     },
