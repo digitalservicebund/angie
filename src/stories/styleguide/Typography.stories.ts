@@ -30,11 +30,20 @@ export default meta;
 
 type Story = StoryObj<TypeArgs>;
 
+export const TitleReg = {
+  args: { name: "title-reg", text: loremWords(4) },
+} satisfies Story;
 export const Heading01Reg = {
   args: { name: "heading-01-reg", text: loremWords(4) },
 } satisfies Story;
+export const Heading01Bold = {
+  args: { name: "heading-01-bold", text: loremWords(4) },
+} satisfies Story;
 export const Heading02Reg = {
   args: { name: "heading-02-reg", text: loremWords(8) },
+} satisfies Story;
+export const Heading02Bold = {
+  args: { name: "heading-02-bold", text: loremWords(8) },
 } satisfies Story;
 export const Heading03Reg = {
   args: { name: "heading-03-reg", text: loremWords(8) },
@@ -69,15 +78,36 @@ export const LabelSection = {
 export const Body01Reg = {
   args: { name: "body-01-reg", text: loremSentences(4) },
 } satisfies Story;
+export const Body01Bold = {
+  args: { name: "body-01-bold", text: loremSentences(4) },
+} satisfies Story;
 export const Body02Reg = {
   args: { name: "body-02-reg", text: loremSentences(5) },
 } satisfies Story;
+export const Body02Bold = {
+  args: { name: "body-02-bold", text: loremSentences(5) },
+} satisfies Story;
+export const Body03Reg = {
+  args: { name: "body-03-reg", text: loremSentences(5) },
+} satisfies Story;
+export const Body03Bold = {
+  args: { name: "body-03-bold", text: loremSentences(5) },
+} satisfies Story;
+export const Link01Reg = {
+  args: { name: "link-01-reg", text: loremSentences(4) },
+} satisfies Story;
 export const Link01Bold = {
-  args: { name: "link-01-bold", text: loremWords(4) },
+  args: { name: "link-01-bold", text: loremSentences(4) },
+} satisfies Story;
+export const Link02Reg = {
+  args: { name: "link-02-reg", text: loremSentences(5) },
 } satisfies Story;
 export const Link02Bold = {
-  args: { name: "link-02-bold", text: loremWords(4) },
+  args: { name: "link-02-bold", text: loremSentences(5) },
+} satisfies Story;
+export const Link03Reg = {
+  args: { name: "link-03-reg", text: loremSentences(5) },
 } satisfies Story;
 export const Link03Bold = {
-  args: { name: "link-03-bold", text: loremWords(4) },
+  args: { name: "link-03-bold", text: loremSentences(5) },
 } satisfies Story;
