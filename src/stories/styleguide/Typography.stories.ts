@@ -94,20 +94,20 @@ export const Body03Bold = {
   args: { name: "body-03-bold", text: loremSentences(5) },
 } satisfies Story;
 export const Link01Reg = {
-  args: { name: "link-01-reg", text: loremSentences(4) },
+  args: { name: "link-01-reg", text: loremWords(4) },
 } satisfies Story;
 export const Link01Bold = {
-  args: { name: "link-01-bold", text: loremSentences(4) },
+  args: { name: "link-01-bold", text: loremWords(4) },
 } satisfies Story;
 export const Link02Reg = {
-  args: { name: "link-02-reg", text: loremSentences(5) },
+  args: { name: "link-02-reg", text: loremWords(5) },
 } satisfies Story;
 export const Link02Bold = {
-  args: { name: "link-02-bold", text: loremSentences(5) },
+  args: { name: "link-02-bold", text: loremWords(5) },
 } satisfies Story;
 export const Link03Reg = {
-  args: { name: "link-03-reg", text: loremSentences(5) },
+  args: { name: "link-03-reg", text: loremWords(5) },
 } satisfies Story;
 export const Link03Bold = {
-  args: { name: "link-03-bold", text: loremSentences(5) },
+  args: { name: "link-03-bold", text: loremWords(5) },
 } satisfies Story;
