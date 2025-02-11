@@ -7,23 +7,13 @@ import {
   loremWords,
 } from "../../../.storybook/utils";
 
-type TypeArgs = {
-  name: string;
-  text: string;
-};
+type TypeArgs = { name: string; text: string };
 
 const meta = {
   title: "Styleguide/Typography",
-  render: ({ name, text }) => {
-    console.log({ name });
-    return `<div class="ds-${name}">${text}</div>`;
-  },
-  argTypes: {
-    text: { control: "text" },
-  },
-  args: {
-    text: loremSentences(8),
-  },
+  render: ({ name, text }) => `<div class="ds-${name}">${text}</div>`,
+  argTypes: { text: { control: "text" } },
+  args: { text: loremSentences(8) },
 } satisfies Meta<TypeArgs>;
 
 export default meta;

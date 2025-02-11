@@ -9,7 +9,6 @@ export default function ColorBlob({
   name: string;
   shade?: string;
 }) {
-  console.log({ tokens });
   const hex = shade ? tokens.color.base[name][shade] : tokens.color.base[name];
   return (
     <div className="colordefinitionbox">
@@ -19,18 +18,13 @@ export default function ColorBlob({
           className="colorshapebox mask1"
         >
           <div
-            style={{
-              backgroundColor: hex,
-              transform: "scale(0.95)",
-            }}
+            style={{ backgroundColor: hex, transform: "scale(0.95)" }}
             className="colorshapebox mask1"
           ></div>
         </div>
       ) : (
         <div
-          style={{
-            backgroundColor: hex,
-          }}
+          style={{ backgroundColor: hex }}
           className="colorshapebox mask1"
         ></div>
       )}
