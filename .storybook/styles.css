@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #storybook-docs .mask1 {
-  mask-image: url("/images/colorvector.svg");
+  mask-image: url("./images/colorvector.svg");
   mask-repeat: no-repeat;
 }
 
