@@ -38,22 +38,12 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-input:focus, .ds-input:hover": {
       boxShadow: `inset 0 0 0 4px ${theme("colors.blue.800")}`,
     },
-    "::-webkit-input-placeholder": {
+    ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
       fontFamily: "BundesSerifWeb, serif",
       fontStyle: "italic",
       color: theme("colors.gray.800"),
     },
-    "::-moz-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
-    },
-    ":-ms-input-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
-      color: theme("colors.gray.800"),
-    },
-    ":-moz-placeholder": {
+    ".ds-input::placeholder, .ds-textarea::placeholder": {
       fontFamily: "BundesSerifWeb, serif",
       fontStyle: "italic",
       color: theme("colors.gray.800"),
