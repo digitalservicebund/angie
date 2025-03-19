@@ -39,6 +39,6 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-select-small": {
       height: "2.5rem",
     },
-    option: { backgroundColor: "white !important" },
+    ".ds-select option": { backgroundColor: "white !important" },
   });
 };

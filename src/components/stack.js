@@ -1,17 +1,17 @@
 module.exports = function ({ addUtilities, matchUtilities, theme }) {
   addUtilities(
     {
-      "[class*=ds-stack]": {
+      ".ds-stack": {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
       },
-      "[class*=ds-stack] > *": { marginBlock: "0" },
-      "[class*=ds-stack] > * + *": {
+      ".ds-stack > *": { marginBlock: "0" },
+      ".ds-stack > * + *": {
         marginBlockStart: "var(--ds-stack-space)",
       },
     },
-    ["responsive"]
+    ["responsive"],
   );
 
   matchUtilities(
@@ -22,6 +22,6 @@ module.exports = function ({ addUtilities, matchUtilities, theme }) {
     },
     {
       values: theme("spacing"),
-    }
+    },
   );
 };
