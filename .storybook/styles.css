@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 #storybook-docs .mask1 {
   mask-image: url("../images/colorvector.svg");
