@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/html";
+import type { Meta, StoryObj } from "@storybook/html-vite";
 import { clsx } from "clsx";
 import dedent from "dedent";
 import { htmlAttrs, loremSentences } from "../../../.storybook/utils";
