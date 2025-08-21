@@ -43,7 +43,9 @@ const meta = {
     `;
   },
   argTypes: {
-    disabled: { description: "Is the textarea not available for interaction?" },
+    disabled: {
+      description: "Is the textarea not available for interaction. ?",
+    },
     error: { description: "Is the textarea highlighted as not valid?" },
     label: { control: "text" },
     placeholder: { control: "text" },
