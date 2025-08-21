@@ -35,8 +35,15 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 2px ${theme("colors.red.800")}`,
       backgroundColor: theme("colors.red.200"),
     },
-    ".ds-input:focus, .ds-input:hover": {
-      boxShadow: `inset 0 0 0 4px ${theme("colors.blue.800")}`,
+    ".ds-input:focus, .ds-input:hover, .ds-textarea:focus, .ds-textarea:hover":
+      {
+        boxShadow: `inset 0 0 0 4px ${theme("colors.blue.800")}`,
+      },
+    ".ds-textarea:hover:not(:focus-visible):not(.has-error)": {
+      backgroundColor: theme("colors.blue.100"),
+    },
+    ".ds-textarea.has-error:hover": {
+      boxShadow: `inset 0 0 0 4px ${theme("colors.red.900")}`,
     },
     ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
       fontFamily: "BundesSerifWeb, serif",
