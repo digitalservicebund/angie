@@ -1,4 +1,4 @@
-import { create } from "@storybook/theming/create";
+import { create } from "storybook/theming/create";
 import digitalServiceLogo from "./assets/images/logo.png";
 
 export default create({

@@ -1,15 +1,17 @@
 import "../build/styles.css";
 
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
+
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
     },
+
     options: {
       storySort: {
         order: [
@@ -20,6 +22,10 @@ const preview = {
           "Development",
         ],
       },
+    },
+
+    docs: {
+      codePanel: true,
     },
   },
 };
