@@ -47,12 +47,10 @@ module.exports = function ({ addComponents, theme }) {
     },
     ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
       fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
       color: theme("colors.gray.900"),
     },
     ".ds-input::placeholder, .ds-textarea::placeholder": {
       fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
       color: theme("colors.gray.900"),
     },
     ".ds-input-medium": {
