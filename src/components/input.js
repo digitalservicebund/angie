@@ -41,7 +41,7 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-textarea:hover:not(:focus-visible):not(.has-error)": {
       backgroundColor: theme("colors.blue.100"),
     },
-    ".ds-textarea.has-error:hover": {
+    ".ds-textarea.has-error:hover, .ds-textarea.has-error:focus": {
       boxShadow: `inset 0 0 0 4px ${theme("colors.red.900")}`,
     },
     ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
