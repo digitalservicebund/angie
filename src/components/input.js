@@ -3,8 +3,6 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-input, .ds-textarea": {
       display: "block",
       width: "100%",
-      paddingLeft: "1.5rem",
-      paddingRight: "1.5rem",
       boxShadow: `inset 0 0 0 2px ${theme("colors.blue.800")}`,
       backgroundColor: "white",
       outline: "0",
@@ -16,10 +14,11 @@ module.exports = function ({ addComponents, theme }) {
       height: "4rem",
       paddingTop: "0",
       paddingBottom: "0",
+      paddingLeft: "1.5rem",
+      paddingRight: "1.5rem",
     },
     ".ds-textarea": {
-      paddingTop: "1.25rem",
-      paddingBottom: "1.25rem",
+      padding: "1rem",
     },
     ".ds-input:read-only": {
       boxShadow: "none !important",
@@ -42,17 +41,15 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-textarea:hover:not(:focus-visible):not(.has-error)": {
       backgroundColor: theme("colors.blue.100"),
     },
-    ".ds-textarea.has-error:hover": {
+    ".ds-textarea.has-error:hover, .ds-textarea.has-error:focus": {
       boxShadow: `inset 0 0 0 4px ${theme("colors.red.900")}`,
     },
     ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
       fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
       color: theme("colors.gray.900"),
     },
     ".ds-input::placeholder, .ds-textarea::placeholder": {
       fontFamily: "BundesSerifWeb, serif",
-      fontStyle: "italic",
       color: theme("colors.gray.900"),
     },
     ".ds-input-medium": {
