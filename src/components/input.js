@@ -3,8 +3,6 @@ module.exports = function ({ addComponents, theme }) {
     ".ds-input, .ds-textarea": {
       display: "block",
       width: "100%",
-      paddingLeft: "1.5rem",
-      paddingRight: "1.5rem",
       boxShadow: `inset 0 0 0 2px ${theme("colors.blue.800")}`,
       backgroundColor: "white",
       outline: "0",
@@ -16,10 +14,11 @@ module.exports = function ({ addComponents, theme }) {
       height: "4rem",
       paddingTop: "0",
       paddingBottom: "0",
+      paddingLeft: "1.5rem",
+      paddingRight: "1.5rem",
     },
     ".ds-textarea": {
-      paddingTop: "1.25rem",
-      paddingBottom: "1.25rem",
+      padding: "1rem",
     },
     ".ds-input:read-only": {
       boxShadow: "none !important",
