@@ -15,6 +15,10 @@ module.exports = function ({ addComponents, theme }) {
         "url(\"data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41.295 6 4.875l4.59-4.58L12 1.705l-6 6-6-6L1.41.295Z' fill='%23000'/%3E%3C/svg%3E\")",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "right 1.5rem center",
+      "@media (forced-colors: active) and (prefers-color-scheme: dark)": {
+        backgroundImage:
+          "url(\"data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41.295 6 4.875l4.59-4.58L12 1.705l-6 6-6-6L1.41.295Z' fill='white'/%3E%3C/svg%3E\")",
+      },
     },
     ".ds-select:hover, .ds-select:focus": {
       outline: `solid 4px ${theme("colors.blue.800")}`,
