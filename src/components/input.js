@@ -45,11 +45,17 @@ module.exports = function ({ addComponents, theme }) {
       boxShadow: `inset 0 0 0 4px ${theme("colors.red.900")}`,
     },
     ".ds-input::-moz-placeholder, .ds-textarea::-moz-placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
+      fontFamily: "BundesSansWeb",
+      lineHeight: "1.625rem",
+      fontSize: "1.125rem",
+      letterSpacing: "0.01rem",
       color: theme("colors.gray.900"),
     },
     ".ds-input::placeholder, .ds-textarea::placeholder": {
-      fontFamily: "BundesSerifWeb, serif",
+      fontFamily: "BundesSansWeb",
+      lineHeight: "1.625rem",
+      fontSize: "1.125rem",
+      letterSpacing: "0.01rem",
       color: theme("colors.gray.900"),
     },
     ".ds-input-medium": {
