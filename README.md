@@ -1,10 +1,12 @@
-# Angie Design System
+# Angie Design System (deprecated)
 
 [![version](https://img.shields.io/npm/v/@digitalservice4germany/angie)](https://www.npmjs.com/package/@digitalservice4germany/angie)
 [![npm downloads](https://img.shields.io/npm/dw/@digitalservice4germany/angie)](https://www.npmjs.com/package/@digitalservice4germany/angie)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 Tailwind plugin for products which use the DigitalService design system "Angie".
+
+:warning: DEPRECATED! This package is only for products which already use the "Angie" design system. New products please use the [KERN UX design system](https://www.kern-ux.de) instead.
 
 ## Installation
 
