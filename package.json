@@ -22,10 +22,6 @@
     "url": "https://github.com/digitalservicebund/angie/issues"
   },
   "homepage": "https://github.com/digitalservicebund/angie#readme",
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "release": {
     "branches": [
       "main"
@@ -50,7 +46,6 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rimraf": "^6.0.1",
-    "semantic-release": "^24.2.9",
     "storybook": "^9.1.10",
     "tailwindcss": "^4.1.14",
     "@storybook/addon-docs": "^9.1.10"
