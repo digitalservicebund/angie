@@ -32,6 +32,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@digitalservice4germany/style-dictionary": "^2.0.0",
     "@storybook/addon-a11y": "^9.1.10",
+    "@storybook/addon-docs": "^9.1.10",
     "@storybook/addon-links": "^9.1.10",
     "@storybook/html-vite": "^9.1.10",
     "@tailwindcss/cli": "^4.1.14",
@@ -47,8 +48,7 @@
     "react-dom": "^19.2.0",
     "rimraf": "^6.0.1",
     "storybook": "^9.1.10",
-    "tailwindcss": "^4.1.14",
-    "@storybook/addon-docs": "^9.1.10"
+    "tailwindcss": "^4.1.14"
   },
   "_id": "@digitalservice4germany/angie@0.0.0-development"
 }
