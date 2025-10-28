@@ -34,7 +34,7 @@
     "@storybook/addon-a11y": "^9.1.12",
     "@storybook/addon-docs": "^9.1.12",
     "@storybook/addon-links": "^9.1.12",
-    "@storybook/html-vite": "^9.1.12",
+    "@storybook/html-vite": "^10.0.0",
     "@tailwindcss/cli": "^4.1.14",
     "@tailwindcss/postcss": "^4.1.14",
     "clsx": "^2.1.1",
