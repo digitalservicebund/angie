@@ -32,7 +32,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@digitalservice4germany/style-dictionary": "^2.0.0",
     "@storybook/addon-a11y": "^9.1.12",
-    "@storybook/addon-docs": "^9.1.12",
+    "@storybook/addon-docs": "^10.0.0",
     "@storybook/addon-links": "^9.1.12",
     "@storybook/html-vite": "^9.1.12",
     "@tailwindcss/cli": "^4.1.14",
