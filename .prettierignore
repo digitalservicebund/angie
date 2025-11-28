@@ -12,3 +12,4 @@ LICENSE
 .env.example
 build-package
 .github/CODEOWNERS
+.npmrc
